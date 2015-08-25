@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ktp-rT-Sfg">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="ucL-OA-yx3">
+            <objects>
+                <viewController id="ktp-rT-Sfg" customClass="ProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xzj-49-1Hh"/>
+                        <viewControllerLayoutGuide type="bottom" id="W4q-st-CrF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Tl-N9-dff">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="p_cerealkiller" translatesAutoresizingMaskIntoConstraints="NO" id="5rZ-LT-fI3">
+                                <rect key="frame" x="16" y="0.0" width="288" height="288"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5rZ-LT-fI3" secondAttribute="height" multiplier="1:1" id="9Zn-bO-rGP"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sm6-UK-pVY">
+                                <rect key="frame" x="16" y="288" width="288" height="280"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sm6-UK-pVY" firstAttribute="leading" secondItem="5rZ-LT-fI3" secondAttribute="leading" id="43x-Vh-jiy"/>
+                            <constraint firstItem="5rZ-LT-fI3" firstAttribute="top" secondItem="7Tl-N9-dff" secondAttribute="topMargin" id="loA-3Y-wQu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5rZ-LT-fI3" secondAttribute="trailing" id="o4e-7n-Yee"/>
+                            <constraint firstItem="W4q-st-CrF" firstAttribute="top" secondItem="sm6-UK-pVY" secondAttribute="bottom" id="tEC-M3-W3T"/>
+                            <constraint firstItem="sm6-UK-pVY" firstAttribute="top" secondItem="5rZ-LT-fI3" secondAttribute="bottom" id="vvm-2T-yrZ"/>
+                            <constraint firstItem="5rZ-LT-fI3" firstAttribute="leading" secondItem="7Tl-N9-dff" secondAttribute="leadingMargin" id="wwW-g6-TwX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sm6-UK-pVY" secondAttribute="trailing" id="yAh-JT-1be"/>
+                            <constraint firstItem="sm6-UK-pVY" firstAttribute="leading" secondItem="7Tl-N9-dff" secondAttribute="leadingMargin" id="ywo-c2-0xc"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="profileImage" destination="5rZ-LT-fI3" id="scm-q5-RFk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L3S-8T-f7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="964" y="294"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="p_cerealkiller" width="1000" height="1000"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
