@@ -26,6 +26,7 @@
 @synthesize delegate;
 
 @synthesize panGestureRecognizer;
+@synthesize tapGestureRecognizer;
 @synthesize information;
 @synthesize overlayView;
 @synthesize profileView;
@@ -49,7 +50,10 @@
         
         panGestureRecognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(beingDragged:)];
         
+        tapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(beingTapped:)];
+        
         [self addGestureRecognizer:panGestureRecognizer];
+        [self addGestureRecognizer:tapGestureRecognizer];
         [self addSubview:information];
 
         profileView = [[ProfileView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
@@ -82,10 +86,18 @@
 }
 */
 
+-(void)beingTapped:(UITapGestureRecognizer *)gestureRecognizer
+{
+    //NSLog(@"You tapped me!");
+    [delegate cardTapped:self];
+}
+
 //%%% called when you move your finger across the screen.
 // called many times a second
 -(void)beingDragged:(UIPanGestureRecognizer *)gestureRecognizer
 {
+    //NSLog(@"draggingme...");
+
     //%%% this extracts the coordinate data from your swipe movement. (i.e. How much did you move?)
     xFromCenter = [gestureRecognizer translationInView:self].x; //%%% positive for right swipe, negative for left
     yFromCenter = [gestureRecognizer translationInView:self].y; //%%% positive for up, negative for down

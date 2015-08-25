@@ -9,13 +9,12 @@
 
 @implementation ProfileViewController
 
-
 - (void)viewDidLoad
 {
     NSLog(@"viewDidLoad");
     [super viewDidLoad];
     
-    _profileImage.image = [UIImage imageNamed:@"p_tradvamp"];
+    //_profileImage.image = [UIImage imageNamed:@"p_tradvamp"];
     
     //DraggableViewBackground *draggableBackground = [[DraggableViewBackground alloc]initWithFrame:self.view.frame];
     //[self.view addSubview:draggableBackground];

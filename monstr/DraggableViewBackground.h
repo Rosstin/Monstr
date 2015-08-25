@@ -33,7 +33,14 @@
 #import <UIKit/UIKit.h>
 #import "DraggableView.h"
 
+@protocol DraggableViewBackgroundDelegate <NSObject>
+-(void)tapped:(UIView *)card;
+@end
+
+
 @interface DraggableViewBackground : UIView <DraggableViewDelegate>
+
+@property (weak) id <DraggableViewBackgroundDelegate> delegate;
 
 //methods called in DraggableView
 -(void)cardSwipedLeft:(UIView *)card;

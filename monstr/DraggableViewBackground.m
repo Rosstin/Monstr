@@ -25,6 +25,8 @@ static const int MAX_BUFFER_SIZE = 2; //%%% max number of cards loaded at any gi
 static const float CARD_HEIGHT = 386; //%%% height of the draggable card
 static const float CARD_WIDTH = 290; //%%% width of the draggable card
 
+@synthesize delegate;
+
 @synthesize todayCards;
 
 @synthesize exampleCardLabels; //%%% all the labels I'm using as example data at the moment
@@ -164,6 +166,11 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
         [self insertSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-1)] belowSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-2)]];
     }
 
+}
+
+-(void)cardTapped:(UIView *)card
+{
+    [delegate tapped:self];
 }
 
 //%%% when you hit the right button, this is called and substitutes the swipe
