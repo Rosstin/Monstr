@@ -10,10 +10,13 @@
 
 @interface ProfileStack : NSObject
 
-@property NSMutableSet *allProfiles;
+@property NSMutableArray *allProfiles;
 @property NSMutableArray *profilesForToday;
 
-@property int *cardsLoadedIndexGlobal;
+@property NSMutableArray *profileIndicesForToday;
+@property NSMutableArray *excludedProfileIndices;
+
+@property NSInteger cardsLoadedIndexGlobal;
 
 + (id)sharedManager;
 

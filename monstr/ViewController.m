@@ -22,7 +22,7 @@
 - (void)tapped:(UIView *)card {
     
     ProfileStack *sharedManager = [ProfileStack sharedManager];
-    Profile *currentProfile = [sharedManager.profilesForToday objectAtIndex: *(sharedManager.cardsLoadedIndexGlobal)];
+    Profile *currentProfile = [sharedManager.profilesForToday objectAtIndex: sharedManager.cardsLoadedIndexGlobal];
     
     [self performSegueWithIdentifier:@"SegueToProfile" sender:self];
 }
@@ -35,7 +35,6 @@
     
     draggableBackground.delegate = self;
 }
-
 
 //- (void)viewDidAppear:(BOOL)animated
 //{}

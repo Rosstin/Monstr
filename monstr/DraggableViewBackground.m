@@ -11,7 +11,7 @@
 #import "Profile.h"
 
 @implementation DraggableViewBackground{
-    NSInteger cardsLoadedIndex; //%%% the index of the card you have loaded into the loadedCards array last
+    //NSInteger cardsLoadedIndex; //%%% the index of the card you have loaded into the loadedCards array last
     NSMutableArray *loadedCards; //%%% the array of card loaded (change max_buffer_size to increase or decrease the number of cards this holds)
     
     UIButton* menuButton;
@@ -44,13 +44,14 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
         //init the day
         //todayCards =
         
-        
         loadedCards = [[NSMutableArray alloc] init];
         allCards = [[NSMutableArray alloc] init];
-        cardsLoadedIndex = 0;
+        
+        ProfileStack *sharedManager = [ProfileStack sharedManager];
+        sharedManager.cardsLoadedIndexGlobal = 0;
+        
         [self loadCards];
     }
-    
     
     return self;
 }
@@ -128,7 +129,9 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
             } else {
                 [self addSubview:[loadedCards objectAtIndex:i]];
             }
-            cardsLoadedIndex++; //%%% we loaded a card into loaded cards, so we have to increment
+            
+            ProfileStack *sharedManager = [ProfileStack sharedManager];
+            sharedManager.cardsLoadedIndexGlobal++; //%%% we loaded a card into loaded cards, so we have to increment
         }
     }
 }
@@ -143,9 +146,13 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     
     [loadedCards removeObjectAtIndex:0]; //%%% card was swiped, so it's no longer a "loaded card"
     
-    if (cardsLoadedIndex < [allCards count]) { //%%% if we haven't reached the end of all cards, put another into the loaded cards
-        [loadedCards addObject:[allCards objectAtIndex:cardsLoadedIndex]];
-        cardsLoadedIndex++;//%%% loaded a card, so have to increment count
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
+    
+    if (sharedManager.cardsLoadedIndexGlobal < [allCards count]) { //%%% if we haven't reached the end of all cards, put another into the loaded cards
+        [loadedCards addObject:[allCards objectAtIndex: sharedManager.cardsLoadedIndexGlobal]];
+        
+        sharedManager.cardsLoadedIndexGlobal++; //%%% loaded a card, so have to increment count
+        
         [self insertSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-1)] belowSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-2)]];
     }
 }
@@ -160,9 +167,11 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     
     [loadedCards removeObjectAtIndex:0]; //%%% card was swiped, so it's no longer a "loaded card"
     
-    if (cardsLoadedIndex < [allCards count]) { //%%% if we haven't reached the end of all cards, put another into the loaded cards
-        [loadedCards addObject:[allCards objectAtIndex:cardsLoadedIndex]];
-        cardsLoadedIndex++;//%%% loaded a card, so have to increment count
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
+
+    if (sharedManager.cardsLoadedIndexGlobal < [allCards count]) { //%%% if we haven't reached the end of all cards, put another into the loaded cards
+        [loadedCards addObject:[allCards objectAtIndex: sharedManager.cardsLoadedIndexGlobal ]];
+        sharedManager.cardsLoadedIndexGlobal++;//%%% loaded a card, so have to increment count
         [self insertSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-1)] belowSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-2)]];
     }
 
@@ -173,9 +182,10 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     [delegate tapped:self];
     
     ProfileStack *sharedManager = [ProfileStack sharedManager];
-    Profile *currentProfile = [sharedManager.profilesForToday objectAtIndex:cardsLoadedIndex];
+    Profile *currentProfile = [sharedManager.profilesForToday objectAtIndex:sharedManager.cardsLoadedIndexGlobal];
     
     NSLog(@"you tapped on a profile.... %@", currentProfile.profileName);
+    
     // now to pass info to the card
     
 }
