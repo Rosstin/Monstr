@@ -11,7 +11,7 @@
 
 - (void)viewDidLoad
 {
-    NSLog(@"viewDidLoad");
+    //NSLog(@"viewDidLoad");
     [super viewDidLoad];
     
     //_profileImage.image = [UIImage imageNamed:@"p_tradvamp"];

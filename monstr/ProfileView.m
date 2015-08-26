@@ -20,6 +20,7 @@
         imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"p_cerealkiller"]];
         [self addSubview:imageView];
     }
+    
     return self;
 }
 

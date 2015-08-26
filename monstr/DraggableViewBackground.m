@@ -171,6 +171,13 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 -(void)cardTapped:(UIView *)card
 {
     [delegate tapped:self];
+    
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
+    Profile *currentProfile = [sharedManager.profilesForToday objectAtIndex:cardsLoadedIndex];
+    
+    NSLog(@"you tapped on a profile.... %@", currentProfile.profileName);
+    // now to pass info to the card
+    
 }
 
 //%%% when you hit the right button, this is called and substitutes the swipe

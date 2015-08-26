@@ -14,6 +14,8 @@
 -(id)init {
     NSLog(@"Init");
     
+    _cardsLoadedIndexGlobal = 0;
+    
     Profile *profile1 = [[Profile alloc] init];
     profile1.profileName = @"XxCEREALKILLERxX";
     profile1.profileImageName = @"p_cerealkiller";

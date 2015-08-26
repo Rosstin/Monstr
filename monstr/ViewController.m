@@ -9,6 +9,8 @@
 
 #import "ViewController.h"
 #import "DraggableViewBackground.h"
+#import "Profile.h"
+#import "ProfileStack.h"
 
 
 @interface ViewController ()
@@ -18,6 +20,10 @@
 
 
 - (void)tapped:(UIView *)card {
+    
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
+    Profile *currentProfile = [sharedManager.profilesForToday objectAtIndex: *(sharedManager.cardsLoadedIndexGlobal)];
+    
     [self performSegueWithIdentifier:@"SegueToProfile" sender:self];
 }
 
@@ -28,31 +34,32 @@
     [self.view addSubview:draggableBackground];
     
     draggableBackground.delegate = self;
-    
-    
-    
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    //[self performSegueWithIdentifier:@"test" sender:self];
-}
 
-- (void)doSegue
+//- (void)viewDidAppear:(BOOL)animated
+//{}
+
+//- (void) viewWillDisappear:(BOOL)animated
+//{ NSLog(@"disappearing...");}
+
+- (void) viewWillAppear:(BOOL)animated
 {
-    NSLog(@"doSegue");
+    [self.navigationController setNavigationBarHidden:YES];
 }
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSLog(@"prepareForSegue");
-    /*
     if ([[segue identifier] isEqualToString:@"SegueToProfile"])
     {
-        NSLog(@"if ([[segue identifier] isEqualToString:@SegueToProfile])");
+        //NSLog(@"not hiding nav bar");
+        //NSLog(@"if ([[segue identifier] isEqualToString:@SegueToProfile])");
+        [self.navigationController setNavigationBarHidden:NO];
     }
-    */
+    else{
+        //NSLog(@"NOT not hiding nav bar");
+    }
 }
 
 

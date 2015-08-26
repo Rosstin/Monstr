@@ -21,6 +21,7 @@
 		99B7AECF192D513800C1B49C /* DraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B7AECE192D513800C1B49C /* DraggableView.m */; };
 		99B7AED2192E914500C1B49C /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B7AED1192E914500C1B49C /* OverlayView.m */; };
 		99FDDE7919A992F200371454 /* DraggableViewBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FDDE7819A992F200371454 /* DraggableViewBackground.m */; };
+		F32CA57D1B8D38A900F3ECBD /* MonstrNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F32CA57C1B8D38A900F3ECBD /* MonstrNavigationController.m */; };
 		F3F620721B8CE163004CA182 /* profiles.csv in Resources */ = {isa = PBXBuildFile; fileRef = F3F620711B8CE163004CA182 /* profiles.csv */; };
 		F3F620781B8CE27C004CA182 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F620771B8CE27C004CA182 /* Profile.m */; };
 		F3F6207A1B8CE4ED004CA182 /* ProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F620791B8CE4ED004CA182 /* ProfileView.m */; };
@@ -60,6 +61,8 @@
 		99B7AED1192E914500C1B49C /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
 		99FDDE7719A992F200371454 /* DraggableViewBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableViewBackground.h; sourceTree = "<group>"; };
 		99FDDE7819A992F200371454 /* DraggableViewBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableViewBackground.m; sourceTree = "<group>"; };
+		F32CA57B1B8D38A900F3ECBD /* MonstrNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonstrNavigationController.h; sourceTree = "<group>"; };
+		F32CA57C1B8D38A900F3ECBD /* MonstrNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonstrNavigationController.m; sourceTree = "<group>"; };
 		F3F620711B8CE163004CA182 /* profiles.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = profiles.csv; sourceTree = "<group>"; };
 		F3F620761B8CE27C004CA182 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
 		F3F620771B8CE27C004CA182 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
@@ -136,6 +139,8 @@
 				99B7AEA8192D50D500C1B49C /* AppDelegate.m */,
 				99B7AEAD192D50D500C1B49C /* ViewController.h */,
 				99B7AEAE192D50D500C1B49C /* ViewController.m */,
+				F32CA57B1B8D38A900F3ECBD /* MonstrNavigationController.h */,
+				F32CA57C1B8D38A900F3ECBD /* MonstrNavigationController.m */,
 				99FDDE7719A992F200371454 /* DraggableViewBackground.h */,
 				99FDDE7819A992F200371454 /* DraggableViewBackground.m */,
 				99B7AECD192D513800C1B49C /* DraggableView.h */,
@@ -272,6 +277,7 @@
 				99B7AEAF192D50D500C1B49C /* ViewController.m in Sources */,
 				99B7AED2192E914500C1B49C /* OverlayView.m in Sources */,
 				99B7AEA9192D50D500C1B49C /* AppDelegate.m in Sources */,
+				F32CA57D1B8D38A900F3ECBD /* MonstrNavigationController.m in Sources */,
 				F3F620841B8D099E004CA182 /* ProfileViewController.m in Sources */,
 				F3F6207A1B8CE4ED004CA182 /* ProfileView.m in Sources */,
 				99B7AECF192D513800C1B49C /* DraggableView.m in Sources */,

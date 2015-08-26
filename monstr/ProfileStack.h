@@ -13,6 +13,8 @@
 @property NSMutableSet *allProfiles;
 @property NSMutableArray *profilesForToday;
 
+@property int *cardsLoadedIndexGlobal;
+
 + (id)sharedManager;
 
 @end
