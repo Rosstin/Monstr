@@ -32,6 +32,9 @@
 
 -(IBAction)messageButtonClicked:(id)sender{
     NSLog(@"Message this user!!");
+    
+    [self performSegueWithIdentifier:@"SegueToMessageFromProfile" sender:self];
+    
 }
 
 

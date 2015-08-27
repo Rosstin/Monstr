@@ -75,6 +75,7 @@
                     <connections>
                         <outlet property="profileImage" destination="5rZ-LT-fI3" id="scm-q5-RFk"/>
                         <outlet property="profileText" destination="sm6-UK-pVY" id="Gn8-FY-Jak"/>
+                        <segue destination="brC-RR-M73" kind="modal" identifier="SegueToMessageFromProfile" id="EoY-8Z-9LC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L3S-8T-f7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -205,11 +206,12 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="hEe-TU-K8j"/>
+                        <segue destination="brC-RR-M73" kind="modal" identifier="SegueToMessageFromNav" id="S8k-Q2-d0T"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rPY-3l-QOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="881" y="-489"/>
+            <point key="canvasLocation" x="1245" y="-557"/>
         </scene>
     </scenes>
     <resources>
@@ -221,6 +223,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="8Mz-Mb-IxM"/>
+        <segue reference="FIE-jQ-pMt"/>
+        <segue reference="EoY-8Z-9LC"/>
     </inferredMetricsTieBreakers>
 </document>
