@@ -38,7 +38,7 @@
 
 -(void)incrementCardsLoadedIndexGlobal
 {
-    NSLog(@"incrementing cardsLoadedIndexGlobal");
+    //NSLog(@"incrementing cardsLoadedIndexGlobal");
     self.cardsLoadedIndexGlobal++;
 }
 

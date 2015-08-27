@@ -13,7 +13,6 @@
 		99B7AEA3192D50D500C1B49C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 99B7AEA1192D50D500C1B49C /* InfoPlist.strings */; };
 		99B7AEA5192D50D500C1B49C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B7AEA4192D50D500C1B49C /* main.m */; };
 		99B7AEA9192D50D500C1B49C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B7AEA8192D50D500C1B49C /* AppDelegate.m */; };
-		99B7AEAC192D50D500C1B49C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99B7AEAA192D50D500C1B49C /* Main.storyboard */; };
 		99B7AEAF192D50D500C1B49C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B7AEAE192D50D500C1B49C /* ViewController.m */; };
 		99B7AEB1192D50D500C1B49C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99B7AEB0192D50D500C1B49C /* Images.xcassets */; };
 		99B7AEB9192D50D500C1B49C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B7AE98192D50D500C1B49C /* Foundation.framework */; };
@@ -25,6 +24,8 @@
 		F32CA5821B8E6F4D00F3ECBD /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F32CA5811B8E6F4D00F3ECBD /* CHCSVParser.m */; };
 		F3F61E101B8F78D500EB0FC7 /* profiles.csv in Resources */ = {isa = PBXBuildFile; fileRef = F3F61E0F1B8F78D500EB0FC7 /* profiles.csv */; };
 		F3F61E121B8F7B8B00EB0FC7 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F61E111B8F7B8B00EB0FC7 /* Config.m */; };
+		F3F61E151B8F85DA00EB0FC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F61E141B8F85DA00EB0FC7 /* Main.storyboard */; };
+		F3F61E181B8F8D5600EB0FC7 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F61E171B8F8D5600EB0FC7 /* LoginController.m */; };
 		F3F620781B8CE27C004CA182 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F620771B8CE27C004CA182 /* Profile.m */; };
 		F3F6207A1B8CE4ED004CA182 /* ProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F620791B8CE4ED004CA182 /* ProfileView.m */; };
 		F3F6207E1B8CEA62004CA182 /* ProfileStack.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F6207D1B8CEA62004CA182 /* ProfileStack.m */; };
@@ -52,7 +53,6 @@
 		99B7AEA6192D50D500C1B49C /* Monstr-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Monstr-Prefix.pch"; sourceTree = "<group>"; };
 		99B7AEA7192D50D500C1B49C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		99B7AEA8192D50D500C1B49C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		99B7AEAB192D50D500C1B49C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		99B7AEAD192D50D500C1B49C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		99B7AEAE192D50D500C1B49C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		99B7AEB0192D50D500C1B49C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -70,6 +70,9 @@
 		F3F61E0F1B8F78D500EB0FC7 /* profiles.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = profiles.csv; sourceTree = "<group>"; };
 		F3F61E111B8F7B8B00EB0FC7 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		F3F61E131B8F7B9500EB0FC7 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		F3F61E141B8F85DA00EB0FC7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F3F61E161B8F8D5600EB0FC7 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		F3F61E171B8F8D5600EB0FC7 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 		F3F620761B8CE27C004CA182 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
 		F3F620771B8CE27C004CA182 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 		F3F620791B8CE4ED004CA182 /* ProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileView.m; sourceTree = "<group>"; };
@@ -134,8 +137,10 @@
 		99B7AE9E192D50D500C1B49C /* Monstr */ = {
 			isa = PBXGroup;
 			children = (
+				F3F61E141B8F85DA00EB0FC7 /* Main.storyboard */,
 				F3F61E0F1B8F78D500EB0FC7 /* profiles.csv */,
-				99B7AEAA192D50D500C1B49C /* Main.storyboard */,
+				F3F61E161B8F8D5600EB0FC7 /* LoginController.h */,
+				F3F61E171B8F8D5600EB0FC7 /* LoginController.m */,
 				F32CA57B1B8D38A900F3ECBD /* MonstrNavigationController.h */,
 				F32CA57C1B8D38A900F3ECBD /* MonstrNavigationController.m */,
 				F3F620831B8D099E004CA182 /* ProfileViewController.h */,
@@ -257,7 +262,7 @@
 				99B7AEB1192D50D500C1B49C /* Images.xcassets in Resources */,
 				99B7AEA3192D50D500C1B49C /* InfoPlist.strings in Resources */,
 				F3F61E101B8F78D500EB0FC7 /* profiles.csv in Resources */,
-				99B7AEAC192D50D500C1B49C /* Main.storyboard in Resources */,
+				F3F61E151B8F85DA00EB0FC7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +287,7 @@
 				99B7AEA9192D50D500C1B49C /* AppDelegate.m in Sources */,
 				F32CA57D1B8D38A900F3ECBD /* MonstrNavigationController.m in Sources */,
 				F3F620841B8D099E004CA182 /* ProfileViewController.m in Sources */,
+				F3F61E181B8F8D5600EB0FC7 /* LoginController.m in Sources */,
 				F3F6207A1B8CE4ED004CA182 /* ProfileView.m in Sources */,
 				99B7AECF192D513800C1B49C /* DraggableView.m in Sources */,
 				F32CA5821B8E6F4D00F3ECBD /* CHCSVParser.m in Sources */,
@@ -315,14 +321,6 @@
 				99B7AEA2192D50D500C1B49C /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		99B7AEAA192D50D500C1B49C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				99B7AEAB192D50D500C1B49C /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

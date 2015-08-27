@@ -35,6 +35,7 @@
 
 @protocol DraggableViewBackgroundDelegate <NSObject>
 -(void)tapped:(UIView *)card;
+-(void)returnToTitle:(UIView *)card;
 @end
 
 

@@ -24,6 +24,10 @@
     [self performSegueWithIdentifier:@"SegueToProfile" sender:self];
 }
 
+- (void)returnToTitle:(UIView *)card {
+    [self performSegueWithIdentifier:@"SegueToTitle" sender:self];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

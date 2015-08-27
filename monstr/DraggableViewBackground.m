@@ -154,8 +154,13 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
         [sharedManager incrementCardsLoadedIndexGlobal];
         [self insertSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-1)] belowSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-2)]];
     }
+    else if(sharedManager.cardsLoadedIndexGlobal == [allCards count]) {
+        //NSLog(@"LAST CARD!");
+        [sharedManager incrementCardsLoadedIndexGlobal];
+    }
     else{
-        NSLog(@"WE REACHED THE END! THE DAY IS OVER.");
+        //NSLog(@"LAST CARD SWIPED!");
+        [self returnToTitle];
     }
 }
 
@@ -178,10 +183,20 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
         [sharedManager incrementCardsLoadedIndexGlobal];
         [self insertSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-1)] belowSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-2)]];
     }
+    else if(sharedManager.cardsLoadedIndexGlobal == [allCards count]) {
+        //NSLog(@"LAST CARD!");
+        [sharedManager incrementCardsLoadedIndexGlobal];
+    }
     else{
-        NSLog(@"WE REACHED THE END! THE DAY IS OVER.");
+        //NSLog(@"LAST CARD SWIPED!");
+        [self returnToTitle];
     }
 
+}
+
+-(void)returnToTitle 
+{
+    [delegate returnToTitle:self];
 }
 
 -(void)cardTapped:(UIView *)card

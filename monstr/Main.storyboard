@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fvf-GV-bgW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="oom-yx-vMU">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
@@ -24,6 +24,7 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <segue destination="ktp-rT-Sfg" kind="push" identifier="SegueToProfile" id="m96-hh-Yz6"/>
+                        <segue destination="oom-yx-vMU" kind="push" identifier="SegueToTitle" id="FIE-jQ-pMt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -79,11 +80,54 @@
             </objects>
             <point key="canvasLocation" x="1496" y="294"/>
         </scene>
+        <!--Login Controller-->
+        <scene sceneID="0g1-fm-dcH">
+            <objects>
+                <viewController id="oom-yx-vMU" customClass="LoginController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lbg-cC-mgD"/>
+                        <viewControllerLayoutGuide type="bottom" id="44d-X3-Zrg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="48N-EC-Yej">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="MONSTR" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xbc-s8-XkL">
+                                <rect key="frame" x="119" y="269" width="82" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xb6-Z1-w0P">
+                                <rect key="frame" x="135" y="307" width="51" height="30"/>
+                                <state key="normal" title="LOG IN">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logIn:" destination="oom-yx-vMU" eventType="touchUpInside" id="41Y-I3-Lfe"/>
+                                    <segue destination="Fvf-GV-bgW" kind="modal" id="cE7-qX-Wyf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Xb6-Z1-w0P" secondAttribute="centerX" id="Hf7-uV-7UJ"/>
+                            <constraint firstAttribute="centerY" secondItem="Xbc-s8-XkL" secondAttribute="centerY" id="Nv5-VL-80B"/>
+                            <constraint firstAttribute="centerX" secondItem="Xbc-s8-XkL" secondAttribute="centerX" id="VnJ-w3-ZDw"/>
+                            <constraint firstItem="Xb6-Z1-w0P" firstAttribute="top" secondItem="Xbc-s8-XkL" secondAttribute="bottom" constant="8" id="bT7-Fo-vDY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pi2-kC-0qH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J44-y8-N6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="449" y="284"/>
+        </scene>
         <!--Monstr Navigation Controller-->
         <scene sceneID="eG0-MU-RBf">
             <objects>
                 <navigationController navigationBarHidden="YES" id="Fvf-GV-bgW" customClass="MonstrNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="97j-DP-ufr"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="F37-wx-E9d">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -96,7 +140,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rPY-3l-QOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="170" y="-377"/>
+            <point key="canvasLocation" x="881" y="-489"/>
         </scene>
     </scenes>
     <resources>
