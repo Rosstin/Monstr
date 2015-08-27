@@ -13,5 +13,6 @@
 @property NSString *profileName;
 @property NSString *profileImageName;
 @property NSString *profileText;
+@property NSString *profileHint;
 
 @end

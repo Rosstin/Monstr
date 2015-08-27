@@ -162,16 +162,30 @@
                                     <segue destination="Fvf-GV-bgW" kind="modal" id="cE7-qX-Wyf"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="73j-TH-8Yj">
+                                <rect key="frame" x="40" y="345" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="73j-TH-8Yj" firstAttribute="leading" secondItem="48N-EC-Yej" secondAttribute="leadingMargin" constant="24" id="5fJ-I4-VCz"/>
                             <constraint firstAttribute="centerX" secondItem="Xb6-Z1-w0P" secondAttribute="centerX" id="Hf7-uV-7UJ"/>
                             <constraint firstAttribute="centerY" secondItem="Xbc-s8-XkL" secondAttribute="centerY" id="Nv5-VL-80B"/>
                             <constraint firstAttribute="centerX" secondItem="Xbc-s8-XkL" secondAttribute="centerX" id="VnJ-w3-ZDw"/>
+                            <constraint firstItem="73j-TH-8Yj" firstAttribute="top" secondItem="Xb6-Z1-w0P" secondAttribute="bottom" constant="8" id="VtE-Hq-Ifi"/>
+                            <constraint firstItem="44d-X3-Zrg" firstAttribute="top" secondItem="73j-TH-8Yj" secondAttribute="bottom" constant="95" id="amI-UI-306"/>
                             <constraint firstItem="Xb6-Z1-w0P" firstAttribute="top" secondItem="Xbc-s8-XkL" secondAttribute="bottom" constant="8" id="bT7-Fo-vDY"/>
+                            <constraint firstAttribute="centerX" secondItem="73j-TH-8Yj" secondAttribute="centerX" id="bff-iL-AQQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Pi2-kC-0qH"/>
+                    <connections>
+                        <outlet property="hintText" destination="73j-TH-8Yj" id="6QO-ZW-q6U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J44-y8-N6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

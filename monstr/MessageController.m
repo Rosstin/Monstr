@@ -19,9 +19,7 @@
     ProfileStack *sharedManager = [ProfileStack sharedManager];
     _usernameField.text = sharedManager.profileUserIsLookingAt.profileName;
     
-    Profile *winningProfile = [sharedManager.allProfiles objectAtIndex: sharedManager.winningProfileIndex ];
-    
-    if(sharedManager.profileUserIsLookingAt.profileName == winningProfile.profileName){
+    if(sharedManager.profileUserIsLookingAt.profileName == sharedManager.profileWinner.profileName){
         NSLog(@"YOU WON! that was the profile you were looking for!!");
     }
     

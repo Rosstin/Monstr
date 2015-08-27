@@ -81,6 +81,10 @@
     return [_allProfiles objectAtIndex: allProfilesIndexNSU ];
 }
 
+- (Profile *) profileWinner{
+    return [_allProfiles objectAtIndex: _winningProfileIndex ];
+}
+
 - (void) loadProfiles{
     
     //_allProfiles
@@ -105,6 +109,9 @@
         profile.profileImageName = myProfile[2];
         profile.profileText = myProfile[4];
 
+        profile.profileHint = myProfile[5];
+
+        
         [_allProfiles addObject:profile];
     }
     

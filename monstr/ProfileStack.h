@@ -24,5 +24,6 @@
 -(void)generateDailyIndices;
 
 -(Profile *)profileUserIsLookingAt;
+-(Profile *)profileWinner;
 
 @end

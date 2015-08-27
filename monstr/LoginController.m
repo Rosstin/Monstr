@@ -21,6 +21,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    ProfileStack *sharedManager = [ProfileStack sharedManager]; // force it to gen a winning profile
+
+    _hintText.text = sharedManager.profileWinner.profileHint;
+    
     // Do any additional setup after loading the view.
 }
 
