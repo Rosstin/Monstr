@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Profile.h"
 
 @interface ProfileStack : NSObject
 
@@ -23,5 +24,7 @@
 + (id)sharedManager;
 
 -(void)incrementCardsLoadedIndexGlobal;
+
+-(Profile *)profileUserIsLookingAt;
 
 @end

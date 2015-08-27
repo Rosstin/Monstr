@@ -23,50 +23,21 @@
         
         Profile *profile1 = [[Profile alloc] init];
         
-        /*
-        profile1.profileName = @"XxCEREALKILLERxX";
-        profile1.profileImageName = @"p_cerealkiller";
-        Profile *profile2 = [[Profile alloc] init];
-        profile2.profileName = @"oldsoul";
-        profile2.profileImageName = @"p_tradvamp";
-        Profile *profile3 = [[Profile alloc] init];
-        profile3.profileName = @"XxCEREALKILLERxX";
-        profile3.profileImageName = @"p_cerealkiller";
-        Profile *profile4 = [[Profile alloc] init];
-        profile4.profileName = @"oldsoul";
-        profile4.profileImageName = @"p_tradvamp";
-        Profile *profile5 = [[Profile alloc] init];
-        profile5.profileName = @"XxCEREALKILLERxX";
-        profile5.profileImageName = @"p_cerealkiller";*/
-        
         _allProfiles = [NSMutableArray array];
         
-        /*
-        [_allProfiles addObject:profile1];
-        [_allProfiles addObject:profile2];
-        [_allProfiles addObject:profile3];
-        [_allProfiles addObject:profile4];
-        [_allProfiles addObject:profile5];*/
+        //_profilesForToday = [NSMutableArray array];
         
-        NSLog(@"allProfiles... before stuff... %@", _allProfiles);
-        
-        _profilesForToday = [NSMutableArray array];
-        
-        /*
-        [_profilesForToday addObject:profile1];
-        [_profilesForToday addObject:profile2];
-        [_profilesForToday addObject:profile3];
-        [_profilesForToday addObject:profile4];
-        [_profilesForToday addObject:profile5];
-         */
-        
-         
         _profileIndicesForToday = [NSMutableArray array];
         _excludedProfileIndices = [NSMutableArray array];
 
         [self loadProfiles];
         //[self generateDailyIndices];
-
+        
+        [_profileIndicesForToday addObject:[NSNumber numberWithInt:4]];
+        [_profileIndicesForToday addObject:[NSNumber numberWithInt:3]];
+        [_profileIndicesForToday addObject:[NSNumber numberWithInt:0]];
+        [_profileIndicesForToday addObject:[NSNumber numberWithInt:1]];
+        [_profileIndicesForToday addObject:[NSNumber numberWithInt:2]];
     }
     
     return self;
@@ -101,6 +72,18 @@
     //NSLog(@"excluded some indices... %@", _excludedProfileIndices);
 }
 
+- (Profile *) profileUserIsLookingAt{
+    NSUInteger myCardNumber = _cardBeingViewedByPlayer;
+    NSNumber *allProfilesIndex = [_profileIndicesForToday objectAtIndex:myCardNumber];
+    NSUInteger allProfilesIndexNSU = allProfilesIndex.integerValue;
+    
+    NSLog(@"_cardBeingViewedByPlayer.. %lu",(unsigned long)myCardNumber);
+    NSLog(@"allProfilesIndex.. %@",allProfilesIndex);
+    NSLog(@"allProfilesIndexNSU.. %lu",(unsigned long)allProfilesIndexNSU);
+    
+    return [_allProfiles objectAtIndex: allProfilesIndexNSU ];
+}
+
 - (void) loadProfiles{
     
     //_allProfiles
@@ -124,11 +107,8 @@
         profile.profileName = myProfile[1];
         profile.profileImageName = myProfile[2];
         
-        //NSLog(@"profileName... %@", myProfile[1]);
-        //NSLog(@"profileImageName... %@", myProfile[2]);
-        
         [_allProfiles addObject:profile];
-        [_profilesForToday addObject:profile];
+        //[_profilesForToday addObject:profile];
     }
     
     //NSLog(@"allProfiles... %@", _allProfiles);

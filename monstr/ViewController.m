@@ -22,7 +22,7 @@
 - (void)tapped:(UIView *)card {
     
     ProfileStack *sharedManager = [ProfileStack sharedManager];
-    Profile *currentProfile = [sharedManager.profilesForToday objectAtIndex: sharedManager.cardBeingViewedByPlayer];
+    //Profile *currentProfile = [sharedManager.profilesForToday objectAtIndex: sharedManager.cardBeingViewedByPlayer];
     
     NSLog(@"inside ViewController, I see... sharedManager.cardBeingViewedByPlayer... %ld", (long)sharedManager.cardBeingViewedByPlayer);
     

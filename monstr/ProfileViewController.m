@@ -16,9 +16,9 @@
     [super viewDidLoad];
     
     ProfileStack *sharedManager = [ProfileStack sharedManager];
-    Profile *currentProfile = [sharedManager.profilesForToday objectAtIndex:sharedManager.cardBeingViewedByPlayer];
+    //Profile *currentProfile = [sharedManager.profilesForToday objectAtIndex:sharedManager.cardBeingViewedByPlayer];
     
-    _profileImage.image = [UIImage imageNamed:currentProfile.profileImageName];
+    _profileImage.image = [UIImage imageNamed:sharedManager.profileUserIsLookingAt.profileImageName];
     
     //DraggableViewBackground *draggableBackground = [[DraggableViewBackground alloc]initWithFrame:self.view.frame];
     //[self.view addSubview:draggableBackground];

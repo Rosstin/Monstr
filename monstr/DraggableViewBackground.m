@@ -88,19 +88,18 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     
     
     DraggableView *draggableView = [[DraggableView alloc]initWithFrame:CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT)];
-    //draggableView.information.text = [exampleCardLabels objectAtIndex:index]; //%%% placeholder for card-specific information
-    
-    ProfileStack *sharedManager = [ProfileStack sharedManager];
-    Profile *currentProfile = [sharedManager.profilesForToday objectAtIndex:index];
-    
-    draggableView.information.text = currentProfile.profileName;
 
-    //NSLog(@"createDraggableViewWithDataAtIndex... %ld", (long)index);
-    //NSLog(@"profileName.... %@", draggableView.information.text);
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
     
+    NSNumber *indexOfThisProfile = [sharedManager.profileIndicesForToday objectAtIndex:index];
+    
+    Profile *profileBeingLoadedRightNow = [sharedManager.allProfiles objectAtIndex:indexOfThisProfile.intValue];
+    
+    draggableView.information.text = profileBeingLoadedRightNow.profileName;
+
     draggableView.delegate = self;
     
-    draggableView.profileView.imageView.image = [UIImage imageNamed:currentProfile.profileImageName];
+    draggableView.profileView.imageView.image = [UIImage imageNamed:profileBeingLoadedRightNow.profileImageName];
     
     return draggableView;
 }
@@ -185,11 +184,11 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 {
     [delegate tapped:self];
     
-    ProfileStack *sharedManager = [ProfileStack sharedManager];
-    Profile *currentProfile = [sharedManager.profilesForToday objectAtIndex:sharedManager.cardBeingViewedByPlayer];
+    //ProfileStack *sharedManager = [ProfileStack sharedManager];
+    //Profile *currentProfile = [sharedManager.profilesForToday objectAtIndex:sharedManager.cardBeingViewedByPlayer];
     
-    NSLog(@"you tapped on a profile.... %@", currentProfile.profileName);
-    NSLog(@"the sharedManager.cardsLoadedIndexGlobal is.... %ld", (long)sharedManager.cardsLoadedIndexGlobal);
+    //NSLog(@"you tapped on a profile.... %@", currentProfile.profileName);
+    //NSLog(@"the sharedManager.cardsLoadedIndexGlobal is.... %ld", (long)sharedManager.cardsLoadedIndexGlobal);
     
     // now to pass info to the card
     
