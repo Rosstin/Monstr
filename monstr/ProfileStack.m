@@ -44,7 +44,7 @@
 - (void) generateWinningProfile{
     int randomNumber = arc4random_uniform(_allProfiles.count);
     self.winningProfileIndex = randomNumber;
-    //NSLog(@"generateWinningProfile... ONLY DO THIS ONCE... %ld... ", (long)self.winningProfileIndex);
+    NSLog(@"generateWinningProfile... ONLY DO THIS ONCE... %ld... ", (long)self.winningProfileIndex);
 }
 
 - (void) generateDailyIndices{

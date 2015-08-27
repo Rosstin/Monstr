@@ -18,6 +18,20 @@
     
     ProfileStack *sharedManager = [ProfileStack sharedManager];
     _usernameField.text = sharedManager.profileUserIsLookingAt.profileName;
+    
+    Profile *winningProfile = [sharedManager.allProfiles objectAtIndex: sharedManager.winningProfileIndex ];
+    
+    if(sharedManager.profileUserIsLookingAt.profileName == winningProfile.profileName){
+        NSLog(@"YOU WON! that was the profile you were looking for!!");
+    }
+    
+    //NSNumber *currentIndex = [sharedManager.profileIndicesForToday indexOfObject: sharedManager.cardBeingViewedByPlayer];
+    
+    //sharedManager.cardBeingViewedByPlayer
+    
+    //if(sharedManager.winningProfileIndex == )
+    
+    
 }
 
 @end
