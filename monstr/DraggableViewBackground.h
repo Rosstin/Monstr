@@ -53,6 +53,4 @@
 @property (retain,nonatomic)NSArray* todayCards;
 @property (retain,nonatomic)NSMutableArray* allProfileCards;
 
-
-
 @end

@@ -16,6 +16,7 @@
 @property NSInteger cardsLoadedIndexGlobal;
 @property NSInteger cardBeingViewedByPlayer;
 
+@property NSInteger winningProfileIndex;
 
 + (id)sharedManager;
 

@@ -26,6 +26,7 @@
 		F3F61E121B8F7B8B00EB0FC7 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F61E111B8F7B8B00EB0FC7 /* Config.m */; };
 		F3F61E151B8F85DA00EB0FC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F61E141B8F85DA00EB0FC7 /* Main.storyboard */; };
 		F3F61E181B8F8D5600EB0FC7 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F61E171B8F8D5600EB0FC7 /* LoginController.m */; };
+		F3F61E1E1B8F96DA00EB0FC7 /* MessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F61E1D1B8F96DA00EB0FC7 /* MessageController.m */; };
 		F3F620781B8CE27C004CA182 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F620771B8CE27C004CA182 /* Profile.m */; };
 		F3F6207A1B8CE4ED004CA182 /* ProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F620791B8CE4ED004CA182 /* ProfileView.m */; };
 		F3F6207E1B8CEA62004CA182 /* ProfileStack.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F6207D1B8CEA62004CA182 /* ProfileStack.m */; };
@@ -73,6 +74,8 @@
 		F3F61E141B8F85DA00EB0FC7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F3F61E161B8F8D5600EB0FC7 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
 		F3F61E171B8F8D5600EB0FC7 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
+		F3F61E1C1B8F96DA00EB0FC7 /* MessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageController.h; sourceTree = "<group>"; };
+		F3F61E1D1B8F96DA00EB0FC7 /* MessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageController.m; sourceTree = "<group>"; };
 		F3F620761B8CE27C004CA182 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
 		F3F620771B8CE27C004CA182 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 		F3F620791B8CE4ED004CA182 /* ProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileView.m; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				F3F61E141B8F85DA00EB0FC7 /* Main.storyboard */,
+				F3F61E1C1B8F96DA00EB0FC7 /* MessageController.h */,
+				F3F61E1D1B8F96DA00EB0FC7 /* MessageController.m */,
 				F3F61E0F1B8F78D500EB0FC7 /* profiles.csv */,
 				F3F61E161B8F8D5600EB0FC7 /* LoginController.h */,
 				F3F61E171B8F8D5600EB0FC7 /* LoginController.m */,
@@ -282,6 +287,7 @@
 			files = (
 				99FDDE7919A992F200371454 /* DraggableViewBackground.m in Sources */,
 				F3F61E121B8F7B8B00EB0FC7 /* Config.m in Sources */,
+				F3F61E1E1B8F96DA00EB0FC7 /* MessageController.m in Sources */,
 				99B7AEAF192D50D500C1B49C /* ViewController.m in Sources */,
 				99B7AED2192E914500C1B49C /* OverlayView.m in Sources */,
 				99B7AEA9192D50D500C1B49C /* AppDelegate.m in Sources */,

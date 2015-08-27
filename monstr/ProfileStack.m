@@ -28,7 +28,8 @@
         _excludedProfileIndices = [NSMutableArray array];
 
         [self loadProfiles];
-        //[self generateDailyIndices];
+        [self generateWinningProfile];
+        //[self generateDailyIndices]; //this is done thru login button now
     }
     
     return self;
@@ -40,10 +41,14 @@
     self.cardsLoadedIndexGlobal++;
 }
 
+- (void) generateWinningProfile{
+    int randomNumber = arc4random_uniform(_allProfiles.count);
+    self.winningProfileIndex = randomNumber;
+    NSLog(@"generateWinningProfile... ONLY DO THIS ONCE... %ld... ", (long)self.winningProfileIndex);
+}
 
 - (void) generateDailyIndices{
     NSLog(@"generating some random indices");
-    
     [_profileIndicesForToday removeAllObjects];
     
     while(_profileIndicesForToday.count < NUMBER_OF_PROFILES_PER_DAY){
@@ -104,8 +109,6 @@
     }
     
     //NSLog(@"allProfiles... %@", _allProfiles);
-    
-    
 }
 
 
