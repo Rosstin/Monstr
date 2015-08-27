@@ -23,8 +23,7 @@
 		99FDDE7919A992F200371454 /* DraggableViewBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FDDE7819A992F200371454 /* DraggableViewBackground.m */; };
 		F32CA57D1B8D38A900F3ECBD /* MonstrNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F32CA57C1B8D38A900F3ECBD /* MonstrNavigationController.m */; };
 		F32CA5821B8E6F4D00F3ECBD /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F32CA5811B8E6F4D00F3ECBD /* CHCSVParser.m */; };
-		F32CA5881B8E75E100F3ECBD /* profiles.csv in Resources */ = {isa = PBXBuildFile; fileRef = F32CA5871B8E75E100F3ECBD /* profiles.csv */; };
-		F32CA58A1B8E7A0800F3ECBD /* profilesTest.csv in Resources */ = {isa = PBXBuildFile; fileRef = F32CA5891B8E7A0800F3ECBD /* profilesTest.csv */; };
+		F3F61E101B8F78D500EB0FC7 /* profiles.csv in Resources */ = {isa = PBXBuildFile; fileRef = F3F61E0F1B8F78D500EB0FC7 /* profiles.csv */; };
 		F3F620781B8CE27C004CA182 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F620771B8CE27C004CA182 /* Profile.m */; };
 		F3F6207A1B8CE4ED004CA182 /* ProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F620791B8CE4ED004CA182 /* ProfileView.m */; };
 		F3F6207E1B8CEA62004CA182 /* ProfileStack.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F6207D1B8CEA62004CA182 /* ProfileStack.m */; };
@@ -67,8 +66,7 @@
 		F32CA57C1B8D38A900F3ECBD /* MonstrNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonstrNavigationController.m; sourceTree = "<group>"; };
 		F32CA5801B8E6F4D00F3ECBD /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
 		F32CA5811B8E6F4D00F3ECBD /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
-		F32CA5871B8E75E100F3ECBD /* profiles.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = profiles.csv; sourceTree = "<group>"; };
-		F32CA5891B8E7A0800F3ECBD /* profilesTest.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = profilesTest.csv; sourceTree = "<group>"; };
+		F3F61E0F1B8F78D500EB0FC7 /* profiles.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = profiles.csv; sourceTree = "<group>"; };
 		F3F620761B8CE27C004CA182 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
 		F3F620771B8CE27C004CA182 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 		F3F620791B8CE4ED004CA182 /* ProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileView.m; sourceTree = "<group>"; };
@@ -133,8 +131,7 @@
 		99B7AE9E192D50D500C1B49C /* Monstr */ = {
 			isa = PBXGroup;
 			children = (
-				F32CA5891B8E7A0800F3ECBD /* profilesTest.csv */,
-				F32CA5871B8E75E100F3ECBD /* profiles.csv */,
+				F3F61E0F1B8F78D500EB0FC7 /* profiles.csv */,
 				99B7AEAA192D50D500C1B49C /* Main.storyboard */,
 				F3F620831B8D099E004CA182 /* ProfileViewController.h */,
 				F3F620821B8D099E004CA182 /* ProfileViewController.m */,
@@ -253,9 +250,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				99B7AEB1192D50D500C1B49C /* Images.xcassets in Resources */,
-				F32CA58A1B8E7A0800F3ECBD /* profilesTest.csv in Resources */,
 				99B7AEA3192D50D500C1B49C /* InfoPlist.strings in Resources */,
-				F32CA5881B8E75E100F3ECBD /* profiles.csv in Resources */,
+				F3F61E101B8F78D500EB0FC7 /* profiles.csv in Resources */,
 				99B7AEAC192D50D500C1B49C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

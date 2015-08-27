@@ -31,13 +31,7 @@
         _excludedProfileIndices = [NSMutableArray array];
 
         [self loadProfiles];
-        //[self generateDailyIndices];
-        
-        [_profileIndicesForToday addObject:[NSNumber numberWithInt:4]];
-        [_profileIndicesForToday addObject:[NSNumber numberWithInt:3]];
-        [_profileIndicesForToday addObject:[NSNumber numberWithInt:0]];
-        [_profileIndicesForToday addObject:[NSNumber numberWithInt:1]];
-        [_profileIndicesForToday addObject:[NSNumber numberWithInt:2]];
+        [self generateDailyIndices];
     }
     
     return self;
@@ -52,7 +46,7 @@
 
 - (void) generateDailyIndices{
     //NSLog(@"generating some random indices");
-    while(_profileIndicesForToday.count < 3){
+    while(_profileIndicesForToday.count < 5){
         NSLog(@"generating indices");
         int randomNumber = arc4random_uniform(_allProfiles.count);
         bool excluded = false;
