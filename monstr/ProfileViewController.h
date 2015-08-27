@@ -7,6 +7,7 @@
 
 @interface ProfileViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *profileImage;
+@property (weak, nonatomic) IBOutlet UITextView *profileText;
 
 @end
 

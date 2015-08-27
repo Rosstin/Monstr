@@ -72,6 +72,7 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="profileImage" destination="5rZ-LT-fI3" id="scm-q5-RFk"/>
+                        <outlet property="profileText" destination="sm6-UK-pVY" id="Gn8-FY-Jak"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L3S-8T-f7i" userLabel="First Responder" sceneMemberID="firstResponder"/>

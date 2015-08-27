@@ -19,9 +19,9 @@
     //Profile *currentProfile = [sharedManager.profilesForToday objectAtIndex:sharedManager.cardBeingViewedByPlayer];
     
     _profileImage.image = [UIImage imageNamed:sharedManager.profileUserIsLookingAt.profileImageName];
+    _profileText.text = sharedManager.profileUserIsLookingAt.profileText;
     
-    //DraggableViewBackground *draggableBackground = [[DraggableViewBackground alloc]initWithFrame:self.view.frame];
-    //[self.view addSubview:draggableBackground];
+    
 }
 
 /*

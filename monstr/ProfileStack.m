@@ -63,8 +63,6 @@
             [_excludedProfileIndices addObject:[NSNumber numberWithInt:randomNumber]];
         }
     }
-    //NSLog(@"got some indices... %@", _profileIndicesForToday);
-    //NSLog(@"excluded some indices... %@", _excludedProfileIndices);
 }
 
 - (Profile *) profileUserIsLookingAt{
@@ -101,7 +99,8 @@
         Profile *profile = [[Profile alloc] init];
         profile.profileName = myProfile[1];
         profile.profileImageName = myProfile[2];
-        
+        profile.profileText = myProfile[4];
+
         [_allProfiles addObject:profile];
         //[_profilesForToday addObject:profile];
     }
