@@ -17,11 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //NSLog(@"MonstrNavigationController viewDidLoad");
-    
     self.navigationBar.translucent = NO;
-    
-    //self.navigationItem.backBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"wahahahahahaha"]];
     
     // Do any additional setup after loading the view.
 }

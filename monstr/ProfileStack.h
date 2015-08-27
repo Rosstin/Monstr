@@ -9,7 +9,6 @@
 @interface ProfileStack : NSObject
 
 @property NSMutableArray *allProfiles;
-@property NSMutableArray *profilesForToday;
 
 @property NSMutableArray *profileIndicesForToday;
 @property NSMutableArray *excludedProfileIndices;

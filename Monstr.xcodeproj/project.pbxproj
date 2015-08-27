@@ -136,6 +136,8 @@
 			children = (
 				F3F61E0F1B8F78D500EB0FC7 /* profiles.csv */,
 				99B7AEAA192D50D500C1B49C /* Main.storyboard */,
+				F32CA57B1B8D38A900F3ECBD /* MonstrNavigationController.h */,
+				F32CA57C1B8D38A900F3ECBD /* MonstrNavigationController.m */,
 				F3F620831B8D099E004CA182 /* ProfileViewController.h */,
 				F3F620821B8D099E004CA182 /* ProfileViewController.m */,
 				F3F620761B8CE27C004CA182 /* Profile.h */,
@@ -148,8 +150,6 @@
 				99B7AEA8192D50D500C1B49C /* AppDelegate.m */,
 				99B7AEAD192D50D500C1B49C /* ViewController.h */,
 				99B7AEAE192D50D500C1B49C /* ViewController.m */,
-				F32CA57B1B8D38A900F3ECBD /* MonstrNavigationController.h */,
-				F32CA57C1B8D38A900F3ECBD /* MonstrNavigationController.m */,
 				99FDDE7719A992F200371454 /* DraggableViewBackground.h */,
 				99FDDE7819A992F200371454 /* DraggableViewBackground.m */,
 				99B7AECD192D513800C1B49C /* DraggableView.h */,

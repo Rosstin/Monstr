@@ -11,7 +11,7 @@
 #import "Profile.h"
 
 @implementation DraggableViewBackground{
-    //NSInteger cardsLoadedIndex; //%%% the index of the card you have loaded into the loadedCards array last
+    //NSInteger cardsLoadedIndex; //%%% the index of the card you have loaded into the loadedCards array last //handled globally now
     NSMutableArray *loadedCards; //%%% the array of card loaded (change max_buffer_size to increase or decrease the number of cards this holds)
     
     UIButton* menuButton;
@@ -29,7 +29,7 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 
 @synthesize todayCards;
 
-@synthesize exampleCardLabels; //%%% all the labels I'm using as example data at the moment
+//@synthesize exampleCardLabels; //%%% all the labels I'm using as example data at the moment
 @synthesize allCards;//%%% all the cards
 
 - (id)initWithFrame:(CGRect)frame
@@ -39,15 +39,11 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
         [super layoutSubviews];
         [self setupView];
         
-        exampleCardLabels = [[NSArray alloc]initWithObjects:@"first",@"second",@"third",@"fourth",@"last", nil]; //%%% placeholder for card-specific information
-        
-        //init the day
-        //todayCards =
+        //exampleCardLabels = [[NSArray alloc]initWithObjects:@"first",@"second",@"third",@"fourth",@"last", nil]; //%%% placeholder for card-specific information
         
         loadedCards = [[NSMutableArray alloc] init];
         allCards = [[NSMutableArray alloc] init];
         
-        NSLog(@"initializing sharedManager.cardsLoadedIndexGlobal and cardBeingViewedByPlayer to 0");
         ProfileStack *sharedManager = [ProfileStack sharedManager];
         sharedManager.cardsLoadedIndexGlobal = 0;
         sharedManager.cardBeingViewedByPlayer = 0;
@@ -107,12 +103,14 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 //%%% loads all the cards and puts the first x in the "loaded cards" array
 -(void)loadCards
 {
-    if([exampleCardLabels count] > 0) {
-        NSInteger numLoadedCardsCap =(([exampleCardLabels count] > MAX_BUFFER_SIZE)?MAX_BUFFER_SIZE:[exampleCardLabels count]);
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
+
+    if([sharedManager.profileIndicesForToday count] > 0) {
+        NSInteger numLoadedCardsCap =(([sharedManager.profileIndicesForToday count] > MAX_BUFFER_SIZE)?MAX_BUFFER_SIZE:[sharedManager.profileIndicesForToday count]);
         //%%% if the buffer size is greater than the data size, there will be an array error, so this makes sure that doesn't happen
         
         //%%% loops through the exampleCardsLabels array to create a card for each label.  This should be customized by removing "exampleCardLabels" with your own array of data
-        for (int i = 0; i<[exampleCardLabels count]; i++) {
+        for (int i = 0; i<[sharedManager.profileIndicesForToday count]; i++) {
             DraggableView* newCard = [self createDraggableViewWithDataAtIndex:i];
             [allCards addObject:newCard];
             
@@ -142,20 +140,22 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 // This should be customized with your own action
 -(void)cardSwipedLeft:(UIView *)card;
 {
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
+
+    sharedManager.cardBeingViewedByPlayer++; // we always increment this regardless
+    
     //do whatever you want with the card that was swiped
     //    DraggableView *c = (DraggableView *)card;
     
     [loadedCards removeObjectAtIndex:0]; //%%% card was swiped, so it's no longer a "loaded card"
     
-    ProfileStack *sharedManager = [ProfileStack sharedManager];
-    
     if (sharedManager.cardsLoadedIndexGlobal < [allCards count]) { //%%% if we haven't reached the end of all cards, put another into the loaded cards
         [loadedCards addObject:[allCards objectAtIndex: sharedManager.cardsLoadedIndexGlobal]];
-        
         [sharedManager incrementCardsLoadedIndexGlobal];
-        sharedManager.cardBeingViewedByPlayer++;
-        
         [self insertSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-1)] belowSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-2)]];
+    }
+    else{
+        NSLog(@"WE REACHED THE END! THE DAY IS OVER.");
     }
 }
 
@@ -164,18 +164,22 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 // This should be customized with your own action
 -(void)cardSwipedRight:(UIView *)card
 {
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
+
+    sharedManager.cardBeingViewedByPlayer++; // we always increment this regardless
+    
     //do whatever you want with the card that was swiped
     //    DraggableView *c = (DraggableView *)card;
     
     [loadedCards removeObjectAtIndex:0]; //%%% card was swiped, so it's no longer a "loaded card"
     
-    ProfileStack *sharedManager = [ProfileStack sharedManager];
-
     if (sharedManager.cardsLoadedIndexGlobal < [allCards count]) { //%%% if we haven't reached the end of all cards, put another into the loaded cards
         [loadedCards addObject:[allCards objectAtIndex: sharedManager.cardsLoadedIndexGlobal ]];
         [sharedManager incrementCardsLoadedIndexGlobal];
-        sharedManager.cardBeingViewedByPlayer++;
         [self insertSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-1)] belowSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-2)]];
+    }
+    else{
+        NSLog(@"WE REACHED THE END! THE DAY IS OVER.");
     }
 
 }
@@ -183,12 +187,6 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 -(void)cardTapped:(UIView *)card
 {
     [delegate tapped:self];
-    
-    //ProfileStack *sharedManager = [ProfileStack sharedManager];
-    //Profile *currentProfile = [sharedManager.profilesForToday objectAtIndex:sharedManager.cardBeingViewedByPlayer];
-    
-    //NSLog(@"you tapped on a profile.... %@", currentProfile.profileName);
-    //NSLog(@"the sharedManager.cardsLoadedIndexGlobal is.... %ld", (long)sharedManager.cardsLoadedIndexGlobal);
     
     // now to pass info to the card
     

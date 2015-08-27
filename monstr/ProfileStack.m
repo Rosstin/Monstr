@@ -26,8 +26,6 @@
         
         _allProfiles = [NSMutableArray array];
         
-        //_profilesForToday = [NSMutableArray array];
-        
         _profileIndicesForToday = [NSMutableArray array];
         _excludedProfileIndices = [NSMutableArray array];
 
@@ -102,7 +100,6 @@
         profile.profileText = myProfile[4];
 
         [_allProfiles addObject:profile];
-        //[_profilesForToday addObject:profile];
     }
     
     //NSLog(@"allProfiles... %@", _allProfiles);
