@@ -17,6 +17,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         //self.backgroundColor = [UIColor whiteColor];
+        
         imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"p_cerealkiller"]];
         [self addSubview:imageView];
     }

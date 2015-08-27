@@ -47,8 +47,10 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
         loadedCards = [[NSMutableArray alloc] init];
         allCards = [[NSMutableArray alloc] init];
         
+        NSLog(@"initializing sharedManager.cardsLoadedIndexGlobal and cardBeingViewedByPlayer to 0");
         ProfileStack *sharedManager = [ProfileStack sharedManager];
         sharedManager.cardsLoadedIndexGlobal = 0;
+        sharedManager.cardBeingViewedByPlayer = 0;
         
         [self loadCards];
     }
@@ -131,7 +133,7 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
             }
             
             ProfileStack *sharedManager = [ProfileStack sharedManager];
-            sharedManager.cardsLoadedIndexGlobal++; //%%% we loaded a card into loaded cards, so we have to increment
+            [sharedManager incrementCardsLoadedIndexGlobal];
         }
     }
 }
@@ -151,7 +153,8 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     if (sharedManager.cardsLoadedIndexGlobal < [allCards count]) { //%%% if we haven't reached the end of all cards, put another into the loaded cards
         [loadedCards addObject:[allCards objectAtIndex: sharedManager.cardsLoadedIndexGlobal]];
         
-        sharedManager.cardsLoadedIndexGlobal++; //%%% loaded a card, so have to increment count
+        [sharedManager incrementCardsLoadedIndexGlobal];
+        sharedManager.cardBeingViewedByPlayer++;
         
         [self insertSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-1)] belowSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-2)]];
     }
@@ -171,7 +174,8 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 
     if (sharedManager.cardsLoadedIndexGlobal < [allCards count]) { //%%% if we haven't reached the end of all cards, put another into the loaded cards
         [loadedCards addObject:[allCards objectAtIndex: sharedManager.cardsLoadedIndexGlobal ]];
-        sharedManager.cardsLoadedIndexGlobal++;//%%% loaded a card, so have to increment count
+        [sharedManager incrementCardsLoadedIndexGlobal];
+        sharedManager.cardBeingViewedByPlayer++;
         [self insertSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-1)] belowSubview:[loadedCards objectAtIndex:(MAX_BUFFER_SIZE-2)]];
     }
 
@@ -182,9 +186,10 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     [delegate tapped:self];
     
     ProfileStack *sharedManager = [ProfileStack sharedManager];
-    Profile *currentProfile = [sharedManager.profilesForToday objectAtIndex:sharedManager.cardsLoadedIndexGlobal];
+    Profile *currentProfile = [sharedManager.profilesForToday objectAtIndex:sharedManager.cardBeingViewedByPlayer];
     
     NSLog(@"you tapped on a profile.... %@", currentProfile.profileName);
+    NSLog(@"the sharedManager.cardsLoadedIndexGlobal is.... %ld", (long)sharedManager.cardsLoadedIndexGlobal);
     
     // now to pass info to the card
     

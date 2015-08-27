@@ -22,7 +22,11 @@
 - (void)tapped:(UIView *)card {
     
     ProfileStack *sharedManager = [ProfileStack sharedManager];
-    Profile *currentProfile = [sharedManager.profilesForToday objectAtIndex: sharedManager.cardsLoadedIndexGlobal];
+    Profile *currentProfile = [sharedManager.profilesForToday objectAtIndex: sharedManager.cardBeingViewedByPlayer];
+    
+    NSLog(@"inside ViewController, I see... sharedManager.cardBeingViewedByPlayer... %ld", (long)sharedManager.cardBeingViewedByPlayer);
+    
+    //SOME LOGIC HERE-- we can set the profile the player is looking at or something here, somehow get that info to the next view
     
     [self performSegueWithIdentifier:@"SegueToProfile" sender:self];
 }

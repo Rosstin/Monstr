@@ -17,7 +17,11 @@
 @property NSMutableArray *excludedProfileIndices;
 
 @property NSInteger cardsLoadedIndexGlobal;
+@property NSInteger cardBeingViewedByPlayer;
+
 
 + (id)sharedManager;
+
+-(void)incrementCardsLoadedIndexGlobal;
 
 @end

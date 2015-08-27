@@ -13,12 +13,13 @@
 @implementation ProfileStack
 
 -(id)init {
-    NSLog(@"Init");
+    NSLog(@"Init ProfileStack");
     
     self = [super init];
     
     if(self) {
         _cardsLoadedIndexGlobal = 0;
+        _cardBeingViewedByPlayer = 0;
         
         Profile *profile1 = [[Profile alloc] init];
         
@@ -69,6 +70,12 @@
     }
     
     return self;
+}
+
+-(void)incrementCardsLoadedIndexGlobal
+{
+    NSLog(@"incrementing cardsLoadedIndexGlobal");
+    self.cardsLoadedIndexGlobal++;
 }
 
 
@@ -140,6 +147,5 @@
     return sharedProfileStack;
 }
 
-//+ (id)returnCardsLoadedIndex
 
 @end
