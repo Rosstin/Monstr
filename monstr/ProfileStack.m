@@ -9,6 +9,7 @@
 #import "ProfileStack.h"
 #import "Profile.h"
 #import "CHCSVParser.h"
+#import "Config.h"
 
 @implementation ProfileStack
 
@@ -46,7 +47,7 @@
 
 - (void) generateDailyIndices{
     //NSLog(@"generating some random indices");
-    while(_profileIndicesForToday.count < 5){
+    while(_profileIndicesForToday.count < NUMBER_OF_PROFILES_PER_DAY){
         NSLog(@"generating indices");
         int randomNumber = arc4random_uniform(_allProfiles.count);
         bool excluded = false;
