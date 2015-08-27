@@ -25,6 +25,7 @@
                     <connections>
                         <segue destination="ktp-rT-Sfg" kind="push" identifier="SegueToProfile" id="m96-hh-Yz6"/>
                         <segue destination="oom-yx-vMU" kind="push" identifier="SegueToTitle" id="FIE-jQ-pMt"/>
+                        <segue destination="brC-RR-M73" kind="push" identifier="SegueToMessage" id="1kM-0S-P1w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -93,7 +94,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ex6-J1-m1Q">
-                                <rect key="frame" x="139" y="273" width="42" height="21"/>
+                                <rect key="frame" x="0.0" y="273" width="320" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -101,13 +102,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="TOJ-yR-64L"/>
                     <connections>
                         <outlet property="usernameField" destination="Ex6-J1-m1Q" id="9hC-2r-cZM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9uf-yQ-8Y1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1496" y="954"/>
+            <point key="canvasLocation" x="1496" y="1002"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="0g1-fm-dcH">
@@ -170,23 +172,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rPY-3l-QOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="881" y="-489"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="axz-4d-jnJ">
-            <objects>
-                <viewController id="PvD-Fg-On9" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bwE-Ng-6jw"/>
-                        <viewControllerLayoutGuide type="bottom" id="FLD-Kf-Wg8"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jWS-uk-ssn">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tRP-f0-JIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>

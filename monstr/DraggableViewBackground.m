@@ -169,9 +169,13 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 // This should be customized with your own action
 -(void)cardSwipedRight:(UIView *)card
 {
+    NSLog(@"the user accepted the profile, and now we message them");
+    
+    [self messageUser];
+    
     ProfileStack *sharedManager = [ProfileStack sharedManager];
 
-    sharedManager.cardBeingViewedByPlayer++; // we always increment this regardless
+    //sharedManager.cardBeingViewedByPlayer++; // we always increment this regardless //don't increment because we chose to look at the card so we're stuck there now
     
     //do whatever you want with the card that was swiped
     //    DraggableView *c = (DraggableView *)card;
@@ -187,16 +191,22 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
         //NSLog(@"LAST CARD!");
         [sharedManager incrementCardsLoadedIndexGlobal];
     }
-    else{
-        //NSLog(@"LAST CARD SWIPED!");
-        [self returnToTitle];
-    }
+    // since you accepted, we're messaging them anyway
+    //else{
+    //    //NSLog(@"LAST CARD SWIPED!");
+    //    [self returnToTitle];
+    //}
 
 }
 
 -(void)returnToTitle 
 {
     [delegate returnToTitle:self];
+}
+
+-(void)messageUser
+{
+    [delegate messageUser:self];
 }
 
 -(void)cardTapped:(UIView *)card

@@ -13,13 +13,11 @@
 
 - (void)viewDidLoad
 {
-    NSLog(@"VIEWDIDLOAD PROFILEVIEWCONTROLLER");
+    NSLog(@"VIEWDIDLOAD MESSAGECONTROLLER");
     [super viewDidLoad];
     
     ProfileStack *sharedManager = [ProfileStack sharedManager];
-    
-    _usernameField.text = sharedManager.profileUserIsLookingAt.profileText;
+    _usernameField.text = sharedManager.profileUserIsLookingAt.profileName;
 }
-
 
 @end

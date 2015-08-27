@@ -44,15 +44,15 @@
 - (void) generateWinningProfile{
     int randomNumber = arc4random_uniform(_allProfiles.count);
     self.winningProfileIndex = randomNumber;
-    NSLog(@"generateWinningProfile... ONLY DO THIS ONCE... %ld... ", (long)self.winningProfileIndex);
+    //NSLog(@"generateWinningProfile... ONLY DO THIS ONCE... %ld... ", (long)self.winningProfileIndex);
 }
 
 - (void) generateDailyIndices{
-    NSLog(@"generating some random indices");
+    //NSLog(@"generating some random indices");
     [_profileIndicesForToday removeAllObjects];
     
     while(_profileIndicesForToday.count < NUMBER_OF_PROFILES_PER_DAY){
-        NSLog(@"generating indices");
+        //NSLog(@"generating indices");
         int randomNumber = arc4random_uniform(_allProfiles.count);
         bool excluded = false;
         for( NSNumber *n in _excludedProfileIndices ){
@@ -74,9 +74,9 @@
     NSNumber *allProfilesIndex = [_profileIndicesForToday objectAtIndex:myCardNumber];
     NSUInteger allProfilesIndexNSU = allProfilesIndex.integerValue;
     
-    NSLog(@"_cardBeingViewedByPlayer.. %lu",(unsigned long)myCardNumber);
-    NSLog(@"allProfilesIndex.. %@",allProfilesIndex);
-    NSLog(@"allProfilesIndexNSU.. %lu",(unsigned long)allProfilesIndexNSU);
+    //NSLog(@"_cardBeingViewedByPlayer.. %lu",(unsigned long)myCardNumber);
+    //NSLog(@"allProfilesIndex.. %@",allProfilesIndex);
+    //NSLog(@"allProfilesIndexNSU.. %lu",(unsigned long)allProfilesIndexNSU);
     
     return [_allProfiles objectAtIndex: allProfilesIndexNSU ];
 }

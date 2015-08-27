@@ -28,6 +28,10 @@
     [self performSegueWithIdentifier:@"SegueToTitle" sender:self];
 }
 
+- (void)messageUser:(UIView *)card {
+    [self performSegueWithIdentifier:@"SegueToMessage" sender:self];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
