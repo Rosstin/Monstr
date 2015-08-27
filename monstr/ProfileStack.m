@@ -22,6 +22,8 @@
         _cardsLoadedIndexGlobal = 0;
         _cardBeingViewedByPlayer = 0;
         
+        _winner = NO;
+        
         _allProfiles = [NSMutableArray array];
         
         _profileIndicesForToday = [NSMutableArray array];

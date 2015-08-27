@@ -18,6 +18,8 @@
 
 @property NSInteger winningProfileIndex;
 
+@property BOOL winner;
+
 + (id)sharedManager;
 
 -(void)incrementCardsLoadedIndexGlobal;

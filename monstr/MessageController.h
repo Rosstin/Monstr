@@ -10,5 +10,6 @@
 
 @interface MessageController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *usernameField;
+- (IBAction)doneButtonAction:(id)sender;
 
 @end

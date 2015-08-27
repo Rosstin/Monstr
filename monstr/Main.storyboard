@@ -115,7 +115,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="oom-yx-vMU" kind="modal" id="8Mz-Mb-IxM"/>
+                                    <action selector="doneButtonAction:" destination="brC-RR-M73" eventType="touchUpInside" id="0l4-aU-RH6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -130,11 +130,39 @@
                     <navigationItem key="navigationItem" id="TOJ-yR-64L"/>
                     <connections>
                         <outlet property="usernameField" destination="Ex6-J1-m1Q" id="9hC-2r-cZM"/>
+                        <segue destination="oom-yx-vMU" kind="modal" identifier="SegueToLoginFromMessage" id="LIL-9R-nib"/>
+                        <segue destination="Nx3-Fg-ekL" kind="modal" identifier="SegueToWinFromMessage" id="8fC-MK-fjd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9uf-yQ-8Y1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="881" y="1058"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MPM-hl-XA7">
+            <objects>
+                <viewController id="Nx3-Fg-ekL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aEF-Qz-QeM"/>
+                        <viewControllerLayoutGuide type="bottom" id="0vL-bW-eH2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Ay-gb-DDQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="U WIN!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Di2-As-Jq9">
+                                <rect key="frame" x="139" y="273" width="55" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aPb-K0-818" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1496" y="1058"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="0g1-fm-dcH">
@@ -223,7 +251,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="FIE-jQ-pMt"/>
-        <segue reference="EoY-8Z-9LC"/>
+        <segue reference="LIL-9R-nib"/>
+        <segue reference="1kM-0S-P1w"/>
     </inferredMetricsTieBreakers>
 </document>

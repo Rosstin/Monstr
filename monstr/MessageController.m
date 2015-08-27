@@ -21,15 +21,20 @@
     
     if(sharedManager.profileUserIsLookingAt.profileName == sharedManager.profileWinner.profileName){
         NSLog(@"YOU WON! that was the profile you were looking for!!");
+        sharedManager.winner = YES;
     }
+}
+
+- (IBAction)doneButtonAction:(id)sender {
     
-    //NSNumber *currentIndex = [sharedManager.profileIndicesForToday indexOfObject: sharedManager.cardBeingViewedByPlayer];
-    
-    //sharedManager.cardBeingViewedByPlayer
-    
-    //if(sharedManager.winningProfileIndex == )
-    
-    
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
+
+    if(sharedManager.winner){
+        [self performSegueWithIdentifier:@"SegueToWinFromMessage" sender:self];
+    }
+    else{
+        [self performSegueWithIdentifier:@"SegueToLoginFromMessage" sender:self];
+    }
 }
 
 @end
