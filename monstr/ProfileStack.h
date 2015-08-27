@@ -22,6 +22,7 @@
 
 -(void)incrementCardsLoadedIndexGlobal;
 -(void)generateDailyIndices;
+-(void)excludeCurrentProfile;
 
 -(Profile *)profileUserIsLookingAt;
 -(Profile *)profileWinner;

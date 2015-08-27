@@ -41,6 +41,15 @@
     self.cardsLoadedIndexGlobal++;
 }
 
+- (void) excludeCurrentProfile{
+    NSUInteger myCardNumber = _cardBeingViewedByPlayer;
+    NSNumber *allProfilesIndex = [_profileIndicesForToday objectAtIndex:myCardNumber];
+
+    [_excludedProfileIndices addObject:allProfilesIndex];
+    
+    NSLog(@"Permantly excluded the file at index... %@...", allProfilesIndex);
+}
+
 - (void) generateWinningProfile{
     int randomNumber = arc4random_uniform(_allProfiles.count);
     self.winningProfileIndex = randomNumber;
@@ -51,20 +60,34 @@
     //NSLog(@"generating some random indices");
     [_profileIndicesForToday removeAllObjects];
     
+    NSMutableArray *excludedRightNow = [NSMutableArray array];
+    
     while(_profileIndicesForToday.count < NUMBER_OF_PROFILES_PER_DAY){
         //NSLog(@"generating indices");
         int randomNumber = arc4random_uniform(_allProfiles.count);
-        bool excluded = false;
+        
+        bool exclude = false;
+        
+        // check if this profile was excluded permanently
         for( NSNumber *n in _excludedProfileIndices ){
             int num = [n intValue];
             if(randomNumber == num){
-                excluded = true;
+                exclude = true;
             }
         }
         
-        if(!excluded){
+        // check if this profile was excluded for this cycle
+        for (NSNumber *n in excludedRightNow){
+            int num = [n intValue];
+            if(randomNumber == num){
+                exclude = true;
+            }
+        }
+        
+        // not excluded this cycle, OR permanantly, so we can add it
+        if(!exclude){
             [_profileIndicesForToday addObject:[NSNumber numberWithInt:randomNumber]];
-            [_excludedProfileIndices addObject:[NSNumber numberWithInt:randomNumber]];
+            [excludedRightNow addObject:[NSNumber numberWithInt:randomNumber]];
         }
     }
 }
@@ -73,10 +96,6 @@
     NSUInteger myCardNumber = _cardBeingViewedByPlayer;
     NSNumber *allProfilesIndex = [_profileIndicesForToday objectAtIndex:myCardNumber];
     NSUInteger allProfilesIndexNSU = allProfilesIndex.integerValue;
-    
-    //NSLog(@"_cardBeingViewedByPlayer.. %lu",(unsigned long)myCardNumber);
-    //NSLog(@"allProfilesIndex.. %@",allProfilesIndex);
-    //NSLog(@"allProfilesIndexNSU.. %lu",(unsigned long)allProfilesIndexNSU);
     
     return [_allProfiles objectAtIndex: allProfilesIndexNSU ];
 }

@@ -174,8 +174,10 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     [self messageUser];
     
     ProfileStack *sharedManager = [ProfileStack sharedManager];
-
     //sharedManager.cardBeingViewedByPlayer++; // we always increment this regardless //don't increment because we chose to look at the card so we're stuck there now
+
+    //since they were accepted, remove them permanently from the pool
+    [sharedManager excludeCurrentProfile];
     
     //do whatever you want with the card that was swiped
     //    DraggableView *c = (DraggableView *)card;
