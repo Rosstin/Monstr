@@ -7,11 +7,15 @@
 //
 
 #import "LoginController.h"
+#import "ProfileStack.h"
 
 @implementation LoginController
 
 - (IBAction)logIn:(id)sender {
     NSLog(@"Logging in!");
+    
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
+    [sharedManager generateDailyIndices];
 }
 
 - (void)viewDidLoad {

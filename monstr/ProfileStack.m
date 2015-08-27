@@ -22,15 +22,13 @@
         _cardsLoadedIndexGlobal = 0;
         _cardBeingViewedByPlayer = 0;
         
-        Profile *profile1 = [[Profile alloc] init];
-        
         _allProfiles = [NSMutableArray array];
         
         _profileIndicesForToday = [NSMutableArray array];
         _excludedProfileIndices = [NSMutableArray array];
 
         [self loadProfiles];
-        [self generateDailyIndices];
+        //[self generateDailyIndices];
     }
     
     return self;
@@ -44,7 +42,10 @@
 
 
 - (void) generateDailyIndices{
-    //NSLog(@"generating some random indices");
+    NSLog(@"generating some random indices");
+    
+    [_profileIndicesForToday removeAllObjects];
+    
     while(_profileIndicesForToday.count < NUMBER_OF_PROFILES_PER_DAY){
         NSLog(@"generating indices");
         int randomNumber = arc4random_uniform(_allProfiles.count);

@@ -20,6 +20,7 @@
 + (id)sharedManager;
 
 -(void)incrementCardsLoadedIndexGlobal;
+-(void)generateDailyIndices;
 
 -(Profile *)profileUserIsLookingAt;
 
