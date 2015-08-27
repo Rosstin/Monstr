@@ -20,7 +20,18 @@
     ProfileStack *sharedManager = [ProfileStack sharedManager];
     
     _profileImage.image = [UIImage imageNamed:sharedManager.profileUserIsLookingAt.profileImageName];
-    _profileText.text = sharedManager.profileUserIsLookingAt.profileText;
+    
+    NSString *trimmedDesc = [sharedManager.profileUserIsLookingAt.profileDescriptors stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\""]];
+    
+    NSString *trimmedText = [sharedManager.profileUserIsLookingAt.profileText stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\""]];
+    
+    NSString *returnCarriage = @"\n\n";
+    
+    
+    
+    NSString *descriptorPlusReturn = [trimmedDesc stringByAppendingString:returnCarriage];
+    
+    _profileText.text = [descriptorPlusReturn stringByAppendingString: trimmedText];
 }
 
 -(void) addNavigationBarItem

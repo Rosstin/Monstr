@@ -23,7 +23,7 @@
     
     ProfileStack *sharedManager = [ProfileStack sharedManager]; // force it to gen a winning profile
 
-    _hintText.text = sharedManager.profileWinner.profileHint;
+    _hintText.text = [sharedManager.profileWinner.profileHint stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\""]];
     
     // Do any additional setup after loading the view.
 }

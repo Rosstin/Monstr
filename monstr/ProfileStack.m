@@ -128,10 +128,9 @@
         Profile *profile = [[Profile alloc] init];
         profile.profileName = myProfile[1];
         profile.profileImageName = myProfile[2];
+        profile.profileDescriptors = myProfile[3];
         profile.profileText = myProfile[4];
-
         profile.profileHint = myProfile[5];
-
         
         [_allProfiles addObject:profile];
     }
