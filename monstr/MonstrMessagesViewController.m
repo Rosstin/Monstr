@@ -321,6 +321,35 @@
     [self.demoData.messages addObject:message];
     
     [self finishSendingMessageAnimated:YES];
+    
+    float r = arc4random_uniform(200);
+    float time = 100 + r;
+    time = time/100;
+    
+    // set a timer for sending a message back
+    [NSTimer scheduledTimerWithTimeInterval: time
+                                     target:self
+                                   selector:@selector(messageResponse:)
+                                   userInfo:nil
+                                    repeats:NO];
+    
+}
+
+- (void)messageResponse:(NSTimer *)timer{
+    
+    NSDate* date = [NSDate date];
+
+    NSString *text = @"Monstrous response to your message. Rawr!";
+    
+    JSQMessage *message = [[JSQMessage alloc] initWithSenderId:dateId
+                                             senderDisplayName:dateName
+                                                          date:date
+                                                          text:text];
+
+    
+    [self.demoData.messages addObject:message];
+    
+    [self finishSendingMessageAnimated:YES];
 }
 
 - (void)didPressAccessoryButton:(UIButton *)sender

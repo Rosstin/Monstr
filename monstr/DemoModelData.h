@@ -34,7 +34,7 @@ static NSString * const kJSQDemoAvatarDisplayNameJobs = @"Monster Lady";
 static NSString * const kJSQDemoAvatarDisplayNameWoz = @"Monster With No Name";
 
 static NSString * const kJSQDemoAvatarIdSquires = @"053496-4509-289";
-static NSString * const kJSQDemoAvatarIdCook = @"468-768355-23123";
+static NSString * const dateId = @"468-768355-23123";
 static NSString * const kJSQDemoAvatarIdJobs = @"707-8956784-57";
 static NSString * const kJSQDemoAvatarIdWoz = @"309-41802-93823";
 
