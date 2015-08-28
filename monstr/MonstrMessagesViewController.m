@@ -37,6 +37,13 @@
     
     self.title = @"JSQMessages";
     
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
+
+    if(sharedManager.profileUserIsLookingAt.profileName == sharedManager.profileWinner.profileName){
+        NSLog(@"YOU WON! that was the profile you were looking for!!");
+        sharedManager.winner = YES;
+    }
+    
     /**
      *  You MUST set your senderId and display name
      */
@@ -342,37 +349,59 @@
     //NSString *text = @"Monstrous response to your message. Rawr!";
 
     ProfileStack *sharedManager = [ProfileStack sharedManager];
-    
-    NSString *response = sharedManager.profileUserIsLookingAt.badMessage;
-    
-    NSArray *responsesArray = [response componentsSeparatedByString:@"\n"];
-    
-    NSString *currentResponse = [responsesArray[0] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\""]];
-    
-    NSString *textLessFirstLine = @"";
-    
-    NSUInteger count = [responsesArray count];
-    
-    for(int i = 1; i < count; i++) { //don't re-add the first element
-        if( (i+1) == count ){
-            textLessFirstLine = [textLessFirstLine stringByAppendingString: responsesArray[i] ]; //don't append newline to last element
-        }
-        else{
-            textLessFirstLine = [textLessFirstLine stringByAppendingString: [responsesArray[i] stringByAppendingString:@"\n"] ];
-        }
+
+    NSString *response;
+    if(sharedManager.winner){
+        response = sharedManager.profileUserIsLookingAt.goodMessage;
+    }
+    else{
+        response = sharedManager.profileUserIsLookingAt.badMessage;
     }
     
-    sharedManager.profileUserIsLookingAt.badMessage = textLessFirstLine;
-    
-    JSQMessage *message = [[JSQMessage alloc] initWithSenderId:dateId
-                                             senderDisplayName:sharedManager.profileUserIsLookingAt.profileName
-                                                          date:date
-                                                          text:currentResponse];
+    if([response isEqualToString: @"empty"]){
+        NSLog(@"No more messages!");
+    } else{
+        NSLog(@"still more messages!");
 
-    
-    [self.demoData.messages addObject:message];
-    
-    [self finishSendingMessageAnimated:YES];
+        NSArray *responsesArray = [response componentsSeparatedByString:@"\n"];
+        
+        NSLog(@"number of lines in array... %lu ", (unsigned long)responsesArray.count);
+        
+        NSString *currentResponse = [responsesArray[0] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\""]];
+        
+        NSString *textLessFirstLine = @"";
+        
+        NSUInteger count = [responsesArray count];
+        
+        if(responsesArray.count > 1){
+            for(int i = 1; i < count; i++) { //don't re-add the first element
+                if( (i+1) == count ){
+                    textLessFirstLine = [textLessFirstLine stringByAppendingString: responsesArray[i] ]; //don't append newline to last element
+                }
+                else{
+                    textLessFirstLine = [textLessFirstLine stringByAppendingString: [responsesArray[i] stringByAppendingString:@"\n"] ];
+                }
+            }
+        } else {
+            textLessFirstLine = @"empty";
+        }
+        
+        if(sharedManager.winner){
+            sharedManager.profileUserIsLookingAt.goodMessage = textLessFirstLine;
+        }
+        else{
+            sharedManager.profileUserIsLookingAt.badMessage = textLessFirstLine;
+        }
+
+        JSQMessage *message = [[JSQMessage alloc] initWithSenderId:dateId
+                                                 senderDisplayName:sharedManager.profileUserIsLookingAt.profileName
+                                                              date:date
+                                                              text:currentResponse];
+        
+        [self.demoData.messages addObject:message];
+        
+        [self finishSendingMessageAnimated:YES];
+    }
 }
 
 - (void)didPressAccessoryButton:(UIButton *)sender
