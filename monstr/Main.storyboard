@@ -25,7 +25,7 @@
                     <connections>
                         <segue destination="ktp-rT-Sfg" kind="push" identifier="SegueToProfile" id="m96-hh-Yz6"/>
                         <segue destination="oom-yx-vMU" kind="push" identifier="SegueToTitle" id="FIE-jQ-pMt"/>
-                        <segue destination="brC-RR-M73" kind="push" identifier="SegueToMessage" id="1kM-0S-P1w"/>
+                        <segue destination="hIX-M7-QA8" kind="push" identifier="SegueToMessage" id="1W9-mJ-6sy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -175,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9uf-yQ-8Y1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="881" y="1058"/>
+            <point key="canvasLocation" x="293" y="1058"/>
         </scene>
         <!--Monstr Messages View Controller-->
         <scene sceneID="ZOe-if-iX1">
@@ -190,10 +190,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Z5S-FA-Wqd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTj-xE-t6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="881" y="1697"/>
+            <point key="canvasLocation" x="881" y="1058"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="MPM-hl-XA7">
@@ -295,7 +296,7 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="hEe-TU-K8j"/>
-                        <segue destination="brC-RR-M73" kind="modal" identifier="SegueToMessageFromNav" id="S8k-Q2-d0T"/>
+                        <segue destination="hIX-M7-QA8" kind="modal" identifier="SegueToMessageFromNav" id="Jab-05-NG9"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rPY-3l-QOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -313,7 +314,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="FIE-jQ-pMt"/>
-        <segue reference="1kM-0S-P1w"/>
+        <segue reference="LIL-9R-nib"/>
+        <segue reference="1W9-mJ-6sy"/>
     </inferredMetricsTieBreakers>
 </document>
