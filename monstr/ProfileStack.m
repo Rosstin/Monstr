@@ -31,8 +31,6 @@
     
     _winner = NO;
     
-    _allProfiles = [NSMutableArray array];
-    
     _profileIndicesForToday = [NSMutableArray array];
     _excludedProfileIndices = [NSMutableArray array];
     
@@ -69,8 +67,12 @@
     
     NSMutableArray *excludedRightNow = [NSMutableArray array];
     
-    while(_profileIndicesForToday.count < NUMBER_OF_PROFILES_PER_DAY){
-        //NSLog(@"generating indices");
+    int count = 0;
+    
+    while(_profileIndicesForToday.count < NUMBER_OF_PROFILES_PER_DAY && count < 100){
+        count++;
+        
+        NSLog(@"generating indices... %d", count);
         int randomNumber = arc4random_uniform(_allProfiles.count);
         
         bool exclude = false;
@@ -97,6 +99,12 @@
             [excludedRightNow addObject:[NSNumber numberWithInt:randomNumber]];
         }
     }
+    if(count >= 100){
+        NSLog(@"WARNING! NOT ENOUGH PROFILES! Reloading profiles and resetting excluded profiles.");
+        [self loadProfiles];
+        _excludedProfileIndices = [NSMutableArray array];
+        [self generateDailyIndices];
+    }
 }
 
 - (Profile *) profileUserIsLookingAt{
@@ -113,7 +121,7 @@
 
 - (void) loadProfiles{
     
-    //_allProfiles
+    _allProfiles = [NSMutableArray array];
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"profiles" ofType:@"csv"];
     
