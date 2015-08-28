@@ -41,7 +41,7 @@
      *  You MUST set your senderId and display name
      */
     self.senderId = kJSQDemoAvatarIdSquires;
-    self.senderDisplayName = kJSQDemoAvatarDisplayNameSquires;
+    self.senderDisplayName = selfName;
     
     //self.inputToolbar.contentView.textView.pasteDelegate = self;
     
@@ -49,7 +49,7 @@
      *  Load up our fake data for the demo
      */
     self.demoData = [[DemoModelData alloc] init];
-    
+        
     
     /**
      *  You can set custom avatar sizes

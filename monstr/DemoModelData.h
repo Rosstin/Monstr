@@ -28,10 +28,10 @@
  *  Do not actually do anything like this.
  */
 
-static NSString * const kJSQDemoAvatarDisplayNameSquires = @"Jesse Squires";
-static NSString * const kJSQDemoAvatarDisplayNameCook = @"Tim Cook";
-static NSString * const kJSQDemoAvatarDisplayNameJobs = @"Jobs";
-static NSString * const kJSQDemoAvatarDisplayNameWoz = @"Steve Wozniak";
+static NSString * const selfName = @"Me";
+static NSString * const dateName = @"Nonbinary Gender Monster";
+static NSString * const kJSQDemoAvatarDisplayNameJobs = @"Monster Lady";
+static NSString * const kJSQDemoAvatarDisplayNameWoz = @"Monster With No Name";
 
 static NSString * const kJSQDemoAvatarIdSquires = @"053496-4509-289";
 static NSString * const kJSQDemoAvatarIdCook = @"468-768355-23123";
