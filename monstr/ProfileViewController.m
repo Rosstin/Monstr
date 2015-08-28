@@ -22,16 +22,43 @@
     _profileImage.image = [UIImage imageNamed:sharedManager.profileUserIsLookingAt.profileImageName];
     
     NSString *trimmedDesc = [sharedManager.profileUserIsLookingAt.profileDescriptors stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\""]];
+
+    _profileDescription.text = trimmedDesc;
     
     NSString *trimmedText = [sharedManager.profileUserIsLookingAt.profileText stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\""]];
+
+    _profileText.text = trimmedText;
     
-    NSString *returnCarriage = @"\n\n";
+    _profileName.text = sharedManager.profileUserIsLookingAt.profileName;
+    
+    CGRect frame = _viewContainingContent.frame;
+    frame.size.height = 50;
+    _viewContainingContent.frame = frame;
+    
+    //_viewContainingContent.backgroundColor = [UIColor redColor];
+    
+    //CGRect viewBounds = _viewContainingContent.bounds;
+    //viewBounds.size.height = 50;
+    //_viewContainingContent.bounds = viewBounds;
+    
+    //[_viewContainingContent layoutIfNeeded];
     
     
+    //[_viewContainingContent setNeedsDisplay];
+    //[_scrollviewContainingView setNeedsDisplay];
     
-    NSString *descriptorPlusReturn = [trimmedDesc stringByAppendingString:returnCarriage];
+    //_viewContainingContent.hidden = YES;
     
-    _profileText.text = [descriptorPlusReturn stringByAppendingString: trimmedText];
+    
+    //_viewContainingContent.bounds
+
+    //CGRect newFrame = CGRectMake(_viewContainingContent.frame.origin.x, _viewContainingContent.frame.origin.y, _viewContainingContent.frame.size.width, 300);
+
+    //[_viewContainingContent setFrame: newFrame];
+    
+    //[self displ]
+    
+    
 }
 
 -(void) addNavigationBarItem

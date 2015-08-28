@@ -12,8 +12,12 @@
 
 -(void) addNavigationBarItem;
 
+@property (weak, nonatomic) IBOutlet UILabel *profileName;
 @property (weak, nonatomic) IBOutlet UIImageView *profileImage;
-@property (weak, nonatomic) IBOutlet UITextView *profileText;
+@property (weak, nonatomic) IBOutlet UILabel *profileDescription;
+@property (weak, nonatomic) IBOutlet UILabel *profileText;
+@property (weak, nonatomic) IBOutlet UIView *viewContainingContent;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollviewContainingView;
 
 @end
 
