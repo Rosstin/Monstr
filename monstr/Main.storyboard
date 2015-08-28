@@ -175,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9uf-yQ-8Y1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="293" y="1058"/>
+            <point key="canvasLocation" x="293" y="1802"/>
         </scene>
         <!--Monstr Messages View Controller-->
         <scene sceneID="ZOe-if-iX1">
@@ -220,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPb-K0-818" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1496" y="1058"/>
+            <point key="canvasLocation" x="881" y="1802"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="0g1-fm-dcH">

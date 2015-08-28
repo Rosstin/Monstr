@@ -102,6 +102,10 @@
      */
     
     // load my own fake messages here?
+    
+    self.messages = [[NSMutableArray alloc] init];
+    
+    /*
     self.messages = [[NSMutableArray alloc] initWithObjects:
                      [[JSQMessage alloc] initWithSenderId:kJSQDemoAvatarIdSquires
                                         senderDisplayName:selfName
@@ -132,7 +136,7 @@
                                         senderDisplayName:selfName
                                                      date:[NSDate date]
                                                      text:@"Nothing but monster things!"],
-                     nil];
+                     nil];*/
     
     //[self addPhotoMediaMessage];
     
