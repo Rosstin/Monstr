@@ -169,8 +169,6 @@
                     <navigationItem key="navigationItem" id="TOJ-yR-64L"/>
                     <connections>
                         <outlet property="usernameField" destination="Ex6-J1-m1Q" id="9hC-2r-cZM"/>
-                        <segue destination="oom-yx-vMU" kind="modal" identifier="SegueToLoginFromMessage" id="LIL-9R-nib"/>
-                        <segue destination="Nx3-Fg-ekL" kind="modal" identifier="SegueToWinFromMessage" id="8fC-MK-fjd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9uf-yQ-8Y1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -191,6 +189,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Z5S-FA-Wqd"/>
+                    <connections>
+                        <segue destination="oom-yx-vMU" kind="modal" identifier="SegueToLoginFromMessage" id="BD7-Z1-eJ4"/>
+                        <segue destination="Nx3-Fg-ekL" kind="modal" identifier="SegueToWinFromMessage" id="vtc-LB-dcC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTj-xE-t6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -314,7 +316,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="LIL-9R-nib"/>
+        <segue reference="BD7-Z1-eJ4"/>
         <segue reference="1W9-mJ-6sy"/>
     </inferredMetricsTieBreakers>
 </document>

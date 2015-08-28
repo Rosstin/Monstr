@@ -342,6 +342,18 @@
     
 }
 
+- (void)done:(NSTimer *)timer{
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
+    
+    if(sharedManager.winner){
+        [self performSegueWithIdentifier:@"SegueToWinFromMessage" sender:self];
+    }
+    else{
+        [self performSegueWithIdentifier:@"SegueToLoginFromMessage" sender:self];
+    }
+    
+}
+
 - (void)messageResponse:(NSTimer *)timer{
     
     NSDate* date = [NSDate date];
@@ -360,6 +372,18 @@
     
     if([response isEqualToString: @"empty"]){
         NSLog(@"No more messages!");
+        
+        float r = arc4random_uniform(200);
+        float time = 100 + r;
+        time = time/100;
+        
+        // set a timer for being done
+        [NSTimer scheduledTimerWithTimeInterval: time
+                                         target:self
+                                       selector:@selector(done:)
+                                       userInfo:nil
+                                        repeats:NO];
+        
     } else{
         NSLog(@"still more messages!");
 
