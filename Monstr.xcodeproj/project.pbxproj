@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53E31EA0D26738A5CBBDFA82 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC9785BA00B4154F17F2DF5 /* libPods.a */; };
 		99B7AE99192D50D500C1B49C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B7AE98192D50D500C1B49C /* Foundation.framework */; };
 		99B7AE9B192D50D500C1B49C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B7AE9A192D50D500C1B49C /* CoreGraphics.framework */; };
 		99B7AE9D192D50D500C1B49C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B7AE9C192D50D500C1B49C /* UIKit.framework */; };
@@ -22,6 +23,9 @@
 		99FDDE7919A992F200371454 /* DraggableViewBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FDDE7819A992F200371454 /* DraggableViewBackground.m */; };
 		F32CA57D1B8D38A900F3ECBD /* MonstrNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F32CA57C1B8D38A900F3ECBD /* MonstrNavigationController.m */; };
 		F32CA5821B8E6F4D00F3ECBD /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F32CA5811B8E6F4D00F3ECBD /* CHCSVParser.m */; };
+		F3C8B84C1B90FAFB0001057D /* MonstrMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8B84B1B90FAFB0001057D /* MonstrMessagesViewController.m */; };
+		F3C8B84F1B90FC5B0001057D /* DemoModelData.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8B84E1B90FC5B0001057D /* DemoModelData.m */; };
+		F3C8B8521B90FCB30001057D /* NSUserDefaults+DemoSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8B8511B90FCB30001057D /* NSUserDefaults+DemoSettings.m */; };
 		F3F61E101B8F78D500EB0FC7 /* profiles.csv in Resources */ = {isa = PBXBuildFile; fileRef = F3F61E0F1B8F78D500EB0FC7 /* profiles.csv */; };
 		F3F61E121B8F7B8B00EB0FC7 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F61E111B8F7B8B00EB0FC7 /* Config.m */; };
 		F3F61E151B8F85DA00EB0FC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F61E141B8F85DA00EB0FC7 /* Main.storyboard */; };
@@ -44,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4BC9785BA00B4154F17F2DF5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DAB09256907669DED725145 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		99B7AE95192D50D500C1B49C /* Monstr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Monstr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99B7AE98192D50D500C1B49C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		99B7AE9A192D50D500C1B49C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -64,10 +70,17 @@
 		99B7AED1192E914500C1B49C /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
 		99FDDE7719A992F200371454 /* DraggableViewBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableViewBackground.h; sourceTree = "<group>"; };
 		99FDDE7819A992F200371454 /* DraggableViewBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableViewBackground.m; sourceTree = "<group>"; };
+		ACE7B59594B5E22593AE89FA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F32CA57B1B8D38A900F3ECBD /* MonstrNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonstrNavigationController.h; sourceTree = "<group>"; };
 		F32CA57C1B8D38A900F3ECBD /* MonstrNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonstrNavigationController.m; sourceTree = "<group>"; };
 		F32CA5801B8E6F4D00F3ECBD /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
 		F32CA5811B8E6F4D00F3ECBD /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
+		F3C8B84A1B90FAFB0001057D /* MonstrMessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonstrMessagesViewController.h; sourceTree = "<group>"; };
+		F3C8B84B1B90FAFB0001057D /* MonstrMessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonstrMessagesViewController.m; sourceTree = "<group>"; };
+		F3C8B84D1B90FC5B0001057D /* DemoModelData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoModelData.h; sourceTree = "<group>"; };
+		F3C8B84E1B90FC5B0001057D /* DemoModelData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoModelData.m; sourceTree = "<group>"; };
+		F3C8B8501B90FCB30001057D /* NSUserDefaults+DemoSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+DemoSettings.h"; sourceTree = "<group>"; };
+		F3C8B8511B90FCB30001057D /* NSUserDefaults+DemoSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+DemoSettings.m"; sourceTree = "<group>"; };
 		F3F61E0F1B8F78D500EB0FC7 /* profiles.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = profiles.csv; sourceTree = "<group>"; };
 		F3F61E111B8F7B8B00EB0FC7 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		F3F61E131B8F7B9500EB0FC7 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
@@ -94,6 +107,7 @@
 				99B7AE9B192D50D500C1B49C /* CoreGraphics.framework in Frameworks */,
 				99B7AE9D192D50D500C1B49C /* UIKit.framework in Frameworks */,
 				99B7AE99192D50D500C1B49C /* Foundation.framework in Frameworks */,
+				53E31EA0D26738A5CBBDFA82 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,12 +123,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CF21D43386011EB9DED7973 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8DAB09256907669DED725145 /* Pods.debug.xcconfig */,
+				ACE7B59594B5E22593AE89FA /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		99B7AE8C192D50D500C1B49C = {
 			isa = PBXGroup;
 			children = (
 				99B7AE9E192D50D500C1B49C /* Monstr */,
 				99B7AE97192D50D500C1B49C /* Frameworks */,
 				99B7AE96192D50D500C1B49C /* Products */,
+				3CF21D43386011EB9DED7973 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +157,7 @@
 				99B7AE98192D50D500C1B49C /* Foundation.framework */,
 				99B7AE9A192D50D500C1B49C /* CoreGraphics.framework */,
 				99B7AE9C192D50D500C1B49C /* UIKit.framework */,
+				4BC9785BA00B4154F17F2DF5 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -141,6 +166,12 @@
 			isa = PBXGroup;
 			children = (
 				F3F61E141B8F85DA00EB0FC7 /* Main.storyboard */,
+				F3C8B84A1B90FAFB0001057D /* MonstrMessagesViewController.h */,
+				F3C8B84B1B90FAFB0001057D /* MonstrMessagesViewController.m */,
+				F3C8B84D1B90FC5B0001057D /* DemoModelData.h */,
+				F3C8B84E1B90FC5B0001057D /* DemoModelData.m */,
+				F3C8B8501B90FCB30001057D /* NSUserDefaults+DemoSettings.h */,
+				F3C8B8511B90FCB30001057D /* NSUserDefaults+DemoSettings.m */,
 				F3F61E1C1B8F96DA00EB0FC7 /* MessageController.h */,
 				F3F61E1D1B8F96DA00EB0FC7 /* MessageController.m */,
 				F3F61E0F1B8F78D500EB0FC7 /* profiles.csv */,
@@ -195,9 +226,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 99B7AEC7192D50D500C1B49C /* Build configuration list for PBXNativeTarget "Monstr" */;
 			buildPhases = (
+				FF61030F9BFE02C1654A92C0 /* Check Pods Manifest.lock */,
 				99B7AE91192D50D500C1B49C /* Sources */,
 				99B7AE92192D50D500C1B49C /* Frameworks */,
 				99B7AE93192D50D500C1B49C /* Resources */,
+				8E76B99C717424E0A3CC5561 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -280,14 +313,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8E76B99C717424E0A3CC5561 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF61030F9BFE02C1654A92C0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		99B7AE91192D50D500C1B49C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C8B84F1B90FC5B0001057D /* DemoModelData.m in Sources */,
 				99FDDE7919A992F200371454 /* DraggableViewBackground.m in Sources */,
 				F3F61E121B8F7B8B00EB0FC7 /* Config.m in Sources */,
 				F3F61E1E1B8F96DA00EB0FC7 /* MessageController.m in Sources */,
+				F3C8B84C1B90FAFB0001057D /* MonstrMessagesViewController.m in Sources */,
 				99B7AEAF192D50D500C1B49C /* ViewController.m in Sources */,
 				99B7AED2192E914500C1B49C /* OverlayView.m in Sources */,
 				99B7AEA9192D50D500C1B49C /* AppDelegate.m in Sources */,
@@ -300,6 +368,7 @@
 				F3F620781B8CE27C004CA182 /* Profile.m in Sources */,
 				99B7AEA5192D50D500C1B49C /* main.m in Sources */,
 				F3F6207E1B8CEA62004CA182 /* ProfileStack.m in Sources */,
+				F3C8B8521B90FCB30001057D /* NSUserDefaults+DemoSettings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +473,7 @@
 		};
 		99B7AEC8192D50D500C1B49C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DAB09256907669DED725145 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -417,6 +487,7 @@
 		};
 		99B7AEC9192D50D500C1B49C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACE7B59594B5E22593AE89FA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
