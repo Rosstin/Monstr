@@ -26,6 +26,8 @@
 -(void)generateDailyIndices;
 -(void)excludeCurrentProfile;
 
+-(void)resetAll;
+
 -(Profile *)profileUserIsLookingAt;
 -(Profile *)profileWinner;
 

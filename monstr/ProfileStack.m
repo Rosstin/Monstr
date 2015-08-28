@@ -19,23 +19,28 @@
     self = [super init];
     
     if(self) {
-        _cardsLoadedIndexGlobal = 0;
-        _cardBeingViewedByPlayer = 0;
-        
-        _winner = NO;
-        
-        _allProfiles = [NSMutableArray array];
-        
-        _profileIndicesForToday = [NSMutableArray array];
-        _excludedProfileIndices = [NSMutableArray array];
-
-        [self loadProfiles];
-        [self generateWinningProfile];
-        //[self generateDailyIndices]; //this is done thru login button now
+        [self resetAll];
     }
     
     return self;
 }
+
+-(void) resetAll{
+    _cardsLoadedIndexGlobal = 0;
+    _cardBeingViewedByPlayer = 0;
+    
+    _winner = NO;
+    
+    _allProfiles = [NSMutableArray array];
+    
+    _profileIndicesForToday = [NSMutableArray array];
+    _excludedProfileIndices = [NSMutableArray array];
+    
+    [self loadProfiles];
+    [self generateWinningProfile];
+    //[self generateDailyIndices]; //this is done thru login button now
+}
+
 
 -(void)incrementCardsLoadedIndexGlobal
 {

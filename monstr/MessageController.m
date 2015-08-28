@@ -34,7 +34,7 @@
     }
     else{
         [self performSegueWithIdentifier:@"SegueToLoginFromMessage" sender:self];
-    }
+    }  
 }
 
 @end

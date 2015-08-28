@@ -198,10 +198,10 @@
             </objects>
             <point key="canvasLocation" x="881" y="1058"/>
         </scene>
-        <!--View Controller-->
+        <!--Win Screen Controller-->
         <scene sceneID="MPM-hl-XA7">
             <objects>
-                <viewController id="Nx3-Fg-ekL" sceneMemberID="viewController">
+                <viewController id="Nx3-Fg-ekL" customClass="WinScreenController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aEF-Qz-QeM"/>
                         <viewControllerLayoutGuide type="bottom" id="0vL-bW-eH2"/>
@@ -210,15 +210,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="U WIN!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Di2-As-Jq9">
-                                <rect key="frame" x="139" y="273" width="55" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="U WIN!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Di2-As-Jq9">
+                                <rect key="frame" x="133" y="273" width="54.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If0-oq-7C6">
+                                <rect key="frame" x="127.5" y="302" width="65" height="30"/>
+                                <state key="normal" title="start over">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startOver:" destination="Nx3-Fg-ekL" eventType="touchUpInside" id="weo-Ub-hw2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="If0-oq-7C6" firstAttribute="top" secondItem="Di2-As-Jq9" secondAttribute="bottom" constant="8" id="7IT-01-c1C"/>
+                            <constraint firstAttribute="centerX" secondItem="If0-oq-7C6" secondAttribute="centerX" id="7o1-Pl-TqO"/>
+                            <constraint firstAttribute="centerY" secondItem="Di2-As-Jq9" secondAttribute="centerY" id="pcq-g5-vEJ"/>
+                            <constraint firstAttribute="centerX" secondItem="Di2-As-Jq9" secondAttribute="centerX" id="rYv-xg-WMA"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="oom-yx-vMU" kind="modal" identifier="SegueToTitleFromWin" id="HeW-oI-xu4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPb-K0-818" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -316,7 +334,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="BD7-Z1-eJ4"/>
+        <segue reference="HeW-oI-xu4"/>
         <segue reference="1W9-mJ-6sy"/>
     </inferredMetricsTieBreakers>
 </document>

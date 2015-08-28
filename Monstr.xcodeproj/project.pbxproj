@@ -24,6 +24,7 @@
 		F32CA57D1B8D38A900F3ECBD /* MonstrNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F32CA57C1B8D38A900F3ECBD /* MonstrNavigationController.m */; };
 		F32CA5821B8E6F4D00F3ECBD /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F32CA5811B8E6F4D00F3ECBD /* CHCSVParser.m */; };
 		F32FD00B1B91138D00710E45 /* profiles.csv in Resources */ = {isa = PBXBuildFile; fileRef = F32FD00A1B91138D00710E45 /* profiles.csv */; };
+		F32FD00E1B9125A200710E45 /* WinScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = F32FD00D1B9125A200710E45 /* WinScreenController.m */; };
 		F3C8B84C1B90FAFB0001057D /* MonstrMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8B84B1B90FAFB0001057D /* MonstrMessagesViewController.m */; };
 		F3C8B84F1B90FC5B0001057D /* DemoModelData.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8B84E1B90FC5B0001057D /* DemoModelData.m */; };
 		F3C8B8521B90FCB30001057D /* NSUserDefaults+DemoSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8B8511B90FCB30001057D /* NSUserDefaults+DemoSettings.m */; };
@@ -76,6 +77,8 @@
 		F32CA5801B8E6F4D00F3ECBD /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
 		F32CA5811B8E6F4D00F3ECBD /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
 		F32FD00A1B91138D00710E45 /* profiles.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = profiles.csv; sourceTree = "<group>"; };
+		F32FD00C1B9125A200710E45 /* WinScreenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinScreenController.h; sourceTree = "<group>"; };
+		F32FD00D1B9125A200710E45 /* WinScreenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinScreenController.m; sourceTree = "<group>"; };
 		F3C8B84A1B90FAFB0001057D /* MonstrMessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonstrMessagesViewController.h; sourceTree = "<group>"; };
 		F3C8B84B1B90FAFB0001057D /* MonstrMessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonstrMessagesViewController.m; sourceTree = "<group>"; };
 		F3C8B84D1B90FC5B0001057D /* DemoModelData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoModelData.h; sourceTree = "<group>"; };
@@ -168,6 +171,8 @@
 				F32FD00A1B91138D00710E45 /* profiles.csv */,
 				F3F61E141B8F85DA00EB0FC7 /* Main.storyboard */,
 				F3C8B84A1B90FAFB0001057D /* MonstrMessagesViewController.h */,
+				F32FD00C1B9125A200710E45 /* WinScreenController.h */,
+				F32FD00D1B9125A200710E45 /* WinScreenController.m */,
 				F3C8B84B1B90FAFB0001057D /* MonstrMessagesViewController.m */,
 				F3C8B84D1B90FC5B0001057D /* DemoModelData.h */,
 				F3C8B84E1B90FC5B0001057D /* DemoModelData.m */,
@@ -357,6 +362,7 @@
 				F3F61E1E1B8F96DA00EB0FC7 /* MessageController.m in Sources */,
 				F3C8B84C1B90FAFB0001057D /* MonstrMessagesViewController.m in Sources */,
 				99B7AEAF192D50D500C1B49C /* ViewController.m in Sources */,
+				F32FD00E1B9125A200710E45 /* WinScreenController.m in Sources */,
 				99B7AED2192E914500C1B49C /* OverlayView.m in Sources */,
 				99B7AEA9192D50D500C1B49C /* AppDelegate.m in Sources */,
 				F32CA57D1B8D38A900F3ECBD /* MonstrNavigationController.m in Sources */,
