@@ -15,6 +15,8 @@
 
 #import "JSQMessagesComposerTextView.h"
 
+#import "ProfileStack.h"
+
 @class MonstrMessagesViewController;
 
 @protocol JSQMonstrViewControllerDelegate <NSObject>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hIX-M7-QA8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="oom-yx-vMU">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
@@ -114,7 +114,7 @@
                         <outlet property="profileText" destination="iJg-sD-G5e" id="CAs-WW-gH0"/>
                         <outlet property="scrollviewContainingView" destination="oNk-2M-Jyv" id="Cc6-cj-1Ni"/>
                         <outlet property="viewContainingContent" destination="7Tl-N9-dff" id="U0z-Og-g0A"/>
-                        <segue destination="brC-RR-M73" kind="modal" identifier="SegueToMessageFromProfile" id="EoY-8Z-9LC"/>
+                        <segue destination="hIX-M7-QA8" kind="modal" identifier="SegueToMessageFromProfile" id="p9v-Zh-02f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L3S-8T-f7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -313,7 +313,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="LIL-9R-nib"/>
-        <segue reference="EoY-8Z-9LC"/>
+        <segue reference="FIE-jQ-pMt"/>
+        <segue reference="1kM-0S-P1w"/>
     </inferredMetricsTieBreakers>
 </document>

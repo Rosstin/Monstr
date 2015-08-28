@@ -131,6 +131,8 @@
         profile.profileDescriptors = myProfile[3];
         profile.profileText = myProfile[4];
         profile.profileHint = myProfile[5];
+        profile.badMessage = myProfile[6];
+        profile.goodMessage = myProfile[7];
         
         [_allProfiles addObject:profile];
     }

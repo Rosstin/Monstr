@@ -16,4 +16,7 @@
 @property NSString *profileText;
 @property NSString *profileHint;
 
+@property NSString *goodMessage;
+@property NSString *badMessage;
+
 @end

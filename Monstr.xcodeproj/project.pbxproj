@@ -23,10 +23,10 @@
 		99FDDE7919A992F200371454 /* DraggableViewBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FDDE7819A992F200371454 /* DraggableViewBackground.m */; };
 		F32CA57D1B8D38A900F3ECBD /* MonstrNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F32CA57C1B8D38A900F3ECBD /* MonstrNavigationController.m */; };
 		F32CA5821B8E6F4D00F3ECBD /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F32CA5811B8E6F4D00F3ECBD /* CHCSVParser.m */; };
+		F32FD00B1B91138D00710E45 /* profiles.csv in Resources */ = {isa = PBXBuildFile; fileRef = F32FD00A1B91138D00710E45 /* profiles.csv */; };
 		F3C8B84C1B90FAFB0001057D /* MonstrMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8B84B1B90FAFB0001057D /* MonstrMessagesViewController.m */; };
 		F3C8B84F1B90FC5B0001057D /* DemoModelData.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8B84E1B90FC5B0001057D /* DemoModelData.m */; };
 		F3C8B8521B90FCB30001057D /* NSUserDefaults+DemoSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8B8511B90FCB30001057D /* NSUserDefaults+DemoSettings.m */; };
-		F3F61E101B8F78D500EB0FC7 /* profiles.csv in Resources */ = {isa = PBXBuildFile; fileRef = F3F61E0F1B8F78D500EB0FC7 /* profiles.csv */; };
 		F3F61E121B8F7B8B00EB0FC7 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F61E111B8F7B8B00EB0FC7 /* Config.m */; };
 		F3F61E151B8F85DA00EB0FC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F61E141B8F85DA00EB0FC7 /* Main.storyboard */; };
 		F3F61E181B8F8D5600EB0FC7 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F61E171B8F8D5600EB0FC7 /* LoginController.m */; };
@@ -75,13 +75,13 @@
 		F32CA57C1B8D38A900F3ECBD /* MonstrNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonstrNavigationController.m; sourceTree = "<group>"; };
 		F32CA5801B8E6F4D00F3ECBD /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
 		F32CA5811B8E6F4D00F3ECBD /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
+		F32FD00A1B91138D00710E45 /* profiles.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = profiles.csv; sourceTree = "<group>"; };
 		F3C8B84A1B90FAFB0001057D /* MonstrMessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonstrMessagesViewController.h; sourceTree = "<group>"; };
 		F3C8B84B1B90FAFB0001057D /* MonstrMessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonstrMessagesViewController.m; sourceTree = "<group>"; };
 		F3C8B84D1B90FC5B0001057D /* DemoModelData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoModelData.h; sourceTree = "<group>"; };
 		F3C8B84E1B90FC5B0001057D /* DemoModelData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoModelData.m; sourceTree = "<group>"; };
 		F3C8B8501B90FCB30001057D /* NSUserDefaults+DemoSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+DemoSettings.h"; sourceTree = "<group>"; };
 		F3C8B8511B90FCB30001057D /* NSUserDefaults+DemoSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+DemoSettings.m"; sourceTree = "<group>"; };
-		F3F61E0F1B8F78D500EB0FC7 /* profiles.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = profiles.csv; sourceTree = "<group>"; };
 		F3F61E111B8F7B8B00EB0FC7 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		F3F61E131B8F7B9500EB0FC7 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		F3F61E141B8F85DA00EB0FC7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -165,6 +165,7 @@
 		99B7AE9E192D50D500C1B49C /* Monstr */ = {
 			isa = PBXGroup;
 			children = (
+				F32FD00A1B91138D00710E45 /* profiles.csv */,
 				F3F61E141B8F85DA00EB0FC7 /* Main.storyboard */,
 				F3C8B84A1B90FAFB0001057D /* MonstrMessagesViewController.h */,
 				F3C8B84B1B90FAFB0001057D /* MonstrMessagesViewController.m */,
@@ -174,7 +175,6 @@
 				F3C8B8511B90FCB30001057D /* NSUserDefaults+DemoSettings.m */,
 				F3F61E1C1B8F96DA00EB0FC7 /* MessageController.h */,
 				F3F61E1D1B8F96DA00EB0FC7 /* MessageController.m */,
-				F3F61E0F1B8F78D500EB0FC7 /* profiles.csv */,
 				F3F61E161B8F8D5600EB0FC7 /* LoginController.h */,
 				F3F61E171B8F8D5600EB0FC7 /* LoginController.m */,
 				F32CA57B1B8D38A900F3ECBD /* MonstrNavigationController.h */,
@@ -299,7 +299,7 @@
 			files = (
 				99B7AEB1192D50D500C1B49C /* Images.xcassets in Resources */,
 				99B7AEA3192D50D500C1B49C /* InfoPlist.strings in Resources */,
-				F3F61E101B8F78D500EB0FC7 /* profiles.csv in Resources */,
+				F32FD00B1B91138D00710E45 /* profiles.csv in Resources */,
 				F3F61E151B8F85DA00EB0FC7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

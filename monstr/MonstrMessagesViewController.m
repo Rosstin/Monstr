@@ -339,12 +339,35 @@
     
     NSDate* date = [NSDate date];
 
-    NSString *text = @"Monstrous response to your message. Rawr!";
+    //NSString *text = @"Monstrous response to your message. Rawr!";
+
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
+    
+    NSString *response = sharedManager.profileUserIsLookingAt.badMessage;
+    
+    NSArray *responsesArray = [response componentsSeparatedByString:@"\n"];
+    
+    NSString *currentResponse = [responsesArray[0] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\""]];
+    
+    NSString *textLessFirstLine = @"";
+    
+    NSUInteger count = [responsesArray count];
+    
+    for(int i = 1; i < count; i++) { //don't re-add the first element
+        if( (i+1) == count ){
+            textLessFirstLine = [textLessFirstLine stringByAppendingString: responsesArray[i] ]; //don't append newline to last element
+        }
+        else{
+            textLessFirstLine = [textLessFirstLine stringByAppendingString: [responsesArray[i] stringByAppendingString:@"\n"] ];
+        }
+    }
+    
+    sharedManager.profileUserIsLookingAt.badMessage = textLessFirstLine;
     
     JSQMessage *message = [[JSQMessage alloc] initWithSenderId:dateId
-                                             senderDisplayName:dateName
+                                             senderDisplayName:sharedManager.profileUserIsLookingAt.profileName
                                                           date:date
-                                                          text:text];
+                                                          text:currentResponse];
 
     
     [self.demoData.messages addObject:message];
