@@ -7,13 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-@import AVFoundation;
 
 @interface LoginController : UIViewController <UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *hintText;
 
-@property AVAudioPlayer* backgroundMusicPlayer;
 @property (weak, nonatomic) IBOutlet UIImageView *rainyIntro;
 
 - (IBAction)handleTap:(UITapGestureRecognizer *)sender;

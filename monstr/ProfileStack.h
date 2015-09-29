@@ -5,6 +5,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Profile.h"
+@import AVFoundation;
 
 @interface ProfileStack : NSObject
 
@@ -22,11 +23,18 @@
 @property BOOL firstTime;
 @property NSInteger introTextIndex;
 
+@property AVAudioPlayer* mainMusicPlayer;
+@property AVAudioPlayer* introMusicPlayer;
+
 + (id)sharedManager;
 
 -(void)incrementCardsLoadedIndexGlobal;
 -(void)generateDailyIndices;
 -(void)excludeCurrentProfile;
+
+-(void)startMainMusic;
+-(void)startIntroMusic;
+
 
 -(void)resetAll;
 

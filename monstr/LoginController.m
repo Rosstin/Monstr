@@ -98,7 +98,9 @@
 - (void)returnToRegularLoginScreen {
     _introText.hidden = YES;
     _rainyIntro.hidden= YES;
-    [self.backgroundMusicPlayer stop];
+
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
+    [sharedManager startMainMusic];
 }
 
 
@@ -106,17 +108,8 @@
     _introText.text = @"Ugh... Late for work again! You're huddled under your umbrella at the bus stop, trying to keep your tentacles out of the rain, trying not to think about what your boss will say...";
     [_introText setFont:[UIFont boldSystemFontOfSize:18]];
     
-    NSBundle *mainBundle = [NSBundle mainBundle];
-    NSString *filePath = [mainBundle pathForResource:@"sfx/rain" ofType:@"mp3"];
-    NSData *fileData = [NSData dataWithContentsOfFile:filePath];
-    
-    NSError *error = nil;
-    
-    self.backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithData:fileData error:&error];
-    
-    [self.backgroundMusicPlayer prepareToPlay];
-    
-    [self.backgroundMusicPlayer play];
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
+    [sharedManager startIntroMusic];
     
     _introText.hidden = NO;
     _rainyIntro.hidden = NO;

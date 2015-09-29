@@ -15,6 +15,19 @@
 
 -(id)init {
     NSLog(@"Init ProfileStack");
+
+    
+    //THE MAIN MUSIC PLAYER
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    NSString *filePath = [mainBundle pathForResource:@"sfx/main" ofType:@"mp3"];
+    NSData *fileData = [NSData dataWithContentsOfFile:filePath];
+    NSError *error = nil;
+    self.mainMusicPlayer = [[AVAudioPlayer alloc] initWithData:fileData error:&error];
+
+    //THE INTRO MUSIC PLAYER
+    NSString *filePath2 = [mainBundle pathForResource:@"sfx/rain" ofType:@"mp3"];
+    NSData *fileData2 = [NSData dataWithContentsOfFile:filePath2];
+    self.introMusicPlayer = [[AVAudioPlayer alloc] initWithData:fileData2 error:&error];
     
     self = [super init];
     
@@ -40,6 +53,24 @@
     [self loadProfiles];
     [self generateWinningProfile];
     //[self generateDailyIndices]; //this is done thru login button now
+}
+
+
+
+-(void) startMainMusic{
+    //[self.mainMusicPlayer stop];
+    [self.introMusicPlayer stop];
+    
+    [self.mainMusicPlayer prepareToPlay];
+    [self.mainMusicPlayer play];
+}
+
+-(void) startIntroMusic{
+    [self.mainMusicPlayer stop];
+    //[self.introMusicPlayer stop];
+    
+    [self.introMusicPlayer prepareToPlay];
+    [self.introMusicPlayer play];
 }
 
 
