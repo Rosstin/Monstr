@@ -21,6 +21,7 @@
     if(self) {
         [self resetAll];
     }
+    _firstTime = YES;
     
     return self;
 }
@@ -30,6 +31,8 @@
     _cardBeingViewedByPlayer = 0;
     
     _winner = NO;
+    _firstTime = NO;
+    _introTextIndex = 0;
     
     _profileIndicesForToday = [NSMutableArray array];
     _excludedProfileIndices = [NSMutableArray array];

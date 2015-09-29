@@ -19,6 +19,8 @@
 @property NSInteger winningProfileIndex;
 
 @property BOOL winner;
+@property BOOL firstTime;
+@property NSInteger introTextIndex;
 
 + (id)sharedManager;
 
