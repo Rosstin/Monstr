@@ -22,6 +22,11 @@
 
 #pragma mark - View lifecycle
 
+- (void) respondToTapGesture{
+    NSLog(@"respondToTapGesture");
+    [self sendMonsterMessage];
+}
+
 /**
  *  Override point for customization.
  *
@@ -43,6 +48,20 @@
         NSLog(@"YOU WON! that was the profile you were looking for!!");
         sharedManager.winner = YES;
     }
+    
+    SEL aSelector = @selector(respondToTapGesture);
+    
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc]
+                                             initWithTarget:self action:aSelector];
+                                             
+    tapRecognizer.numberOfTapsRequired = 1;
+    
+    [self.view addGestureRecognizer:tapRecognizer];
+    
+    
+    
+    
+    
     
     /**
      *  You MUST set your senderId and display name
@@ -141,6 +160,8 @@
 
 - (void)receiveMessagePressed:(UIBarButtonItem *)sender
 {
+    NSLog(@"receiveMessagePressed");
+    
     /**
      *  DEMO ONLY
      *
@@ -311,6 +332,7 @@
          senderDisplayName:(NSString *)senderDisplayName
                       date:(NSDate *)date
 {
+    NSLog(@"didPressSendButton");
     /**
      *  Sending a message. Your implementation of this method should do *at least* the following:
      *
@@ -328,7 +350,12 @@
     [self.demoData.messages addObject:message];
     
     [self finishSendingMessageAnimated:YES];
-    
+
+    [self sendMonsterMessage];
+}
+
+- (void) sendMonsterMessage{
+
     float r = arc4random_uniform(200);
     float time = 100 + r;
     time = time/100;

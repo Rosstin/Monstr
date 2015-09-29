@@ -121,60 +121,6 @@
             </objects>
             <point key="canvasLocation" x="1496" y="294"/>
         </scene>
-        <!--Message Controller-->
-        <scene sceneID="Xj7-Lk-fZ0">
-            <objects>
-                <viewController id="brC-RR-M73" customClass="MessageController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tor-PZ-ecu"/>
-                        <viewControllerLayoutGuide type="bottom" id="bH8-GK-LOa"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="g12-f6-xPK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ex6-J1-m1Q">
-                                <rect key="frame" x="0.0" y="272" width="42" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="talking with a user" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zb1-aU-EKS">
-                                <rect key="frame" x="0.0" y="244" width="139" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="1qt-oj-dvP"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Gf-07-rE4">
-                                <rect key="frame" x="137" y="518" width="43" height="30"/>
-                                <state key="normal" title="DONE">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="doneButtonAction:" destination="brC-RR-M73" eventType="touchUpInside" id="0l4-aU-RH6"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Zb1-aU-EKS" firstAttribute="leading" secondItem="Ex6-J1-m1Q" secondAttribute="leading" id="DOE-TY-VEq"/>
-                            <constraint firstItem="Zb1-aU-EKS" firstAttribute="top" secondItem="tor-PZ-ecu" secondAttribute="bottom" constant="244" id="Eam-79-rBp"/>
-                            <constraint firstItem="Zb1-aU-EKS" firstAttribute="leading" secondItem="g12-f6-xPK" secondAttribute="leading" id="IQ9-tN-W9Y"/>
-                            <constraint firstItem="Ex6-J1-m1Q" firstAttribute="top" secondItem="Zb1-aU-EKS" secondAttribute="bottom" constant="8" id="lMT-7y-K9f"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="TOJ-yR-64L"/>
-                    <connections>
-                        <outlet property="usernameField" destination="Ex6-J1-m1Q" id="9hC-2r-cZM"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9uf-yQ-8Y1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="293" y="1802"/>
-        </scene>
         <!--Monstr Messages View Controller-->
         <scene sceneID="ZOe-if-iX1">
             <objects>
@@ -361,7 +307,7 @@
         <image name="rainyBus" width="750" height="1092"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="BD7-Z1-eJ4"/>
         <segue reference="1W9-mJ-6sy"/>
-        <segue reference="FIE-jQ-pMt"/>
     </inferredMetricsTieBreakers>
 </document>

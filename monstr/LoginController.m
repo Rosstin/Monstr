@@ -27,7 +27,7 @@
     _hintText.text = [sharedManager.profileWinner.profileHint stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\""]];
     
     if(sharedManager.firstTime){    // if it's your first time show the intro
-        NSLog(@"It's my first time!");
+        //NSLog(@"It's my first time!");
         sharedManager.firstTime = NO;
         
         _rainyIntro.hidden = NO;
@@ -39,7 +39,7 @@
         
     }
     else{
-        NSLog(@"It's not my first time at login screen... don't show intro....");
+        //NSLog(@"It's not my first time at login screen... don't show intro....");
         [self returnToRegularLoginScreen];
     }
     

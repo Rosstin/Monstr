@@ -31,7 +31,7 @@
 
 - (instancetype)init
 {
-    NSLog(@"init DemoModelData");
+    //NSLog(@"init DemoModelData");
     
     self = [super init];
     if (self) {
