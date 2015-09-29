@@ -37,14 +37,14 @@
     if (self) {
         [self setupView];
         
-#warning placeholder stuff, replace with card-specific information {
+//warning placeholder stuff, replace with card-specific information {
         information = [[UILabel alloc]initWithFrame:CGRectMake(0, 275, self.frame.size.width, 100)];
         information.text = @"no info given";
         [information setTextAlignment:NSTextAlignmentCenter];
         information.textColor = [UIColor blackColor];
         
         self.backgroundColor = [UIColor whiteColor];
-#warning placeholder stuff, replace with card-specific information }
+//warning placeholder stuff, replace with card-specific information }
         
         
         
@@ -118,7 +118,7 @@
             CGFloat rotationAngel = (CGFloat) (ROTATION_ANGLE * rotationStrength);
             
             //%%% amount the height changes when you move the card up to a certain point
-            CGFloat scale = MAX(1 - fabsf(rotationStrength) / SCALE_STRENGTH, SCALE_MAX);
+            CGFloat scale = MAX(1 - fabs(rotationStrength) / SCALE_STRENGTH, SCALE_MAX);
             
             //%%% move the object's center by center + gesture coordinate
             self.center = CGPointMake(self.originalPoint.x + xFromCenter, self.originalPoint.y + yFromCenter);
@@ -155,7 +155,7 @@
         overlayView.mode = GGOverlayViewModeLeft;
     }
     
-    overlayView.alpha = MIN(fabsf(distance)/100, 0.9);
+    overlayView.alpha = MIN(fabs(distance)/100, 0.9);
 }
 
 //%%% called when the card is let go

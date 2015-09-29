@@ -57,7 +57,6 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 //%%% sets up the extra buttons on the screen
 -(void)setupView
 {
-#warning customize all of this.  These are just place holders to make it look pretty
     self.backgroundColor = [UIColor colorWithRed:.92 green:.93 blue:.95 alpha:1]; //the gray background colors
     menuButton = [[UIButton alloc]initWithFrame:CGRectMake(17, 34, 22, 15)];
     [menuButton setImage:[UIImage imageNamed:@"menuButton"] forState:UIControlStateNormal];
@@ -75,7 +74,6 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     [self addSubview:checkButton];
 }
 
-#warning include own card customization here!
 //%%% creates a card and returns it.  This should be customized to fit your needs.
 // use "index" to indicate where the information should be pulled.  If this doesn't apply to you, feel free
 // to get rid of it (eg: if you are building cards from data from the internet)
@@ -135,7 +133,6 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     }
 }
 
-#warning include own action here!
 //%%% action called when the card goes to the left.
 // This should be customized with your own action
 -(void)cardSwipedLeft:(UIView *)card;
@@ -164,14 +161,14 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     }
 }
 
-#warning include own action here!
 //%%% action called when the card goes to the right.
 // This should be customized with your own action
 -(void)cardSwipedRight:(UIView *)card
 {
-    NSLog(@"the user accepted the profile, and now we message them");
+    NSLog(@"the user accepted the profile, and now we GO TO THEIR PROFILE instead of directly messaging them");
     
-    [self messageUser];
+    //[self messageUser];
+    [delegate tapped:self];
     
     ProfileStack *sharedManager = [ProfileStack sharedManager];
     //sharedManager.cardBeingViewedByPlayer++; // we always increment this regardless //don't increment because we chose to look at the card so we're stuck there now

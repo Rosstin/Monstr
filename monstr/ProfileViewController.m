@@ -17,6 +17,8 @@
     
     [self addNavigationBarItem];
     
+    self.navigationItem.hidesBackButton = YES;
+    
     ProfileStack *sharedManager = [ProfileStack sharedManager];
     
     _profileImage.image = [UIImage imageNamed:sharedManager.profileUserIsLookingAt.profileImageName];
@@ -69,10 +71,13 @@
 }
 
 -(IBAction)messageButtonClicked:(id)sender{
-    NSLog(@"Message this user!!");
+    NSLog(@"Message this user!! And remove them permanently from pool.");
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
+    //since they were accepted, remove them permanently from the pool
+    [sharedManager excludeCurrentProfile];
     
     [self performSegueWithIdentifier:@"SegueToMessageFromProfile" sender:self];
-    
+
 }
 
 

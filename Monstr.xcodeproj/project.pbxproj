@@ -273,7 +273,7 @@
 		99B7AE8D192D50D500C1B49C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Richard Kim";
 				TargetAttributes = {
 					99B7AE94192D50D500C1B49C = {
@@ -447,7 +447,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -495,6 +495,8 @@
 				GCC_PREFIX_HEADER = "Monstr/Monstr-Prefix.pch";
 				INFOPLIST_FILE = "Monstr/Monstr-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Monstr;
 				PRODUCT_NAME = Monstr;
 				WRAPPER_EXTENSION = app;
 			};
@@ -511,6 +513,8 @@
 				GCC_PREFIX_HEADER = "Monstr/Monstr-Prefix.pch";
 				INFOPLIST_FILE = "Monstr/Monstr-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Monstr;
 				PRODUCT_NAME = Monstr;
 				WRAPPER_EXTENSION = app;
 			};
