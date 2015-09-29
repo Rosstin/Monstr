@@ -120,6 +120,8 @@
 
     headerView.loadButton.tintColor = self.loadEarlierMessagesHeaderTextColor;
     headerView.delegate = self;
+    
+    headerView.hidden = YES;
 
     return headerView;
 }
