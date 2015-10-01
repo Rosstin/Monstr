@@ -29,6 +29,7 @@
 		F3C8B84C1B90FAFB0001057D /* MonstrMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8B84B1B90FAFB0001057D /* MonstrMessagesViewController.m */; };
 		F3C8B84F1B90FC5B0001057D /* DemoModelData.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8B84E1B90FC5B0001057D /* DemoModelData.m */; };
 		F3C8B8521B90FCB30001057D /* NSUserDefaults+DemoSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8B8511B90FCB30001057D /* NSUserDefaults+DemoSettings.m */; };
+		F3E048E31BBDEDAF0080898E /* profiles3.csv in Resources */ = {isa = PBXBuildFile; fileRef = F3E048E21BBDEDAF0080898E /* profiles3.csv */; settings = {ASSET_TAGS = (); }; };
 		F3F61E121B8F7B8B00EB0FC7 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F61E111B8F7B8B00EB0FC7 /* Config.m */; };
 		F3F61E151B8F85DA00EB0FC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F61E141B8F85DA00EB0FC7 /* Main.storyboard */; };
 		F3F61E181B8F8D5600EB0FC7 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F61E171B8F8D5600EB0FC7 /* LoginController.m */; };
@@ -86,6 +87,7 @@
 		F3C8B84E1B90FC5B0001057D /* DemoModelData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoModelData.m; sourceTree = "<group>"; };
 		F3C8B8501B90FCB30001057D /* NSUserDefaults+DemoSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+DemoSettings.h"; sourceTree = "<group>"; };
 		F3C8B8511B90FCB30001057D /* NSUserDefaults+DemoSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+DemoSettings.m"; sourceTree = "<group>"; };
+		F3E048E21BBDEDAF0080898E /* profiles3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = profiles3.csv; sourceTree = "<group>"; };
 		F3F61E111B8F7B8B00EB0FC7 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		F3F61E131B8F7B9500EB0FC7 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		F3F61E141B8F85DA00EB0FC7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			children = (
 				F357B4851BBB0A730049CF22 /* sfx */,
 				F32FD00A1B91138D00710E45 /* profiles.csv */,
+				F3E048E21BBDEDAF0080898E /* profiles3.csv */,
 				F3F61E141B8F85DA00EB0FC7 /* Main.storyboard */,
 				F3C8B84A1B90FAFB0001057D /* MonstrMessagesViewController.h */,
 				F3C8B84B1B90FAFB0001057D /* MonstrMessagesViewController.m */,
@@ -307,6 +310,7 @@
 				99B7AEA3192D50D500C1B49C /* InfoPlist.strings in Resources */,
 				F357B4861BBB0A730049CF22 /* sfx in Resources */,
 				F32FD00B1B91138D00710E45 /* profiles.csv in Resources */,
+				F3E048E31BBDEDAF0080898E /* profiles3.csv in Resources */,
 				F3F61E151B8F85DA00EB0FC7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

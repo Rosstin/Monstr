@@ -23,8 +23,9 @@
 #pragma mark - View lifecycle
 
 - (void) respondToTapGesture{
+    //temporarily disabled until i make it way better
     NSLog(@"respondToTapGesture");
-    [self sendMonsterMessage];
+    //[self sendMonsterMessage];
 }
 
 /**

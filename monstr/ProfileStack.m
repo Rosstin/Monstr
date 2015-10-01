@@ -92,7 +92,7 @@
 - (void) generateWinningProfile{
     int randomNumber = arc4random_uniform(_allProfiles.count);
     self.winningProfileIndex = randomNumber;
-    NSLog(@"generateWinningProfile... ONLY DO THIS ONCE... %ld... ", (long)self.winningProfileIndex);
+    //NSLog(@"generateWinningProfile... ONLY DO THIS ONCE... %ld... ", (long)self.winningProfileIndex);
 }
 
 - (void) generateDailyIndices{
@@ -106,7 +106,7 @@
     while(_profileIndicesForToday.count < NUMBER_OF_PROFILES_PER_DAY && count < 100){
         count++;
         
-        NSLog(@"generating indices... %d", count);
+        //NSLog(@"generating indices... %d", count);
         int randomNumber = arc4random_uniform(_allProfiles.count);
         
         bool exclude = false;
@@ -157,7 +157,7 @@
     
     _allProfiles = [NSMutableArray array];
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"profiles" ofType:@"csv"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"profiles3" ofType:@"csv"];
     
     NSError *error = nil;
     
@@ -181,10 +181,11 @@
         profile.badMessage = myProfile[6];
         profile.goodMessage = myProfile[7];
         
+        NSLog(@"profilename... %@", profile.profileName);
+        
         [_allProfiles addObject:profile];
     }
     
-    //NSLog(@"allProfiles... %@", _allProfiles);
 }
 
 
