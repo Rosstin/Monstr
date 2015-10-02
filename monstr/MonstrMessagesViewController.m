@@ -25,7 +25,7 @@
 - (void) respondToTapGesture{
     //temporarily disabled until i make it way better
     NSLog(@"respondToTapGesture");
-    //[self sendMonsterMessage];
+    [self sendPlayerMessage];
 }
 
 /**
@@ -345,6 +345,10 @@
      *  3. Call `finishSendingMessage`
      */
     
+    [self sendPlayerMessage];
+}
+
+-(void) sendPlayerMessage{
     ProfileStack *sharedManager = [ProfileStack sharedManager];
 
     if(sharedManager.monsterSentMessage){
@@ -383,9 +387,9 @@
         myCurrentProfile.badMessage = textLessFirstLine;
     }
     
-    JSQMessage *message = [[JSQMessage alloc] initWithSenderId:senderId
-                                             senderDisplayName:senderDisplayName
-                                                          date:date
+    JSQMessage *message = [[JSQMessage alloc] initWithSenderId:@"053496-4509-289"
+                                             senderDisplayName:@"Me"
+                                                          date:[NSDate date]
                                                           text:currentResponse];
 
     [self.demoData.messages addObject:message];
@@ -497,7 +501,7 @@
 
         JSQMessage *message = [[JSQMessage alloc] initWithSenderId:dateId
                                                  senderDisplayName:myCurrentProfile.profileName
-                                                              date:date
+                                                              date:[NSDate date]
                                                               text:currentResponse];
         
         [self.demoData.messages addObject:message];
