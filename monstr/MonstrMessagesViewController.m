@@ -45,7 +45,9 @@
     
     ProfileStack *sharedManager = [ProfileStack sharedManager];
 
-    if(sharedManager.profileUserIsLookingAt.profileName == sharedManager.profileWinner.profileName){
+    Profile *myCurrentProfile = [sharedManager.allProfiles objectAtIndex: sharedManager.profileWeWantUserToSeeRightNow ];
+    
+    if(myCurrentProfile.profileName == sharedManager.profileWinner.profileName){
         NSLog(@"YOU WON! that was the profile you were looking for!!");
         sharedManager.winner = YES;
     }
@@ -392,10 +394,14 @@
 
     NSString *response;
     if(sharedManager.winner){
-        response = sharedManager.profileUserIsLookingAt.goodMessage;
+        Profile *myCurrentProfile = [sharedManager.allProfiles objectAtIndex: sharedManager.profileWeWantUserToSeeRightNow ];
+        
+        response = myCurrentProfile.goodMessage;
     }
     else{
-        response = sharedManager.profileUserIsLookingAt.badMessage;
+        Profile *myCurrentProfile = [sharedManager.allProfiles objectAtIndex: sharedManager.profileWeWantUserToSeeRightNow ];
+
+        response = myCurrentProfile.badMessage;
     }
     
     if([response isEqualToString: @"empty"]){
@@ -439,14 +445,20 @@
         }
         
         if(sharedManager.winner){
-            sharedManager.profileUserIsLookingAt.goodMessage = textLessFirstLine;
+            Profile *myCurrentProfile = [sharedManager.allProfiles objectAtIndex: sharedManager.profileWeWantUserToSeeRightNow ];
+            
+            myCurrentProfile.goodMessage = textLessFirstLine;
         }
         else{
-            sharedManager.profileUserIsLookingAt.badMessage = textLessFirstLine;
+            Profile *myCurrentProfile = [sharedManager.allProfiles objectAtIndex: sharedManager.profileWeWantUserToSeeRightNow ];
+            
+            myCurrentProfile.badMessage = textLessFirstLine;
         }
+        
+        Profile *myCurrentProfile = [sharedManager.allProfiles objectAtIndex: sharedManager.profileWeWantUserToSeeRightNow ];
 
         JSQMessage *message = [[JSQMessage alloc] initWithSenderId:dateId
-                                                 senderDisplayName:sharedManager.profileUserIsLookingAt.profileName
+                                                 senderDisplayName:myCurrentProfile.profileName
                                                               date:date
                                                               text:currentResponse];
         

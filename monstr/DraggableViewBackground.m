@@ -58,20 +58,23 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 -(void)setupView
 {
     self.backgroundColor = [UIColor colorWithRed:.92 green:.93 blue:.95 alpha:1]; //the gray background colors
-    menuButton = [[UIButton alloc]initWithFrame:CGRectMake(17, 34, 22, 15)];
-    [menuButton setImage:[UIImage imageNamed:@"menuButton"] forState:UIControlStateNormal];
-    messageButton = [[UIButton alloc]initWithFrame:CGRectMake(284, 34, 18, 18)];
-    [messageButton setImage:[UIImage imageNamed:@"messageButton"] forState:UIControlStateNormal];
-    xButton = [[UIButton alloc]initWithFrame:CGRectMake(60, 485, 59, 59)];
-    [xButton setImage:[UIImage imageNamed:@"xButton"] forState:UIControlStateNormal];
-    [xButton addTarget:self action:@selector(swipeLeft) forControlEvents:UIControlEventTouchUpInside];
-    checkButton = [[UIButton alloc]initWithFrame:CGRectMake(200, 485, 59, 59)];
-    [checkButton setImage:[UIImage imageNamed:@"checkButton"] forState:UIControlStateNormal];
-    [checkButton addTarget:self action:@selector(swipeRight) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:menuButton];
-    [self addSubview:messageButton];
-    [self addSubview:xButton];
-    [self addSubview:checkButton];
+    
+    // dont put all those buttons
+    
+    //menuButton = [[UIButton alloc]initWithFrame:CGRectMake(17, 34, 22, 15)];
+    //[menuButton setImage:[UIImage imageNamed:@"menuButton"] forState:UIControlStateNormal];
+    //messageButton = [[UIButton alloc]initWithFrame:CGRectMake(284, 34, 18, 18)];
+    //[messageButton setImage:[UIImage imageNamed:@"messageButton"] forState:UIControlStateNormal];
+    //xButton = [[UIButton alloc]initWithFrame:CGRectMake(60, 485, 59, 59)];
+    //[xButton setImage:[UIImage imageNamed:@"xButton"] forState:UIControlStateNormal];
+    //[xButton addTarget:self action:@selector(swipeLeft) forControlEvents:UIControlEventTouchUpInside];
+    //checkButton = [[UIButton alloc]initWithFrame:CGRectMake(200, 485, 59, 59)];
+    //[checkButton setImage:[UIImage imageNamed:@"checkButton"] forState:UIControlStateNormal];
+    //[checkButton addTarget:self action:@selector(swipeRight) forControlEvents:UIControlEventTouchUpInside];
+    //[self addSubview:menuButton];
+    //[self addSubview:messageButton];
+    //[self addSubview:xButton];
+    //[self addSubview:checkButton];
 }
 
 //%%% creates a card and returns it.  This should be customized to fit your needs.
@@ -165,17 +168,18 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 // This should be customized with your own action
 -(void)cardSwipedRight:(UIView *)card
 {
+
     NSLog(@"the user accepted the profile, and now we GO TO THEIR PROFILE instead of directly messaging them");
     
-    //[self messageUser];
-    [delegate tapped:self];
-    
     ProfileStack *sharedManager = [ProfileStack sharedManager];
-    //sharedManager.cardBeingViewedByPlayer++; // we always increment this regardless //don't increment because we chose to look at the card so we're stuck there now
-
-    //since they were accepted, remove them permanently from the pool
-    [sharedManager excludeCurrentProfile];
+    sharedManager.thisIsTheLastCard = FALSE;
+ 
+    sharedManager.profileWeWantUserToSeeRightNow = sharedManager.profileUserIsLookingAtIndexNumber;
     
+    sharedManager.cardBeingViewedByPlayer++; // we always increment this regardless //don't increment because we chose to look at the card so we're stuck there now
+    
+    //since they were accepted, remove them permanently from the pool
+        
     //do whatever you want with the card that was swiped
     //    DraggableView *c = (DraggableView *)card;
     
@@ -191,10 +195,14 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
         [sharedManager incrementCardsLoadedIndexGlobal];
     }
     // since you accepted, we're messaging them anyway
-    //else{
+    else{
+        sharedManager.thisIsTheLastCard = TRUE;
     //    //NSLog(@"LAST CARD SWIPED!");
     //    [self returnToTitle];
-    //}
+    }
+    
+    [delegate rightSwiped:self];
+
 
 }
 
@@ -210,6 +218,12 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 
 -(void)cardTapped:(UIView *)card
 {
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
+
+    sharedManager.profileWeWantUserToSeeRightNow = sharedManager.profileUserIsLookingAtIndexNumber;
+    
+    sharedManager.thisIsTheLastCard = FALSE;
+    
     [delegate tapped:self];
     
     // now to pass info to the card

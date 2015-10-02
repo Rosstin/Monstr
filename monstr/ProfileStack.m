@@ -80,6 +80,7 @@
     self.cardsLoadedIndexGlobal++;
 }
 
+/*
 - (void) excludeCurrentProfile{
     NSUInteger myCardNumber = _cardBeingViewedByPlayer;
     NSNumber *allProfilesIndex = [_profileIndicesForToday objectAtIndex:myCardNumber];
@@ -88,6 +89,16 @@
     
     NSLog(@"Permantly excluded the file at index... %@...", allProfilesIndex);
 }
+ */
+
+- (void) excludeProfileByProfileWeWantUserToSeeRightNow{
+    
+    NSNumber *myNum = [NSNumber numberWithInteger:self.profileWeWantUserToSeeRightNow];
+    [_excludedProfileIndices addObject: myNum];
+    
+    NSLog(@"Permantly excluded the file at index... %@...", myNum);
+}
+
 
 - (void) generateWinningProfile{
     int randomNumber = arc4random_uniform(_allProfiles.count);
@@ -141,6 +152,7 @@
     }
 }
 
+/*
 - (Profile *) profileUserIsLookingAt{
     NSUInteger myCardNumber = _cardBeingViewedByPlayer;
     NSNumber *allProfilesIndex = [_profileIndicesForToday objectAtIndex:myCardNumber];
@@ -148,6 +160,16 @@
     
     return [_allProfiles objectAtIndex: allProfilesIndexNSU ];
 }
+ */
+
+- (NSUInteger) profileUserIsLookingAtIndexNumber{
+    NSUInteger myCardNumber = _cardBeingViewedByPlayer;
+    NSNumber *allProfilesIndex = [_profileIndicesForToday objectAtIndex:myCardNumber];
+    NSUInteger allProfilesIndexNSU = allProfilesIndex.integerValue;
+    
+    return allProfilesIndexNSU;
+}
+
 
 - (Profile *) profileWinner{
     return [_allProfiles objectAtIndex: _winningProfileIndex ];

@@ -24,6 +24,13 @@
     [self performSegueWithIdentifier:@"SegueToProfile" sender:self];
 }
 
+- (void)rightSwiped:(UIView *)card {
+    //SOME LOGIC HERE-- we can set the profile the player is looking at or something here, somehow get that info to the next view
+    
+    [self performSegueWithIdentifier:@"SegueToProfileWithRightSwipe" sender:self];
+}
+
+
 - (void)returnToTitle:(UIView *)card {
     [self performSegueWithIdentifier:@"SegueToTitle" sender:self];
 }
@@ -57,8 +64,13 @@
 {
     if ([[segue identifier] isEqualToString:@"SegueToProfile"])
     {
-        //NSLog(@"not hiding nav bar");
-        //NSLog(@"if ([[segue identifier] isEqualToString:@SegueToProfile])");
+        NSLog(@"SegueToProfile");
+        [self.navigationController setNavigationBarHidden:NO];
+
+    }
+    else if ([[segue identifier] isEqualToString:@"SegueToProfileWithRightSwipe"])
+    {
+        NSLog(@"SegueToProfileWithRightSwipe");
         [self.navigationController setNavigationBarHidden:NO];
     }
     else{

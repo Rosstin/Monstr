@@ -21,6 +21,7 @@
 
 @property BOOL winner;
 @property BOOL firstTime;
+@property BOOL thisIsTheLastCard;
 @property NSInteger introTextIndex;
 
 @property AVAudioPlayer* mainMusicPlayer;
@@ -30,7 +31,7 @@
 
 -(void)incrementCardsLoadedIndexGlobal;
 -(void)generateDailyIndices;
--(void)excludeCurrentProfile;
+-(void)excludeProfileByProfileWeWantUserToSeeRightNow;
 
 -(void)startMainMusic;
 -(void)startIntroMusic;
@@ -38,7 +39,10 @@
 
 -(void)resetAll;
 
--(Profile *)profileUserIsLookingAt;
+//-(Profile *)profileUserIsLookingAt;
+-(NSUInteger)profileUserIsLookingAtIndexNumber;
 -(Profile *)profileWinner;
+
+@property NSInteger profileWeWantUserToSeeRightNow;
 
 @end
