@@ -811,21 +811,25 @@
                 header:(JSQMessagesLoadEarlierHeaderView *)headerView didTapLoadEarlierMessagesButton:(UIButton *)sender
 {
     NSLog(@"Load earlier messages!");
+    [self sendPlayerMessage];
 }
 
 - (void)collectionView:(JSQMessagesCollectionView *)collectionView didTapAvatarImageView:(UIImageView *)avatarImageView atIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"Tapped avatar!");
+    [self sendPlayerMessage];
 }
 
 - (void)collectionView:(JSQMessagesCollectionView *)collectionView didTapMessageBubbleAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"Tapped message bubble!");
+    [self sendPlayerMessage];
 }
 
 - (void)collectionView:(JSQMessagesCollectionView *)collectionView didTapCellAtIndexPath:(NSIndexPath *)indexPath touchLocation:(CGPoint)touchLocation
 {
     NSLog(@"Tapped cell at %@!", NSStringFromCGPoint(touchLocation));
+    [self sendPlayerMessage];
 }
 
 #pragma mark - JSQMessagesComposerTextViewPasteDelegate methods
