@@ -46,6 +46,7 @@
     ProfileStack *sharedManager = [ProfileStack sharedManager];
 
     Profile *myCurrentProfile = [sharedManager.allProfiles objectAtIndex: sharedManager.profileWeWantUserToSeeRightNow ];
+    sharedManager.monsterSentMessage = TRUE;
     
     if(myCurrentProfile.profileName == sharedManager.profileWinner.profileName){
         NSLog(@"YOU WON! that was the profile you were looking for!!");
@@ -345,6 +346,8 @@
      */
     
     ProfileStack *sharedManager = [ProfileStack sharedManager];
+
+    if(sharedManager.monsterSentMessage){
     
     Profile *myCurrentProfile = [sharedManager.allProfiles objectAtIndex: sharedManager.profileWeWantUserToSeeRightNow ];
     NSString *response;
@@ -370,7 +373,7 @@
             }
         }
     } else {
-        textLessFirstLine = @"empty";
+        textLessFirstLine = @"......";
     }
     
     if(sharedManager.winner){
@@ -389,7 +392,12 @@
     
     [self finishSendingMessageAnimated:YES];
 
+    sharedManager.monsterSentMessage = FALSE;
     [self sendMonsterMessage];
+    }
+    else{
+        NSLog(@"monster hasnt sent their message yet");
+    }
 }
 
 - (void) sendMonsterMessage{
@@ -434,7 +442,7 @@
         response = myCurrentProfile.badMessage;
     }
     
-    if([response isEqualToString: @"empty"]){
+    if([response isEqualToString: @"......"]){
         NSLog(@"No more messages!");
         
         float r = arc4random_uniform(200);
@@ -471,7 +479,7 @@
                 }
             }
         } else {
-            textLessFirstLine = @"empty";
+            textLessFirstLine = @"......";
         }
         
         if(sharedManager.winner){
@@ -496,6 +504,7 @@
         
         [self finishSendingMessageAnimated:YES];
     }
+    sharedManager.monsterSentMessage = TRUE;
 }
 
 - (void)didPressAccessoryButton:(UIButton *)sender

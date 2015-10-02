@@ -24,6 +24,8 @@
 @property BOOL thisIsTheLastCard;
 @property NSInteger introTextIndex;
 
+@property BOOL monsterSentMessage;
+
 @property AVAudioPlayer* mainMusicPlayer;
 @property AVAudioPlayer* introMusicPlayer;
 
