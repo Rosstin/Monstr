@@ -179,7 +179,7 @@
     
     _allProfiles = [NSMutableArray array];
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"profiles3" ofType:@"csv"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"profiles4" ofType:@"csv"];
     
     NSError *error = nil;
     

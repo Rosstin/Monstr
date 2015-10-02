@@ -343,13 +343,48 @@
      *  2. Add new id<JSQMessageData> object to your data source
      *  3. Call `finishSendingMessage`
      */
-    [JSQSystemSoundPlayer jsq_playMessageSentSound];
+    
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
+    
+    Profile *myCurrentProfile = [sharedManager.allProfiles objectAtIndex: sharedManager.profileWeWantUserToSeeRightNow ];
+    NSString *response;
+    if(sharedManager.winner){
+        response = myCurrentProfile.goodMessage;
+    }
+    else{
+        response = myCurrentProfile.badMessage;
+    }
+
+    NSArray *responsesArray = [response componentsSeparatedByString:@"\n"];
+    //NSLog(@"number of lines in array... %lu ", (unsigned long)responsesArray.count);
+    NSString *currentResponse = [responsesArray[0] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\""]];
+    NSString *textLessFirstLine = @"";
+    NSUInteger count = [responsesArray count];
+    if(responsesArray.count > 1){
+        for(int i = 1; i < count; i++) { //don't re-add the first element
+            if( (i+1) == count ){
+                textLessFirstLine = [textLessFirstLine stringByAppendingString: responsesArray[i] ]; //don't append newline to last element
+            }
+            else{
+                textLessFirstLine = [textLessFirstLine stringByAppendingString: [responsesArray[i] stringByAppendingString:@"\n"] ];
+            }
+        }
+    } else {
+        textLessFirstLine = @"empty";
+    }
+    
+    if(sharedManager.winner){
+        myCurrentProfile.goodMessage = textLessFirstLine;
+    }
+    else{
+        myCurrentProfile.badMessage = textLessFirstLine;
+    }
     
     JSQMessage *message = [[JSQMessage alloc] initWithSenderId:senderId
                                              senderDisplayName:senderDisplayName
                                                           date:date
-                                                          text:text];
-    
+                                                          text:currentResponse];
+
     [self.demoData.messages addObject:message];
     
     [self finishSendingMessageAnimated:YES];
@@ -388,19 +423,14 @@
     
     NSDate* date = [NSDate date];
 
-    //NSString *text = @"Monstrous response to your message. Rawr!";
-
     ProfileStack *sharedManager = [ProfileStack sharedManager];
 
+    Profile *myCurrentProfile = [sharedManager.allProfiles objectAtIndex: sharedManager.profileWeWantUserToSeeRightNow ];
     NSString *response;
     if(sharedManager.winner){
-        Profile *myCurrentProfile = [sharedManager.allProfiles objectAtIndex: sharedManager.profileWeWantUserToSeeRightNow ];
-        
         response = myCurrentProfile.goodMessage;
     }
     else{
-        Profile *myCurrentProfile = [sharedManager.allProfiles objectAtIndex: sharedManager.profileWeWantUserToSeeRightNow ];
-
         response = myCurrentProfile.badMessage;
     }
     
@@ -422,7 +452,7 @@
         NSLog(@"still more messages!");
 
         NSArray *responsesArray = [response componentsSeparatedByString:@"\n"];
-        
+    
         NSLog(@"number of lines in array... %lu ", (unsigned long)responsesArray.count);
         
         NSString *currentResponse = [responsesArray[0] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\""]];
