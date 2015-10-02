@@ -349,6 +349,9 @@
 }
 
 -(void) sendPlayerMessage{
+    
+    [JSQSystemSoundPlayer jsq_playMessageReceivedSound];
+    
     ProfileStack *sharedManager = [ProfileStack sharedManager];
 
     if(sharedManager.monsterSentMessage){
@@ -433,8 +436,8 @@
 
 - (void)messageResponse:(NSTimer *)timer{
     
-    NSDate* date = [NSDate date];
-
+    [JSQSystemSoundPlayer jsq_playMessageReceivedSound];
+    
     ProfileStack *sharedManager = [ProfileStack sharedManager];
 
     Profile *myCurrentProfile = [sharedManager.allProfiles objectAtIndex: sharedManager.profileWeWantUserToSeeRightNow ];
