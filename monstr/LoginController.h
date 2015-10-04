@@ -14,6 +14,8 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *rainyIntro;
 
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+
 - (IBAction)handleTap:(UITapGestureRecognizer *)sender;
 
 @property (weak, nonatomic) IBOutlet UITextView *introText;

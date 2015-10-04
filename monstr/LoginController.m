@@ -22,9 +22,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _loginButton.layer.cornerRadius = 2;
+    _loginButton.layer.borderWidth = 1;
+    _loginButton.layer.borderColor = [UIColor colorWithRed: 0.1 green: 0.5 blue: 0.9 alpha: 0.8].CGColor;
+    _loginButton.backgroundColor = [UIColor colorWithRed: 0.1 green: 0.5 blue: 0.9 alpha: 0.2 ];
+    
     ProfileStack *sharedManager = [ProfileStack sharedManager]; // force it to gen a winning profile
 
     _hintText.text = [sharedManager.profileWinner.profileHint stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\""]];
+    _hintText.font = [UIFont fontWithName:@"TrebuchetMS-Italic" size:16];
     
     if(sharedManager.firstTime){    // if it's your first time show the intro
         //NSLog(@"It's my first time!");
