@@ -32,6 +32,25 @@
     _hintText.text = [sharedManager.profileWinner.profileHint stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\""]];
     _hintText.font = [UIFont fontWithName:@"TrebuchetMS-Italic" size:16];
     
+    /*
+    CGFloat fixedWidth = _hintText.frame.size.width;
+    CGSize newSize = [_hintText sizeThatFits:CGSizeMake(fixedWidth, MAXFLOAT)];
+    CGRect newFrame = _hintText.frame;
+    newFrame.size = CGSizeMake(fmaxf(newSize.width, fixedWidth), newSize.height);
+    _hintText.frame = newFrame;*/
+    _hintText.scrollEnabled = NO;
+    
+    _memoryText.text = @"You think back to that unforgettable encounter at the bus stop...";
+    _memoryText.font = [UIFont fontWithName:@"TrebuchetMS" size:18];
+    
+    /*
+    CGFloat fixedWidth2 = _memoryText.frame.size.width;
+    CGSize newSize2 = [_memoryText sizeThatFits:CGSizeMake(fixedWidth2, MAXFLOAT)];
+    CGRect newFrame2 = _memoryText.frame;
+    newFrame2.size = CGSizeMake(fmaxf(newSize2.width, fixedWidth2), newSize2.height);
+    _memoryText.frame = newFrame2;*/
+    _memoryText.scrollEnabled = NO;
+
     if(sharedManager.firstTime){    // if it's your first time show the intro
         //NSLog(@"It's my first time!");
         sharedManager.firstTime = NO;

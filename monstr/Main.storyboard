@@ -227,8 +227,9 @@ Good luck! YOU'LL NEED IT!</string>
                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                 </accessibility>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="You think back to that unforgettable encounter at the bus stop..." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKe-Yw-Qnc" userLabel="Memory Text">
-                                <rect key="frame" x="20" y="176" width="280" height="100"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="bottom" editable="NO" text="You think back to that unforgettable encounter at the bus stop..." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKe-Yw-Qnc" userLabel="Memory Text">
+                                <rect key="frame" x="20" y="117" width="280" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Iph-Iq-MeA"/>
                                     <constraint firstAttribute="width" constant="280" id="XhE-f9-JvN"/>
@@ -236,8 +237,8 @@ Good luck! YOU'LL NEED IT!</string>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73j-TH-8Yj">
-                                <rect key="frame" x="33" y="238" width="253" height="300"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73j-TH-8Yj">
+                                <rect key="frame" x="33" y="218" width="253" height="300"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="qXC-Kb-2Pz"/>
@@ -255,7 +256,7 @@ Good luck! YOU'LL NEED IT!</string>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xb6-Z1-w0P">
-                                <rect key="frame" x="20" y="518" width="280" height="30"/>
+                                <rect key="frame" x="20" y="498" width="280" height="30"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="71v-L5-uEB"/>
@@ -267,7 +268,7 @@ Good luck! YOU'LL NEED IT!</string>
                                     <segue destination="Fvf-GV-bgW" kind="modal" id="cE7-qX-Wyf"/>
                                 </connections>
                             </button>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rainyBus" translatesAutoresizingMaskIntoConstraints="NO" id="7qJ-2p-4oZ">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="busstop" translatesAutoresizingMaskIntoConstraints="NO" id="7qJ-2p-4oZ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <gestureRecognizers/>
                             </imageView>
@@ -283,11 +284,11 @@ Good luck! YOU'LL NEED IT!</string>
                         <constraints>
                             <constraint firstItem="44d-X3-Zrg" firstAttribute="top" secondItem="akU-yU-4TO" secondAttribute="bottom" constant="20" id="BJa-or-PM5"/>
                             <constraint firstItem="7qJ-2p-4oZ" firstAttribute="centerX" secondItem="Xb6-Z1-w0P" secondAttribute="centerX" id="COF-RW-BQR"/>
-                            <constraint firstItem="uKe-Yw-Qnc" firstAttribute="top" secondItem="dM1-CI-1kF" secondAttribute="bottom" constant="40" id="D3P-Y1-KQ1"/>
                             <constraint firstItem="uKe-Yw-Qnc" firstAttribute="centerX" secondItem="48N-EC-Yej" secondAttribute="centerX" id="DrU-VQ-T3l"/>
                             <constraint firstAttribute="trailingMargin" secondItem="akU-yU-4TO" secondAttribute="trailing" constant="15" id="NMA-E6-8tz"/>
                             <constraint firstItem="akU-yU-4TO" firstAttribute="leading" secondItem="48N-EC-Yej" secondAttribute="leadingMargin" constant="15" id="O2V-nX-ZzB"/>
                             <constraint firstItem="akU-yU-4TO" firstAttribute="top" secondItem="Lbg-cC-mgD" secondAttribute="bottom" constant="20" id="QoR-0M-fnx"/>
+                            <constraint firstItem="73j-TH-8Yj" firstAttribute="top" secondItem="uKe-Yw-Qnc" secondAttribute="bottom" constant="1" id="W6B-Zy-sMZ"/>
                             <constraint firstItem="7qJ-2p-4oZ" firstAttribute="top" secondItem="Lbg-cC-mgD" secondAttribute="bottom" id="YuV-V3-dAd"/>
                             <constraint firstItem="dM1-CI-1kF" firstAttribute="top" secondItem="Lbg-cC-mgD" secondAttribute="bottom" constant="8" id="c4X-1O-Fgf"/>
                             <constraint firstItem="73j-TH-8Yj" firstAttribute="bottom" secondItem="Xb6-Z1-w0P" secondAttribute="top" constant="20" id="dUT-SG-Yn0"/>
@@ -297,7 +298,7 @@ Good luck! YOU'LL NEED IT!</string>
                             <constraint firstAttribute="centerX" secondItem="dM1-CI-1kF" secondAttribute="centerX" id="pq8-7l-z5D"/>
                             <constraint firstItem="7qJ-2p-4oZ" firstAttribute="bottom" secondItem="44d-X3-Zrg" secondAttribute="top" id="xBY-kU-9Q3"/>
                             <constraint firstItem="7qJ-2p-4oZ" firstAttribute="leading" secondItem="48N-EC-Yej" secondAttribute="leading" id="y1n-aR-Bxk"/>
-                            <constraint firstItem="44d-X3-Zrg" firstAttribute="top" secondItem="Xb6-Z1-w0P" secondAttribute="bottom" constant="20" id="zQk-Mz-zak"/>
+                            <constraint firstItem="44d-X3-Zrg" firstAttribute="top" secondItem="Xb6-Z1-w0P" secondAttribute="bottom" constant="40" id="zQk-Mz-zak"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="PSs-bB-lSR" appends="YES" id="BVX-rS-8Dg"/>
@@ -308,6 +309,7 @@ Good luck! YOU'LL NEED IT!</string>
                         <outlet property="hintText" destination="73j-TH-8Yj" id="6QO-ZW-q6U"/>
                         <outlet property="introText" destination="akU-yU-4TO" id="zJb-te-LcD"/>
                         <outlet property="loginButton" destination="Xb6-Z1-w0P" id="Nct-yu-ioO"/>
+                        <outlet property="memoryText" destination="uKe-Yw-Qnc" id="4nx-6q-XWM"/>
                         <outlet property="rainyIntro" destination="7qJ-2p-4oZ" id="pFq-FH-qVz"/>
                     </connections>
                 </viewController>
@@ -344,10 +346,10 @@ Good luck! YOU'LL NEED IT!</string>
     </scenes>
     <resources>
         <image name="MonstrLogoBIG" width="1573" height="423"/>
+        <image name="busstop" width="1800" height="3200"/>
         <image name="heart-texture" width="4724" height="3543"/>
         <image name="monsterbackground_1280" width="1280" height="1280"/>
         <image name="p_cerealkiller" width="1000" height="1000"/>
-        <image name="rainyBus" width="750" height="1092"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="p9v-Zh-02f"/>
