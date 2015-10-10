@@ -355,7 +355,47 @@
     ProfileStack *sharedManager = [ProfileStack sharedManager];
 
     if(sharedManager.monsterSentMessage){
+        
+        NSString *currentResponse = self.getCurrentResponseAndRemoveTopResponse; //gets the thing that the player will say
+
+        JSQMessage *message = [[JSQMessage alloc] initWithSenderId:@"053496-4509-289"
+                                                 senderDisplayName:@"Me"
+                                                              date:[NSDate date]
+                                                              text:currentResponse];
+
+        [self.demoData.messages addObject:message];
+        [self finishSendingMessageAnimated:YES];
+        
+        // YOU MUST REPEAT *IF* YOU FIND THE PLAYER CHARACTER }
+        if(self.nextMessageIsPlayerMessage){
+            //repeat this function
+            [self sendPlayerMessage];
+            // REPEAT AFTER A SHORT TIME!!! DON'T DO IT INSTANTLY! MAKE IT SHORT THOUGH
+        }
+        else{
+            sharedManager.monsterSentMessage = FALSE;
+            [self sendMonsterMessage];
+        }
+    }
+    else{
+        NSLog(@"monster hasnt sent their message yet");
+    }
+}
+
+- (BOOL) nextMessageIsPlayerMessage{
+    NSString *currentResponse = self.getCurrentResponse;
+    currentResponse=[currentResponse substringToIndex:1];
+    if([currentResponse isEqual: @"}"]){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+- (NSString *) getCurrentResponse{
     
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
     Profile *myCurrentProfile = [sharedManager.allProfiles objectAtIndex: sharedManager.profileWeWantUserToSeeRightNow ];
     NSString *response;
     if(sharedManager.winner){
@@ -364,10 +404,34 @@
     else{
         response = myCurrentProfile.badMessage;
     }
-
+    
     NSArray *responsesArray = [response componentsSeparatedByString:@"\n"];
     //NSLog(@"number of lines in array... %lu ", (unsigned long)responsesArray.count);
     NSString *currentResponse = [responsesArray[0] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\""]];
+    
+    return currentResponse;
+}
+
+- (NSString *) getCurrentResponseAndRemoveTopResponse{
+    
+    NSString *currentResponse = self.getCurrentResponse;
+    [self removeTopResponse];
+    return currentResponse;
+}
+
+- (void) removeTopResponse{
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
+    Profile *myCurrentProfile = [sharedManager.allProfiles objectAtIndex: sharedManager.profileWeWantUserToSeeRightNow ];
+    NSString *response;
+    if(sharedManager.winner){
+        response = myCurrentProfile.goodMessage;
+    }
+    else{
+        response = myCurrentProfile.badMessage;
+    }
+    
+    NSArray *responsesArray = [response componentsSeparatedByString:@"\n"];
+    //NSLog(@"number of lines in array... %lu ", (unsigned long)responsesArray.count);
     NSString *textLessFirstLine = @"";
     NSUInteger count = [responsesArray count];
     if(responsesArray.count > 1){
@@ -383,27 +447,12 @@
         textLessFirstLine = @"......";
     }
     
+    //REMOVES THE TOP RESPONSE
     if(sharedManager.winner){
         myCurrentProfile.goodMessage = textLessFirstLine;
     }
     else{
         myCurrentProfile.badMessage = textLessFirstLine;
-    }
-    
-    JSQMessage *message = [[JSQMessage alloc] initWithSenderId:@"053496-4509-289"
-                                             senderDisplayName:@"Me"
-                                                          date:[NSDate date]
-                                                          text:currentResponse];
-
-    [self.demoData.messages addObject:message];
-    
-    [self finishSendingMessageAnimated:YES];
-
-    sharedManager.monsterSentMessage = FALSE;
-    [self sendMonsterMessage];
-    }
-    else{
-        NSLog(@"monster hasnt sent their message yet");
     }
 }
 
@@ -506,6 +555,8 @@
                                                  senderDisplayName:myCurrentProfile.profileName
                                                               date:[NSDate date]
                                                               text:currentResponse];
+        
+        // YOU MUST REPEAT *IF* YOU FIND THE MONSTER CHARACTER {
         
         [self.demoData.messages addObject:message];
         
