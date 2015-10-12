@@ -28,6 +28,23 @@
     NSString *filePath2 = [mainBundle pathForResource:@"sfx/rain" ofType:@"mp3"];
     NSData *fileData2 = [NSData dataWithContentsOfFile:filePath2];
     self.introMusicPlayer = [[AVAudioPlayer alloc] initWithData:fileData2 error:&error];
+
+    //THE START SOUND PLAYER
+    NSString *filePath3 = [mainBundle pathForResource:@"sfx/start" ofType:@"mp3"];
+    NSData *fileData3 = [NSData dataWithContentsOfFile:filePath3];
+    self.startSoundPlayer = [[AVAudioPlayer alloc] initWithData:fileData3 error:&error];
+
+    //THE VICTORY MUSIC PLAYER
+    NSString *filePath4 = [mainBundle pathForResource:@"sfx/victory" ofType:@"mp3"];
+    NSData *fileData4 = [NSData dataWithContentsOfFile:filePath4];
+    self.victoryMusicPlayer = [[AVAudioPlayer alloc] initWithData:fileData4 error:&error];
+    
+    //THE TITLE MUSIC PLAYER
+    NSString *filePath5 = [mainBundle pathForResource:@"sfx/title" ofType:@"mp3"];
+    NSData *fileData5 = [NSData dataWithContentsOfFile:filePath5];
+    self.titleMusicPlayer = [[AVAudioPlayer alloc] initWithData:fileData5 error:&error];
+
+
     
     self = [super init];
     
@@ -55,22 +72,45 @@
     //[self generateDailyIndices]; //this is done thru login button now
 }
 
-
+-(void) startSound{
+    //[self.mainMusicPlayer stop];
+    [self.startSoundPlayer prepareToPlay];
+    [self.startSoundPlayer play];
+}
 
 -(void) startMainMusic{
-    //[self.mainMusicPlayer stop];
-    [self.introMusicPlayer stop];
+    [self stopAllMusic];
     
     [self.mainMusicPlayer prepareToPlay];
     [self.mainMusicPlayer play];
 }
 
 -(void) startIntroMusic{
-    [self.mainMusicPlayer stop];
-    //[self.introMusicPlayer stop];
+    [self stopAllMusic];
     
     [self.introMusicPlayer prepareToPlay];
     [self.introMusicPlayer play];
+}
+
+-(void) startVictoryMusic{
+    [self stopAllMusic];
+    
+    [self.victoryMusicPlayer prepareToPlay];
+    [self.victoryMusicPlayer play];
+}
+
+-(void) startTitleMusic{
+    [self stopAllMusic];
+
+    [self.titleMusicPlayer prepareToPlay];
+    [self.titleMusicPlayer play];
+}
+
+-(void) stopAllMusic{
+    [self.mainMusicPlayer stop];
+    [self.introMusicPlayer stop];
+    [self.victoryMusicPlayer stop];
+    [self.titleMusicPlayer stop];
 }
 
 

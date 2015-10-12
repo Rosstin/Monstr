@@ -228,17 +228,17 @@ Good luck! YOU'LL NEED IT!</string>
                                 </accessibility>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="bottom" editable="NO" text="You think back to that unforgettable encounter at the bus stop..." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKe-Yw-Qnc" userLabel="Memory Text">
-                                <rect key="frame" x="20" y="117" width="280" height="100"/>
+                                <rect key="frame" x="20" y="146" width="280" height="80"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Iph-Iq-MeA"/>
+                                    <constraint firstAttribute="height" constant="80" id="Iph-Iq-MeA"/>
                                     <constraint firstAttribute="width" constant="280" id="XhE-f9-JvN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73j-TH-8Yj">
-                                <rect key="frame" x="33" y="218" width="253" height="300"/>
+                                <rect key="frame" x="33" y="227" width="253" height="300"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="qXC-Kb-2Pz"/>
@@ -256,13 +256,16 @@ Good luck! YOU'LL NEED IT!</string>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xb6-Z1-w0P">
-                                <rect key="frame" x="20" y="498" width="280" height="30"/>
+                                <rect key="frame" x="20" y="473" width="280" height="55"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="71v-L5-uEB"/>
+                                    <constraint firstAttribute="height" constant="55" id="xr1-KA-BSX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="LOG IN"/>
+                                <state key="normal" title="LOG IN">
+                                    <color key="titleColor" red="0.26666666666666666" green="0.0" blue="0.51372549019607838" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="logIn:" destination="oom-yx-vMU" eventType="touchUpInside" id="41Y-I3-Lfe"/>
                                     <segue destination="Fvf-GV-bgW" kind="modal" id="cE7-qX-Wyf"/>
@@ -282,6 +285,7 @@ Good luck! YOU'LL NEED IT!</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="uKe-Yw-Qnc" firstAttribute="top" secondItem="dM1-CI-1kF" secondAttribute="bottom" constant="10" id="3jt-uT-suk"/>
                             <constraint firstItem="44d-X3-Zrg" firstAttribute="top" secondItem="akU-yU-4TO" secondAttribute="bottom" constant="20" id="BJa-or-PM5"/>
                             <constraint firstItem="7qJ-2p-4oZ" firstAttribute="centerX" secondItem="Xb6-Z1-w0P" secondAttribute="centerX" id="COF-RW-BQR"/>
                             <constraint firstItem="uKe-Yw-Qnc" firstAttribute="centerX" secondItem="48N-EC-Yej" secondAttribute="centerX" id="DrU-VQ-T3l"/>
@@ -291,7 +295,6 @@ Good luck! YOU'LL NEED IT!</string>
                             <constraint firstItem="73j-TH-8Yj" firstAttribute="top" secondItem="uKe-Yw-Qnc" secondAttribute="bottom" constant="1" id="W6B-Zy-sMZ"/>
                             <constraint firstItem="7qJ-2p-4oZ" firstAttribute="top" secondItem="Lbg-cC-mgD" secondAttribute="bottom" id="YuV-V3-dAd"/>
                             <constraint firstItem="dM1-CI-1kF" firstAttribute="top" secondItem="Lbg-cC-mgD" secondAttribute="bottom" constant="8" id="c4X-1O-Fgf"/>
-                            <constraint firstItem="73j-TH-8Yj" firstAttribute="bottom" secondItem="Xb6-Z1-w0P" secondAttribute="top" constant="20" id="dUT-SG-Yn0"/>
                             <constraint firstAttribute="centerX" secondItem="Xb6-Z1-w0P" secondAttribute="centerX" id="fti-AW-vfn"/>
                             <constraint firstAttribute="centerX" secondItem="73j-TH-8Yj" secondAttribute="centerX" id="i9p-6T-UKo"/>
                             <constraint firstAttribute="centerY" secondItem="akU-yU-4TO" secondAttribute="centerY" id="mJp-bU-EcQ"/>
@@ -352,8 +355,8 @@ Good luck! YOU'LL NEED IT!</string>
         <image name="p_cerealkiller" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="p9v-Zh-02f"/>
         <segue reference="Awt-Lr-BQd"/>
         <segue reference="HeW-oI-xu4"/>
+        <segue reference="Jab-05-NG9"/>
     </inferredMetricsTieBreakers>
 </document>

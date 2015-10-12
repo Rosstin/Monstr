@@ -51,21 +51,17 @@
     if(myCurrentProfile.profileName == sharedManager.profileWinner.profileName){
         NSLog(@"YOU WON! that was the profile you were looking for!!");
         sharedManager.winner = YES;
+        [sharedManager startVictoryMusic];
     }
     
     SEL aSelector = @selector(respondToTapGesture);
     
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc]
                                              initWithTarget:self action:aSelector];
-                                             
+
     tapRecognizer.numberOfTapsRequired = 1;
     
     [self.view addGestureRecognizer:tapRecognizer];
-    
-    
-    
-    
-    
     
     /**
      *  You MUST set your senderId and display name
@@ -348,39 +344,7 @@
     [self sendPlayerMessage];
 }
 
--(void) sendPlayerMessage{
-    
-    [JSQSystemSoundPlayer jsq_playMessageReceivedSound];
-    
-    ProfileStack *sharedManager = [ProfileStack sharedManager];
 
-    if(sharedManager.monsterSentMessage){
-        
-        NSString *currentResponse = self.getCurrentResponseAndRemoveTopResponse; //gets the thing that the player will say
-
-        JSQMessage *message = [[JSQMessage alloc] initWithSenderId:@"053496-4509-289"
-                                                 senderDisplayName:@"Me"
-                                                              date:[NSDate date]
-                                                              text:currentResponse];
-
-        [self.demoData.messages addObject:message];
-        [self finishSendingMessageAnimated:YES];
-        
-        // YOU MUST REPEAT *IF* YOU FIND THE PLAYER CHARACTER }
-        if(self.nextMessageIsPlayerMessage){
-            //repeat this function
-            [self sendPlayerMessage];
-            // REPEAT AFTER A SHORT TIME!!! DON'T DO IT INSTANTLY! MAKE IT SHORT THOUGH
-        }
-        else{
-            sharedManager.monsterSentMessage = FALSE;
-            [self sendMonsterMessage];
-        }
-    }
-    else{
-        NSLog(@"monster hasnt sent their message yet");
-    }
-}
 
 - (BOOL) nextMessageIsPlayerMessage{
     NSString *currentResponse = self.getCurrentResponse;
@@ -392,6 +356,18 @@
         return false;
     }
 }
+
+- (BOOL) nextMessageIsMonsterMessage{
+    NSString *currentResponse = self.getCurrentResponse;
+    currentResponse=[currentResponse substringToIndex:1];
+    if([currentResponse isEqual: @"{"]){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
 
 - (NSString *) getCurrentResponse{
     
@@ -483,12 +459,66 @@
     
 }
 
+-(void) sendPlayerMessage{
+    
+    [JSQSystemSoundPlayer jsq_playMessageReceivedSound];
+    
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
+    
+    if(sharedManager.monsterSentMessage){
+        
+        NSString *currentResponse = self.getCurrentResponseAndRemoveTopResponse; //gets the thing that the player will say
+        
+        if ([currentResponse hasPrefix:@"}"] && [currentResponse length] > 1) {
+            currentResponse = [currentResponse substringFromIndex:1];
+        }
+        
+        JSQMessage *message = [[JSQMessage alloc] initWithSenderId:@"053496-4509-289"
+                                                 senderDisplayName:@"Me"
+                                                              date:[NSDate date]
+                                                              text:currentResponse];
+        
+        [self.demoData.messages addObject:message];
+        [self finishSendingMessageAnimated:YES];
+        
+        // YOU MUST REPEAT *IF* YOU FIND THE PLAYER CHARACTER }
+        if(self.nextMessageIsPlayerMessage){
+            //repeat this function
+            float r = arc4random_uniform(100);
+            float time = 100 + r;
+            time = time/100;
+            
+            // set a timer for sending a message back
+            [NSTimer scheduledTimerWithTimeInterval: time
+                                             target:self
+                                           selector:@selector(sendPlayerMessageAfterTimer:)
+                                           userInfo:nil
+                                            repeats:NO];
+            
+            
+            // REPEAT AFTER A SHORT TIME!!! DON'T DO IT INSTANTLY! MAKE IT SHORT THOUGH
+        }
+        else{
+            sharedManager.monsterSentMessage = FALSE;
+            [self sendMonsterMessage];
+        }
+    }
+    else{
+        NSLog(@"monster hasnt sent their message yet");
+    }
+}
+
+- (void)sendPlayerMessageAfterTimer:(NSTimer *)timer{
+    [self sendPlayerMessage];
+}
+
+
 - (void)messageResponse:(NSTimer *)timer{
     
     [JSQSystemSoundPlayer jsq_playMessageReceivedSound];
     
     ProfileStack *sharedManager = [ProfileStack sharedManager];
-
+    
     Profile *myCurrentProfile = [sharedManager.allProfiles objectAtIndex: sharedManager.profileWeWantUserToSeeRightNow ];
     NSString *response;
     if(sharedManager.winner){
@@ -501,7 +531,7 @@
     if([response isEqualToString: @"......"]){
         NSLog(@"No more messages!");
         
-        float r = arc4random_uniform(200);
+        float r = arc4random_uniform(100);
         float time = 100 + r;
         time = time/100;
         
@@ -513,56 +543,31 @@
                                         repeats:NO];
         
     } else{
-        NSLog(@"still more messages!");
+        NSString *currentResponse = self.getCurrentResponseAndRemoveTopResponse; //gets the thing that the player will say
 
-        NSArray *responsesArray = [response componentsSeparatedByString:@"\n"];
-    
-        NSLog(@"number of lines in array... %lu ", (unsigned long)responsesArray.count);
-        
-        NSString *currentResponse = [responsesArray[0] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\""]];
-        
-        NSString *textLessFirstLine = @"";
-        
-        NSUInteger count = [responsesArray count];
-        
-        if(responsesArray.count > 1){
-            for(int i = 1; i < count; i++) { //don't re-add the first element
-                if( (i+1) == count ){
-                    textLessFirstLine = [textLessFirstLine stringByAppendingString: responsesArray[i] ]; //don't append newline to last element
-                }
-                else{
-                    textLessFirstLine = [textLessFirstLine stringByAppendingString: [responsesArray[i] stringByAppendingString:@"\n"] ];
-                }
-            }
-        } else {
-            textLessFirstLine = @"......";
-        }
-        
-        if(sharedManager.winner){
-            Profile *myCurrentProfile = [sharedManager.allProfiles objectAtIndex: sharedManager.profileWeWantUserToSeeRightNow ];
-            
-            myCurrentProfile.goodMessage = textLessFirstLine;
-        }
-        else{
-            Profile *myCurrentProfile = [sharedManager.allProfiles objectAtIndex: sharedManager.profileWeWantUserToSeeRightNow ];
-            
-            myCurrentProfile.badMessage = textLessFirstLine;
-        }
-        
         Profile *myCurrentProfile = [sharedManager.allProfiles objectAtIndex: sharedManager.profileWeWantUserToSeeRightNow ];
 
+        if ([currentResponse hasPrefix:@"{"] && [currentResponse length] > 1) {
+            currentResponse = [currentResponse substringFromIndex:1];
+        }
+        
         JSQMessage *message = [[JSQMessage alloc] initWithSenderId:dateId
                                                  senderDisplayName:myCurrentProfile.profileName
                                                               date:[NSDate date]
                                                               text:currentResponse];
         
-        // YOU MUST REPEAT *IF* YOU FIND THE MONSTER CHARACTER {
-        
         [self.demoData.messages addObject:message];
-        
         [self finishSendingMessageAnimated:YES];
+        
+        // YOU MUST REPEAT *IF* YOU FIND THE MONSTER CHARACTER {
+        // REPEAT AFTER A SHORT TIME!!! DON'T DO IT INSTANTLY! MAKE IT SHORT THOUGH
+        if(self.nextMessageIsMonsterMessage){
+            [self sendMonsterMessage];
+        }
+        else{
+            sharedManager.monsterSentMessage = TRUE;
+        }
     }
-    sharedManager.monsterSentMessage = TRUE;
 }
 
 - (void)didPressAccessoryButton:(UIButton *)sender

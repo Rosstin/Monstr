@@ -28,6 +28,9 @@
 
 @property AVAudioPlayer* mainMusicPlayer;
 @property AVAudioPlayer* introMusicPlayer;
+@property AVAudioPlayer* startSoundPlayer;
+@property AVAudioPlayer* victoryMusicPlayer;
+@property AVAudioPlayer* titleMusicPlayer;
 
 + (id)sharedManager;
 
@@ -37,6 +40,9 @@
 
 -(void)startMainMusic;
 -(void)startIntroMusic;
+-(void)startVictoryMusic;
+-(void)startTitleMusic;
+-(void)startSound;
 
 
 -(void)resetAll;
