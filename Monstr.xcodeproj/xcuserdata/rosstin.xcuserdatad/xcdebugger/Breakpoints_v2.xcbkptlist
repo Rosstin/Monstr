@@ -106,12 +106,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "monstr/DraggableViewBackground.m"
-            timestampString = "465438861.116111"
+            timestampString = "466466210.521372"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "213"
-            endingLineNumber = "213"
-            landmarkName = "-messageUser"
+            startingLineNumber = "277"
+            endingLineNumber = "277"
+            landmarkName = "-cardSwipedRight:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -122,12 +122,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "monstr/DraggableViewBackground.m"
-            timestampString = "465438861.116111"
+            timestampString = "466466210.521372"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "221"
-            endingLineNumber = "221"
-            landmarkName = "-cardTapped:"
+            startingLineNumber = "285"
+            endingLineNumber = "285"
+            landmarkName = "-messageUser"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

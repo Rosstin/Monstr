@@ -45,6 +45,8 @@
 
 @property (weak) id <DraggableViewBackgroundDelegate> delegate;
 
+@property UIImageView* outtaLikesWindow;
+
 //methods called in DraggableView
 -(void)cardSwipedLeft:(UIView *)card;
 -(void)cardSwipedRight:(UIView *)card;

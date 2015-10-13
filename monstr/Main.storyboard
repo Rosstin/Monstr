@@ -355,8 +355,8 @@ Good luck! YOU'LL NEED IT!</string>
         <image name="p_cerealkiller" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="1W9-mJ-6sy"/>
+        <segue reference="FIE-jQ-pMt"/>
         <segue reference="Awt-Lr-BQd"/>
-        <segue reference="HeW-oI-xu4"/>
-        <segue reference="Jab-05-NG9"/>
     </inferredMetricsTieBreakers>
 </document>

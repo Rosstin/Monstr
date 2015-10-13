@@ -12,9 +12,10 @@
 @implementation WinScreenController
 
 - (IBAction)startOver:(id)sender {
-    NSLog(@"start over!");
+    //NSLog(@"start over!");
     ProfileStack *sharedManager = [ProfileStack sharedManager];
     [sharedManager resetAll];
+    sharedManager.firstTime = true;
     [self performSegueWithIdentifier:@"SegueToTitleFromWin" sender:self];
 }
 

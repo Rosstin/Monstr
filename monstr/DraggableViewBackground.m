@@ -54,10 +54,81 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     return self;
 }
 
+-(void) tapDetected{
+    
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
+    [sharedManager startSound];
+    
+    self.outtaLikesWindow.animationImages = [NSArray arrayWithObjects:
+                                         [UIImage imageNamed:@"p1.png"],
+                                         [UIImage imageNamed:@"p2.png"],
+                                         [UIImage imageNamed:@"p1.png"],
+                                         [UIImage imageNamed:@"p4.png"], nil];
+    self.outtaLikesWindow.animationRepeatCount = 0;
+    NSTimeInterval interval = 0.1;
+    self.outtaLikesWindow.animationDuration = interval;
+    
+    [NSTimer scheduledTimerWithTimeInterval:1.0
+                                     target:self
+                                   selector:@selector(stopAnimating)
+                                   userInfo:nil
+                                    repeats:NO];
+    
+    [self.outtaLikesWindow startAnimating];
+    
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDetected2)];
+    singleTap.numberOfTapsRequired = 1;
+    [self.outtaLikesWindow setUserInteractionEnabled:YES];
+    [self.outtaLikesWindow addGestureRecognizer:singleTap];
+}
+
+-(void) stopAnimating{
+    NSLog(@"stopAnimating");
+    
+    [self.outtaLikesWindow.layer removeAllAnimations];
+    self.outtaLikesWindow.image = [UIImage imageNamed:@"p1.png"];
+    
+    //self.outtaLikesWindow.frame = [[self.outtaLikesWindow.layer presentationLayer] frame];
+}
+
+-(void) tapDetected2{
+    
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
+    [sharedManager startSound];
+
+    [self returnToTitle];
+}
+
 //%%% sets up the extra buttons on the screen
 -(void)setupView
 {
     self.backgroundColor = [UIColor colorWithRed:.92 green:.93 blue:.95 alpha:1]; //the gray background colors
+
+    //UIImage *image = [UIImage imageNamed:@"l1"];
+    int width = 1048.0/3.9;
+    int height = 1197.0/3.9;
+    
+    UIImageView* animatedImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.center.x-width/2,self.center.y-height/2,width,height)];
+    animatedImageView.animationImages = [NSArray arrayWithObjects:
+                                         [UIImage imageNamed:@"l1.png"],
+                                         [UIImage imageNamed:@"l2.png"],
+                                         [UIImage imageNamed:@"l3.png"],
+                                         [UIImage imageNamed:@"l2.png"], nil];
+    animatedImageView.animationRepeatCount = 0;
+    NSTimeInterval interval = 5.0;
+    animatedImageView.animationDuration = interval;
+    [animatedImageView startAnimating];
+    
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDetected)];
+    singleTap.numberOfTapsRequired = 1;
+    [animatedImageView setUserInteractionEnabled:YES];
+    [animatedImageView addGestureRecognizer:singleTap];
+    
+    [self addSubview:animatedImageView];
+
+    self.outtaLikesWindow = animatedImageView;
+    
+    //TODO CHANGE THE VIEW IMAGE HERE
     
     // dont put all those buttons
     
@@ -159,8 +230,8 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
         [sharedManager incrementCardsLoadedIndexGlobal];
     }
     else{
-        //NSLog(@"LAST CARD SWIPED!");
-        [self returnToTitle];
+        NSLog(@"LAST CARD SWIPED!");
+        //[self returnToTitle];
     }
 }
 
