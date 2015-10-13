@@ -32,7 +32,6 @@
 
 
 - (void)returnToTitle:(UIView *)card {
-    NSLog(@"returnToTitle... we should start a timer here for the segue, don't go right away");
     [self performSegueWithIdentifier:@"SegueToTitle" sender:self];
 }
 

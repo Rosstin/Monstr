@@ -23,11 +23,13 @@
     NSData *fileData = [NSData dataWithContentsOfFile:filePath];
     NSError *error = nil;
     self.mainMusicPlayer = [[AVAudioPlayer alloc] initWithData:fileData error:&error];
+    self.mainMusicPlayer.numberOfLoops = -1;
 
     //THE INTRO MUSIC PLAYER
     NSString *filePath2 = [mainBundle pathForResource:@"sfx/rain" ofType:@"mp3"];
     NSData *fileData2 = [NSData dataWithContentsOfFile:filePath2];
     self.introMusicPlayer = [[AVAudioPlayer alloc] initWithData:fileData2 error:&error];
+    self.introMusicPlayer.numberOfLoops = -1;
 
     //THE START SOUND PLAYER
     NSString *filePath3 = [mainBundle pathForResource:@"sfx/start" ofType:@"mp3"];
@@ -43,6 +45,7 @@
     NSString *filePath5 = [mainBundle pathForResource:@"sfx/title" ofType:@"mp3"];
     NSData *fileData5 = [NSData dataWithContentsOfFile:filePath5];
     self.titleMusicPlayer = [[AVAudioPlayer alloc] initWithData:fileData5 error:&error];
+    self.titleMusicPlayer.numberOfLoops = -1;
 
 
     
