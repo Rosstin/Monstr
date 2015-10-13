@@ -68,7 +68,7 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     NSTimeInterval interval = 0.1;
     self.outtaLikesWindow.animationDuration = interval;
     
-    [NSTimer scheduledTimerWithTimeInterval:1.0
+    [NSTimer scheduledTimerWithTimeInterval:0.5
                                      target:self
                                    selector:@selector(stopAnimating)
                                    userInfo:nil

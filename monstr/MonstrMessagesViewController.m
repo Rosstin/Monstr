@@ -448,6 +448,10 @@
 }
 
 - (void)done:(NSTimer *)timer{
+    [self doneFunction];
+}
+
+- (void) doneFunction{
     ProfileStack *sharedManager = [ProfileStack sharedManager];
     
     if(sharedManager.winner){
@@ -456,7 +460,6 @@
     else{
         [self performSegueWithIdentifier:@"SegueToLoginFromMessage" sender:self];
     }
-    
 }
 
 -(void) sendPlayerMessage{
@@ -505,6 +508,7 @@
     }
     else{
         NSLog(@"monster hasnt sent their message yet");
+        //TODO!!!! FORCE MESSAGE!!
     }
 }
 
@@ -512,6 +516,14 @@
     [self sendPlayerMessage];
 }
 
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    //NSLog(@"alertView.... buttonIndex is %ld", (long)buttonIndex);
+    if (buttonIndex == 0) {
+        [self doneFunction];
+    }
+}
 
 - (void)messageResponse:(NSTimer *)timer{
     
@@ -528,11 +540,38 @@
         response = myCurrentProfile.badMessage;
     }
     
-    if([response isEqualToString: @"......"]){
-        NSLog(@"No more messages!");
+    if([response isEqualToString: @"......"] && !sharedManager.winner){
+        NSLog(@"So-and-so has blocked you.");
+        
+        NSString *blockMessage = @"";
+        
+        blockMessage = [blockMessage stringByAppendingString:myCurrentProfile.profileName];
+        blockMessage = [blockMessage stringByAppendingString:@" has blocked you."];
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
+                                                        message:blockMessage
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"                                                                           otherButtonTitles:nil];
+        alert.cancelButtonIndex = -1;
+        
+        [alert show];
+        
+        /*
+        float r = arc4random_uniform(100);
+        float time = 50 + r;
+        time = time/100;
+        
+        // set a timer for being done
+        [NSTimer scheduledTimerWithTimeInterval: time
+                                         target:self
+                                       selector:@selector(done:)
+                                       userInfo:nil
+                                        repeats:NO];*/
+    }
+    else if([response isEqualToString: @"......"]){
         
         float r = arc4random_uniform(100);
-        float time = 100 + r;
+        float time = 50 + r;
         time = time/100;
         
         // set a timer for being done
