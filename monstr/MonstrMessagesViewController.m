@@ -88,7 +88,7 @@
         self.collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSizeZero; //CGSizeMake(15,15);
     }
     
-    self.showLoadEarlierMessagesHeader = YES;
+    self.showLoadEarlierMessagesHeader = NO;
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage jsq_defaultTypingIndicatorImage]
                                                                               style:UIBarButtonItemStyleBordered
@@ -98,14 +98,14 @@
     /**
      *  Register custom menu actions for cells.
      */
-    [JSQMessagesCollectionViewCell registerMenuAction:@selector(customAction:)];
-    [UIMenuController sharedMenuController].menuItems = @[ [[UIMenuItem alloc] initWithTitle:@"Custom Action"
-                                                                                      action:@selector(customAction:)] ];
+    //[JSQMessagesCollectionViewCell registerMenuAction:@selector(customAction:)];
+    //[UIMenuController sharedMenuController].menuItems = @[ [[UIMenuItem alloc] initWithTitle:@"Custom Action"
+    //                                                                                  action:@selector(customAction:)] ];
     
     /**
      *  OPT-IN: allow cells to be deleted
      */
-    [JSQMessagesCollectionViewCell registerMenuAction:@selector(delete:)];
+    //[JSQMessagesCollectionViewCell registerMenuAction:@selector(delete:)];
     
     /**
      *  Customize your toolbar buttons
@@ -113,6 +113,10 @@
      *  self.inputToolbar.contentView.leftBarButtonItem = custom button or nil to remove
      *  self.inputToolbar.contentView.rightBarButtonItem = custom button or nil to remove
      */
+    
+    
+    //DONT SHOW TOOLBAR
+    self.inputToolbar.hidden = YES;
     
     /**
      *  Set a maximum height for the input toolbar
