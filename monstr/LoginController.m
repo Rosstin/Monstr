@@ -111,8 +111,11 @@
             _introText.text = @"It's time to check Monstr.";
             [_introText setFont:[UIFont boldSystemFontOfSize:18]];
             break;
-        default:
+        case 8:
             [self returnToRegularLoginScreen];
+            break;
+        default:
+            // do nothing
             break;
     }
     
