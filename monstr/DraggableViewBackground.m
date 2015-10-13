@@ -60,10 +60,10 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     [sharedManager startSound];
     
     self.outtaLikesWindow.animationImages = [NSArray arrayWithObjects:
-                                         [UIImage imageNamed:@"p1.png"],
-                                         [UIImage imageNamed:@"p2.png"],
-                                         [UIImage imageNamed:@"p1.png"],
-                                         [UIImage imageNamed:@"p4.png"], nil];
+                                         [UIImage imageNamed:@"mm1.png"],
+                                         [UIImage imageNamed:@"mm2.png"],
+                                         [UIImage imageNamed:@"mm1.png"],
+                                         [UIImage imageNamed:@"mm3.png"], nil];
     self.outtaLikesWindow.animationRepeatCount = 0;
     NSTimeInterval interval = 0.1;
     self.outtaLikesWindow.animationDuration = interval;
@@ -110,10 +110,10 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     
     UIImageView* animatedImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.center.x-width/2,self.center.y-height/2,width,height)];
     animatedImageView.animationImages = [NSArray arrayWithObjects:
-                                         [UIImage imageNamed:@"l1.png"],
-                                         [UIImage imageNamed:@"l2.png"],
-                                         [UIImage imageNamed:@"l3.png"],
-                                         [UIImage imageNamed:@"l2.png"], nil];
+                                         [UIImage imageNamed:@"ll1.png"],
+                                         [UIImage imageNamed:@"ll2.png"],
+                                         [UIImage imageNamed:@"ll3.png"],
+                                         [UIImage imageNamed:@"ll2.png"], nil];
     animatedImageView.animationRepeatCount = 0;
     NSTimeInterval interval = 5.0;
     animatedImageView.animationDuration = interval;
