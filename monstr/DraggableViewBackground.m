@@ -86,7 +86,7 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     NSLog(@"stopAnimating");
     
     [self.outtaLikesWindow.layer removeAllAnimations];
-    self.outtaLikesWindow.image = [UIImage imageNamed:@"p1.png"];
+    self.outtaLikesWindow.image = [UIImage imageNamed:@"mm1.png"];
     
     //self.outtaLikesWindow.frame = [[self.outtaLikesWindow.layer presentationLayer] frame];
 }
@@ -102,11 +102,10 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 //%%% sets up the extra buttons on the screen
 -(void)setupView
 {
-    self.backgroundColor = [UIColor colorWithRed:.92 green:.93 blue:.95 alpha:1]; //the gray background colors
+    self.backgroundColor = [UIColor colorWithRed:.90 green:.85 blue:.90 alpha:1]; //the gray background colors
 
-    //UIImage *image = [UIImage imageNamed:@"l1"];
-    int width = 1048.0/3.9;
-    int height = 1197.0/3.9;
+    int width = 1048.0/3.6;
+    int height = 1197.0/3.6;
     
     UIImageView* animatedImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.center.x-width/2,self.center.y-height/2,width,height)];
     animatedImageView.animationImages = [NSArray arrayWithObjects:
@@ -127,25 +126,6 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     [self addSubview:animatedImageView];
 
     self.outtaLikesWindow = animatedImageView;
-    
-    //TODO CHANGE THE VIEW IMAGE HERE
-    
-    // dont put all those buttons
-    
-    //menuButton = [[UIButton alloc]initWithFrame:CGRectMake(17, 34, 22, 15)];
-    //[menuButton setImage:[UIImage imageNamed:@"menuButton"] forState:UIControlStateNormal];
-    //messageButton = [[UIButton alloc]initWithFrame:CGRectMake(284, 34, 18, 18)];
-    //[messageButton setImage:[UIImage imageNamed:@"messageButton"] forState:UIControlStateNormal];
-    //xButton = [[UIButton alloc]initWithFrame:CGRectMake(60, 485, 59, 59)];
-    //[xButton setImage:[UIImage imageNamed:@"xButton"] forState:UIControlStateNormal];
-    //[xButton addTarget:self action:@selector(swipeLeft) forControlEvents:UIControlEventTouchUpInside];
-    //checkButton = [[UIButton alloc]initWithFrame:CGRectMake(200, 485, 59, 59)];
-    //[checkButton setImage:[UIImage imageNamed:@"checkButton"] forState:UIControlStateNormal];
-    //[checkButton addTarget:self action:@selector(swipeRight) forControlEvents:UIControlEventTouchUpInside];
-    //[self addSubview:menuButton];
-    //[self addSubview:messageButton];
-    //[self addSubview:xButton];
-    //[self addSubview:checkButton];
 }
 
 //%%% creates a card and returns it.  This should be customized to fit your needs.
