@@ -68,6 +68,13 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     NSTimeInterval interval = 0.1;
     self.outtaLikesWindow.animationDuration = interval;
     
+    
+    self.outtaLikesWindow.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.outtaLikesWindow.layer.shadowOffset = CGSizeMake(1, 1);
+    self.outtaLikesWindow.layer.shadowOpacity = 0.2;
+    self.outtaLikesWindow.layer.shadowRadius = 3.0;
+    self.outtaLikesWindow.clipsToBounds = NO;
+
     [NSTimer scheduledTimerWithTimeInterval:0.5
                                      target:self
                                    selector:@selector(stopAnimating)
@@ -88,6 +95,12 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     [self.outtaLikesWindow.layer removeAllAnimations];
     self.outtaLikesWindow.image = [UIImage imageNamed:@"mm1.png"];
     
+    self.outtaLikesWindow.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.outtaLikesWindow.layer.shadowOffset = CGSizeMake(1, 1);
+    self.outtaLikesWindow.layer.shadowOpacity = 0.2;
+    self.outtaLikesWindow.layer.shadowRadius = 3.0;
+    self.outtaLikesWindow.clipsToBounds = NO;
+    
     //self.outtaLikesWindow.frame = [[self.outtaLikesWindow.layer presentationLayer] frame];
 }
 
@@ -102,7 +115,7 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 //%%% sets up the extra buttons on the screen
 -(void)setupView
 {
-    self.backgroundColor = [UIColor colorWithRed:.90 green:.85 blue:.90 alpha:1]; //the gray background colors
+    self.backgroundColor = [UIColor colorWithRed:.90 green:.87 blue:.90 alpha:1]; //the gray background colors
 
     int width = 1048.0/3.6;
     int height = 1197.0/3.6;
@@ -117,6 +130,11 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
     NSTimeInterval interval = 5.0;
     animatedImageView.animationDuration = interval;
     [animatedImageView startAnimating];
+    animatedImageView.layer.shadowColor = [UIColor blackColor].CGColor;
+    animatedImageView.layer.shadowOffset = CGSizeMake(1, 1);
+    animatedImageView.layer.shadowOpacity = 0.2;
+    animatedImageView.layer.shadowRadius = 3.0;
+    animatedImageView.clipsToBounds = NO;
     
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDetected)];
     singleTap.numberOfTapsRequired = 1;
