@@ -34,6 +34,7 @@
 
 @property UIImageView *messageMessage;
 
+@property NSTimer *monsterMessageTimer;
 
 -(void) receiveMessagePressed:(UIBarButtonItem *)sender;
 

@@ -54,7 +54,6 @@
     int width = 2048.0/9.6;
     int height = 1676.0/9.6;
     
-    
     UIImageView* animatedImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.center.x-width/2,self.view.center.y-height/2,width,height)];
     animatedImageView.animationImages = [NSArray arrayWithObjects:
                                          [UIImage imageNamed:@"t1.png"],
@@ -475,7 +474,7 @@
     time = time/100;
     
     // set a timer for sending a message back
-    [NSTimer scheduledTimerWithTimeInterval: time
+    _monsterMessageTimer = [NSTimer scheduledTimerWithTimeInterval: time
                                      target:self
                                    selector:@selector(messageResponse:)
                                    userInfo:nil
@@ -543,8 +542,12 @@
         }
     }
     else{
-        NSLog(@"monster hasnt sent their message yet");
+        NSLog(@"monster hasnt sent their message yet... force it!");
         //TODO!!!! FORCE MESSAGE!!
+        
+        //cancel timer message
+        [_monsterMessageTimer invalidate];
+        [self monsterMessageFunction];
     }
 }
 
@@ -562,7 +565,10 @@
 }
 
 - (void)messageResponse:(NSTimer *)timer{
-    
+    [self monsterMessageFunction];
+}
+
+- (void)monsterMessageFunction{
     [JSQSystemSoundPlayer jsq_playMessageReceivedSound];
     
     ProfileStack *sharedManager = [ProfileStack sharedManager];
