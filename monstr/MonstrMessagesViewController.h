@@ -32,6 +32,9 @@
 
 @property (strong, nonatomic) DemoModelData *demoData;
 
+@property UIImageView *messageMessage;
+
+
 -(void) receiveMessagePressed:(UIBarButtonItem *)sender;
 
 -(void)closePressed:(UIBarButtonItem *)sender;

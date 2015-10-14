@@ -23,9 +23,17 @@
 #pragma mark - View lifecycle
 
 - (void) respondToTapGesture{
-    //temporarily disabled until i make it way better
     NSLog(@"respondToTapGesture");
-    [self sendPlayerMessage];
+    [self hideMessageMessage];
+}
+
+- (void) hideMessageMessage{
+    [UIView animateWithDuration:0.5 delay:0.1 options:0 animations:^{
+        self.messageMessage.alpha = 0.0f;
+    } completion:^(BOOL finished){
+        self.messageMessage.hidden = YES;
+        [self sendPlayerMessage];
+    }];
 }
 
 /**
@@ -42,6 +50,30 @@
     [super viewDidLoad];
     
     self.title = @"JSQMessages";
+    
+    int width = 2048.0/9.6;
+    int height = 1676.0/9.6;
+    
+    
+    UIImageView* animatedImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.center.x-width/2,self.view.center.y-height/2,width,height)];
+    animatedImageView.animationImages = [NSArray arrayWithObjects:
+                                         [UIImage imageNamed:@"t1.png"],
+                                         [UIImage imageNamed:@"t2.png"],
+                                         [UIImage imageNamed:@"t1.png"],
+                                         [UIImage imageNamed:@"t3.png"], nil];
+    animatedImageView.animationRepeatCount = 0;
+    NSTimeInterval interval = 5.0;
+    animatedImageView.animationDuration = interval;
+    [animatedImageView startAnimating];
+    animatedImageView.layer.shadowColor = [UIColor blackColor].CGColor;
+    animatedImageView.layer.shadowOffset = CGSizeMake(1, 1);
+    animatedImageView.layer.shadowOpacity = 0.2;
+    animatedImageView.layer.shadowRadius = 3.0;
+    animatedImageView.clipsToBounds = NO;
+    
+    [self.view addSubview:animatedImageView];
+    
+    self.messageMessage = animatedImageView;
     
     ProfileStack *sharedManager = [ProfileStack sharedManager];
 
