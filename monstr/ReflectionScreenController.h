@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ReflectionScreenController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextView *hintText;
 
 @end

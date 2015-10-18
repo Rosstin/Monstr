@@ -21,60 +21,53 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    UIColor *borderAndTextColor = [UIColor colorWithRed: 0.5 green: 0.1 blue: 0.5 alpha: 0.9];
+    UIColor *backgroundColor = [UIColor colorWithRed: 0.1 green: 0.7 blue: 0.9 alpha: 0.19 ];
     
-    _loginButton.layer.cornerRadius = 2;
-    _loginButton.layer.borderWidth = 3;
-    _loginButton.layer.borderColor = [UIColor colorWithRed: 0.6 green: 0.4 blue: 0.9 alpha: 0.8].CGColor;
-    _loginButton.backgroundColor = [UIColor colorWithRed: 0.1 green: 0.7 blue: 0.9 alpha: 0.3 ];
+    _loginButton.layer.cornerRadius = 8;
+    _loginButton.layer.borderWidth = 2;
+    _loginButton.layer.borderColor = borderAndTextColor.CGColor;
+    _loginButton.backgroundColor = backgroundColor;
+    [_loginButton setTitleColor: borderAndTextColor forState:UIControlStateNormal];
+    
+    _loginWithButton.layer.cornerRadius = 8;
+    _loginWithButton.layer.borderWidth = 2;
+    _loginWithButton.layer.borderColor = borderAndTextColor.CGColor;
+    _loginWithButton.backgroundColor = backgroundColor;
+    [_loginWithButton setTitleColor: borderAndTextColor forState:UIControlStateNormal];
     
     ProfileStack *sharedManager = [ProfileStack sharedManager]; // force it to gen a winning profile
 
+    /*
     _hintText.text = [sharedManager.profileWinner.profileHint stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\""]];
     _hintText.font = [UIFont fontWithName:@"TrebuchetMS-Italic" size:16];
-    
+    */
     /*
     CGFloat fixedWidth = _hintText.frame.size.width;
     CGSize newSize = [_hintText sizeThatFits:CGSizeMake(fixedWidth, MAXFLOAT)];
     CGRect newFrame = _hintText.frame;
     newFrame.size = CGSizeMake(fmaxf(newSize.width, fixedWidth), newSize.height);
     _hintText.frame = newFrame;*/
-    _hintText.scrollEnabled = NO;
+    //_hintText.scrollEnabled = NO;
     
-    _memoryText.text = @"You think back to that unforgettable encounter at the bus stop...";
-    _memoryText.font = [UIFont fontWithName:@"TrebuchetMS" size:18];
-    
-    /*
-    CGFloat fixedWidth2 = _memoryText.frame.size.width;
-    CGSize newSize2 = [_memoryText sizeThatFits:CGSizeMake(fixedWidth2, MAXFLOAT)];
-    CGRect newFrame2 = _memoryText.frame;
-    newFrame2.size = CGSizeMake(fmaxf(newSize2.width, fixedWidth2), newSize2.height);
-    _memoryText.frame = newFrame2;*/
-    _memoryText.scrollEnabled = NO;
+    //_memoryText.text = @"You think back to that unforgettable encounter at the bus stop...";
+    //_memoryText.font = [UIFont fontWithName:@"TrebuchetMS" size:18];
+    //_memoryText.scrollEnabled = NO;
 
-    if(sharedManager.firstTime){    // if it's your first time show the intro
-        //NSLog(@"It's my first time!");
+    if(sharedManager.firstTime){   // if it's your first time show the intro
         sharedManager.firstTime = NO;
-        
         _rainyIntro.hidden = NO;
-        
-        //[self performSegueWithIdentifier:@"SegueToIntroFromLogin" sender:self];
-        
         [self startFirstTimeIntro];
-        
-        
     }
-    else{
-        //NSLog(@"It's not my first time at login screen... don't show intro....");
+    else{ //NSLog(@"It's not my first time at login screen... don't show intro....");
         [self returnToRegularLoginScreen];
     }
     
 }
 
 - (IBAction)handleTap:(UITapGestureRecognizer *)sender {
-    //NSLog(@"handleTap in LoginController");
-    
     ProfileStack *sharedManager = [ProfileStack sharedManager];
-    
     sharedManager.introTextIndex++;
 
     switch(sharedManager.introTextIndex)

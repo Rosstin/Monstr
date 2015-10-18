@@ -16,6 +16,7 @@
 -(id)init {
     NSLog(@"Init ProfileStack");
 
+    _facebookName = @"Disgracebook";
     
     //THE MAIN MUSIC PLAYER
     NSBundle *mainBundle = [NSBundle mainBundle];
@@ -46,8 +47,6 @@
     NSData *fileData5 = [NSData dataWithContentsOfFile:filePath5];
     self.titleMusicPlayer = [[AVAudioPlayer alloc] initWithData:fileData5 error:&error];
     self.titleMusicPlayer.numberOfLoops = -1;
-
-
     
     self = [super init];
     
@@ -152,6 +151,7 @@
 - (void) generateDailyIndices{
     //NSLog(@"generating some random indices");
     [_profileIndicesForToday removeAllObjects];
+    
     
     NSMutableArray *excludedRightNow = [NSMutableArray array];
     

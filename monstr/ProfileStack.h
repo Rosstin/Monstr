@@ -24,6 +24,8 @@
 @property BOOL thisIsTheLastCard;
 @property NSInteger introTextIndex;
 
+@property NSString* facebookName;
+
 @property BOOL monsterSentMessage;
 
 @property AVAudioPlayer* mainMusicPlayer;
@@ -44,10 +46,8 @@
 -(void)startTitleMusic;
 -(void)startSound;
 
-
 -(void)resetAll;
 
-//-(Profile *)profileUserIsLookingAt;
 -(NSUInteger)profileUserIsLookingAtIndexNumber;
 -(Profile *)profileWinner;
 

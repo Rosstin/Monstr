@@ -10,13 +10,11 @@
 
 @interface LoginController : UIViewController <UIGestureRecognizerDelegate>
 
-@property (weak, nonatomic) IBOutlet UITextView *hintText;
 
 @property (weak, nonatomic) IBOutlet UIImageView *rainyIntro;
 
-@property (weak, nonatomic) IBOutlet UITextView *memoryText;
-
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UIButton *loginWithButton;
 
 - (IBAction)handleTap:(UITapGestureRecognizer *)sender;
 
