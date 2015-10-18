@@ -30,6 +30,7 @@
 		F3C8B84C1B90FAFB0001057D /* MonstrMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8B84B1B90FAFB0001057D /* MonstrMessagesViewController.m */; };
 		F3C8B84F1B90FC5B0001057D /* DemoModelData.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8B84E1B90FC5B0001057D /* DemoModelData.m */; };
 		F3C8B8521B90FCB30001057D /* NSUserDefaults+DemoSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8B8511B90FCB30001057D /* NSUserDefaults+DemoSettings.m */; };
+		F3D1A8951BD2E54F00332F9E /* ReflectionScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D1A8941BD2E54F00332F9E /* ReflectionScreenController.m */; settings = {ASSET_TAGS = (); }; };
 		F3F61E121B8F7B8B00EB0FC7 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F61E111B8F7B8B00EB0FC7 /* Config.m */; };
 		F3F61E151B8F85DA00EB0FC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F61E141B8F85DA00EB0FC7 /* Main.storyboard */; };
 		F3F61E181B8F8D5600EB0FC7 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F61E171B8F8D5600EB0FC7 /* LoginController.m */; };
@@ -88,6 +89,8 @@
 		F3C8B84E1B90FC5B0001057D /* DemoModelData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoModelData.m; sourceTree = "<group>"; };
 		F3C8B8501B90FCB30001057D /* NSUserDefaults+DemoSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+DemoSettings.h"; sourceTree = "<group>"; };
 		F3C8B8511B90FCB30001057D /* NSUserDefaults+DemoSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+DemoSettings.m"; sourceTree = "<group>"; };
+		F3D1A8931BD2E54700332F9E /* ReflectionScreenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReflectionScreenController.h; sourceTree = "<group>"; };
+		F3D1A8941BD2E54F00332F9E /* ReflectionScreenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReflectionScreenController.m; sourceTree = "<group>"; };
 		F3F61E111B8F7B8B00EB0FC7 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		F3F61E131B8F7B9500EB0FC7 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		F3F61E141B8F85DA00EB0FC7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -175,6 +178,8 @@
 				F3F61E141B8F85DA00EB0FC7 /* Main.storyboard */,
 				F3C8B84A1B90FAFB0001057D /* MonstrMessagesViewController.h */,
 				F3C8B84B1B90FAFB0001057D /* MonstrMessagesViewController.m */,
+				F3D1A8931BD2E54700332F9E /* ReflectionScreenController.h */,
+				F3D1A8941BD2E54F00332F9E /* ReflectionScreenController.m */,
 				F32FD00C1B9125A200710E45 /* WinScreenController.h */,
 				F32FD00D1B9125A200710E45 /* WinScreenController.m */,
 				F3C8B84D1B90FC5B0001057D /* DemoModelData.h */,
@@ -362,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3D1A8951BD2E54F00332F9E /* ReflectionScreenController.m in Sources */,
 				F3C8B84F1B90FC5B0001057D /* DemoModelData.m in Sources */,
 				99FDDE7919A992F200371454 /* DraggableViewBackground.m in Sources */,
 				F3F61E121B8F7B8B00EB0FC7 /* Config.m in Sources */,

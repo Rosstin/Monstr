@@ -24,9 +24,9 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <segue destination="ktp-rT-Sfg" kind="push" identifier="SegueToProfile" id="m96-hh-Yz6"/>
-                        <segue destination="oom-yx-vMU" kind="push" identifier="SegueToTitle" id="FIE-jQ-pMt"/>
                         <segue destination="hIX-M7-QA8" kind="push" identifier="SegueToMessage" id="1W9-mJ-6sy"/>
                         <segue destination="ktp-rT-Sfg" kind="push" identifier="SegueToProfileWithRightSwipe" id="Awt-Lr-BQd"/>
+                        <segue destination="piJ-Ev-x7h" kind="push" identifier="SegueToReflection" id="j9h-Az-9ah"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -122,6 +122,52 @@
             </objects>
             <point key="canvasLocation" x="1496" y="294"/>
         </scene>
+        <!--Reflection Screen Controller-->
+        <scene sceneID="rzb-2g-x6t">
+            <objects>
+                <viewController id="piJ-Ev-x7h" customClass="ReflectionScreenController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pl6-mE-chE"/>
+                        <viewControllerLayoutGuide type="bottom" id="6CB-tG-GC7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rZn-i5-79t">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="busstop" translatesAutoresizingMaskIntoConstraints="NO" id="5f7-l6-e1t">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="You think back to that unforgettable encounter at the bus stop..." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qr-hV-TVl">
+                                <rect key="frame" x="20" y="20" width="280" height="57"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8H-NH-YkS">
+                                <rect key="frame" x="20" y="85" width="280" height="463"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="qK5-GN-vaT" appends="YES" id="bsB-4d-7I0"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="vyb-RH-HbZ"/>
+                    <connections>
+                        <segue destination="oom-yx-vMU" kind="modal" identifier="SegueToLoginFromReflection" id="fqB-zU-iaG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mV6-0q-txo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="qK5-GN-vaT">
+                    <connections>
+                        <action selector="handleTap:" destination="piJ-Ev-x7h" id="G0t-dk-YLn"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="293" y="1058"/>
+        </scene>
         <!--Monstr Messages View Controller-->
         <scene sceneID="ZOe-if-iX1">
             <objects>
@@ -137,8 +183,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Z5S-FA-Wqd"/>
                     <connections>
-                        <segue destination="oom-yx-vMU" kind="modal" identifier="SegueToLoginFromMessage" id="BD7-Z1-eJ4"/>
                         <segue destination="Nx3-Fg-ekL" kind="modal" identifier="SegueToWinFromMessage" id="vtc-LB-dcC"/>
+                        <segue destination="piJ-Ev-x7h" kind="modal" identifier="SegueToReflectionFromMessage" id="B33-w7-ewh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTj-xE-t6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -346,6 +392,23 @@ Good luck! YOU'LL NEED IT!</string>
             </objects>
             <point key="canvasLocation" x="1245" y="-557"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="OTT-ga-sKM">
+            <objects>
+                <viewController id="JWv-FA-gLV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g3Y-7P-Jz4"/>
+                        <viewControllerLayoutGuide type="bottom" id="g4W-zE-c4b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3rY-W3-2nH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TYn-sc-Gb7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="MonstrLogoBIG" width="1573" height="423"/>
@@ -355,8 +418,9 @@ Good luck! YOU'LL NEED IT!</string>
         <image name="p_cerealkiller" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="fqB-zU-iaG"/>
+        <segue reference="j9h-Az-9ah"/>
         <segue reference="1W9-mJ-6sy"/>
-        <segue reference="FIE-jQ-pMt"/>
-        <segue reference="Awt-Lr-BQd"/>
+        <segue reference="m96-hh-Yz6"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -32,7 +32,8 @@
 
 
 - (void)returnToTitle:(UIView *)card {
-    [self performSegueWithIdentifier:@"SegueToTitle" sender:self];
+    //TODO SEGUE TO REFLECTION SCREEN INSTEAD
+    [self performSegueWithIdentifier:@"SegueToReflection" sender:self];
 }
 
 - (void)messageUser:(UIView *)card {

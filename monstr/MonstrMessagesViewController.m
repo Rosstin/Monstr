@@ -54,7 +54,7 @@
     int width = 2048.0/9.6;
     int height = 1676.0/9.6;
     
-    UIImageView* animatedImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.center.x-width/2,self.view.center.y-height/2,width,height)];
+    UIImageView* animatedImageView = [[UIImageView alloc] initWithFrame:CGRectMake(5+(self.view.center.x-width/2),self.view.center.y-height/2,width,height)];
     animatedImageView.animationImages = [NSArray arrayWithObjects:
                                          [UIImage imageNamed:@"t1.png"],
                                          [UIImage imageNamed:@"t2.png"],
@@ -487,13 +487,17 @@
 }
 
 - (void) doneFunction{
+    NSLog(@"doneFunction");
+    
     ProfileStack *sharedManager = [ProfileStack sharedManager];
     
     if(sharedManager.winner){
         [self performSegueWithIdentifier:@"SegueToWinFromMessage" sender:self];
     }
     else{
-        [self performSegueWithIdentifier:@"SegueToLoginFromMessage" sender:self];
+        //TODO SEGUE TO REFLECTION SCREEN INSTEAD
+        //NSLog(@"else... TODO SEGUE TO REFLECTION SCREEN INSTEAD");
+        [self performSegueWithIdentifier:@"SegueToReflectionFromMessage" sender:self];
     }
 }
 
