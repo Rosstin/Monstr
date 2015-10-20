@@ -400,15 +400,15 @@ Good luck! YOU'LL NEED IT!</string>
                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                 </accessibility>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="dM1-CI-1kF">
-                                <rect key="frame" x="16" y="8" width="288" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="dM1-CI-1kF">
+                                <rect key="frame" x="16" y="22" width="288" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="288" id="DXr-KN-ZCE"/>
                                     <constraint firstAttribute="height" constant="100" id="GV4-il-ewa"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="heartlogo" translatesAutoresizingMaskIntoConstraints="NO" id="Wsb-Fn-FX1">
-                                <rect key="frame" x="31" y="116" width="258" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heartlogo" translatesAutoresizingMaskIntoConstraints="NO" id="Wsb-Fn-FX1">
+                                <rect key="frame" x="31" y="130" width="258" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="258" id="ZrA-me-5CM"/>
                                     <constraint firstAttribute="height" constant="128" id="tEw-g3-MAN"/>

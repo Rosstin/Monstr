@@ -383,7 +383,15 @@
 
 - (BOOL) nextMessageIsPlayerMessage{
     NSString *currentResponse = self.getCurrentResponse;
-    currentResponse=[currentResponse substringToIndex:1];
+    
+    if(currentResponse.length >= 2){
+        currentResponse=[currentResponse substringToIndex:1];
+    }
+    else{
+        NSLog(@"BAD DATA in this message!!");
+        return true;
+    }
+    
     if([currentResponse isEqual: @"}"]){
         return true;
     }
@@ -394,7 +402,16 @@
 
 - (BOOL) nextMessageIsMonsterMessage{
     NSString *currentResponse = self.getCurrentResponse;
-    currentResponse=[currentResponse substringToIndex:1];
+    
+    if(currentResponse.length >= 2){
+        currentResponse=[currentResponse substringToIndex:1];
+    }
+    else{
+        NSLog(@"BAD DATA in this message!!");
+        return true;
+    }
+    
+    
     if([currentResponse isEqual: @"{"]){
         return true;
     }
@@ -402,6 +419,8 @@
         return false;
     }
 }
+
+
 
 
 - (NSString *) getCurrentResponse{
