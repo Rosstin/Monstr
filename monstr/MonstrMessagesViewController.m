@@ -491,10 +491,9 @@
     
     ProfileStack *sharedManager = [ProfileStack sharedManager];
     
-    if(sharedManager.winner){
-        ProfileStack *sharedManager = [ProfileStack sharedManager];
-        [sharedManager resetAll];
-        sharedManager.firstTime = true;
+    if(sharedManager.winner && !sharedManager.seguedToWin){
+        NSLog(@"if(sharedManager.winner && !sharedManager.seguedToWin){");
+        sharedManager.seguedToWin = YES;
         [self performSegueWithIdentifier:@"SegueToWinFromMessage" sender:self];
     }
     else{

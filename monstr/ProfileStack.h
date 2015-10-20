@@ -28,6 +28,8 @@
 
 @property BOOL monsterSentMessage;
 
+@property BOOL seguedToWin;
+
 @property AVAudioPlayer* mainMusicPlayer;
 @property AVAudioPlayer* introMusicPlayer;
 @property AVAudioPlayer* startSoundPlayer;

@@ -63,11 +63,15 @@
     _cardBeingViewedByPlayer = 0;
     
     _winner = NO;
+    _seguedToWin = NO;
     _firstTime = NO;
     _introTextIndex = 0;
     
+    
     _profileIndicesForToday = [NSMutableArray array];
     _excludedProfileIndices = [NSMutableArray array];
+    
+    
     
     [self loadProfiles];
     [self generateWinningProfile];

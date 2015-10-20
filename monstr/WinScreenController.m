@@ -14,9 +14,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
+    [sharedManager resetAll];
+    sharedManager.firstTime = true;
     
-    /*
-    UIColor *borderAndTextColor = [UIColor colorWithRed: 0.5 green: 0.1 blue: 0.5 alpha: 0.9];
+    UIColor *borderAndTextColor = [UIColor colorWithRed: 0.1 green: 0.1 blue: 0.1 alpha: 0.9];
     UIColor *backgroundColor = [UIColor colorWithRed: 0.1 green: 0.7 blue: 0.9 alpha: 0.19 ];
     
     _creditsButton.layer.cornerRadius = STANDARD_BUTTON_CORNER_RADIUS;
@@ -30,7 +33,6 @@
     _startOverButton.layer.borderColor = borderAndTextColor.CGColor;
     _startOverButton.backgroundColor = backgroundColor;
     [_startOverButton setTitleColor: borderAndTextColor forState:UIControlStateNormal];
-     */
 }
 
 
@@ -38,5 +40,6 @@
     //NSLog(@"start over!");
     [self performSegueWithIdentifier:@"SegueToTitleFromWin" sender:self];
 }
+
 
 @end
