@@ -228,48 +228,33 @@
                     </view>
                     <navigationItem key="navigationItem" id="Z5S-FA-Wqd"/>
                     <connections>
-                        <segue destination="Nx3-Fg-ekL" kind="modal" identifier="SegueToWinFromMessage" id="vtc-LB-dcC"/>
                         <segue destination="piJ-Ev-x7h" kind="modal" identifier="SegueToReflectionFromMessage" id="B33-w7-ewh"/>
+                        <segue destination="VWQ-XH-kLd" kind="modal" identifier="SegueToSuccessFromMessage" id="cMf-My-gOH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTj-xE-t6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="881" y="1058"/>
         </scene>
-        <!--Win Screen Controller-->
-        <scene sceneID="MPM-hl-XA7">
+        <!--Success Screen Controller-->
+        <scene sceneID="4JL-Yk-Wop">
             <objects>
-                <viewController id="Nx3-Fg-ekL" customClass="WinScreenController" sceneMemberID="viewController">
+                <viewController id="VWQ-XH-kLd" customClass="SuccessScreenController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="aEF-Qz-QeM"/>
-                        <viewControllerLayoutGuide type="bottom" id="0vL-bW-eH2"/>
+                        <viewControllerLayoutGuide type="top" id="BC1-Di-G6q"/>
+                        <viewControllerLayoutGuide type="bottom" id="QBv-nd-BGH"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2Ay-gb-DDQ">
+                    <view key="view" contentMode="scaleToFill" id="niz-Wo-CLm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart-texture" translatesAutoresizingMaskIntoConstraints="NO" id="lvZ-km-2BN">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart-texture" translatesAutoresizingMaskIntoConstraints="NO" id="ij9-VP-IxY">
                                 <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If0-oq-7C6">
-                                <rect key="frame" x="16" y="472" width="288" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="START OVER">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="startOver:" destination="Nx3-Fg-ekL" eventType="touchUpInside" id="weo-Ub-hw2"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NZ-9i-hlj">
-                                <rect key="frame" x="16" y="20" width="288" height="274"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTd-dz-yzA">
+                                <rect key="frame" x="12" y="20" width="296" height="274"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="274" id="B4W-Py-ZcW"/>
+                                    <constraint firstAttribute="height" constant="274" id="obX-Sh-8qQ"/>
                                 </constraints>
                                 <string key="text">CONGRATULATIONS!!
 
@@ -282,8 +267,8 @@ Good luck! YOU'LL NEED IT!</string>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWS-5D-GFG">
-                                <rect key="frame" x="16" y="518" width="288" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srr-nk-hWf">
+                                <rect key="frame" x="12" y="518" width="296" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Hey, who made this game?">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -294,37 +279,51 @@ Good luck! YOU'LL NEED IT!</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="NHT-oV-tLV" kind="modal" id="vxH-Cx-hGg"/>
+                                    <segue destination="NHT-oV-tLV" kind="modal" id="50u-53-vYR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLw-o0-Mhd">
+                                <rect key="frame" x="12" y="472" width="296" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="START OVER">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startOver:" destination="VWQ-XH-kLd" eventType="touchUpInside" id="Mxb-fm-xM9"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1NZ-9i-hlj" firstAttribute="leading" secondItem="2Ay-gb-DDQ" secondAttribute="leadingMargin" id="4Ie-hy-mH2"/>
-                            <constraint firstItem="If0-oq-7C6" firstAttribute="trailing" secondItem="2Ay-gb-DDQ" secondAttribute="trailingMargin" id="4K7-aP-HYS"/>
-                            <constraint firstItem="1NZ-9i-hlj" firstAttribute="top" secondItem="aEF-Qz-QeM" secondAttribute="bottom" constant="20" id="58Q-nh-WdQ"/>
-                            <constraint firstItem="1NZ-9i-hlj" firstAttribute="trailing" secondItem="2Ay-gb-DDQ" secondAttribute="trailingMargin" id="Dav-I6-G9g"/>
-                            <constraint firstItem="If0-oq-7C6" firstAttribute="leading" secondItem="2Ay-gb-DDQ" secondAttribute="leadingMargin" id="Gi2-oi-Ryg"/>
-                            <constraint firstItem="lvZ-km-2BN" firstAttribute="leading" secondItem="2Ay-gb-DDQ" secondAttribute="leadingMargin" constant="-20" id="JKm-6i-P2Y"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="lvZ-km-2BN" secondAttribute="trailing" constant="-20" id="R3U-jP-Vml"/>
-                            <constraint firstItem="MWS-5D-GFG" firstAttribute="top" secondItem="If0-oq-7C6" secondAttribute="bottom" constant="16" id="cH4-tr-gqp"/>
-                            <constraint firstItem="MWS-5D-GFG" firstAttribute="leading" secondItem="2Ay-gb-DDQ" secondAttribute="leadingMargin" id="erS-us-QAv"/>
-                            <constraint firstItem="lvZ-km-2BN" firstAttribute="top" secondItem="aEF-Qz-QeM" secondAttribute="bottom" id="evM-gB-Qdu"/>
-                            <constraint firstItem="0vL-bW-eH2" firstAttribute="top" secondItem="lvZ-km-2BN" secondAttribute="bottom" id="ksP-5a-QBM"/>
-                            <constraint firstItem="MWS-5D-GFG" firstAttribute="trailing" secondItem="2Ay-gb-DDQ" secondAttribute="trailingMargin" id="pkF-qY-oqX"/>
-                            <constraint firstItem="0vL-bW-eH2" firstAttribute="top" secondItem="MWS-5D-GFG" secondAttribute="bottom" constant="20" id="vNy-75-9FF"/>
+                            <constraint firstItem="ij9-VP-IxY" firstAttribute="leading" secondItem="niz-Wo-CLm" secondAttribute="leadingMargin" constant="-20" id="0dz-8V-iJZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ij9-VP-IxY" secondAttribute="trailing" constant="-20" id="EJq-In-KoE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hTd-dz-yzA" secondAttribute="trailing" constant="-4" id="F5B-5H-SHP"/>
+                            <constraint firstItem="rLw-o0-Mhd" firstAttribute="leading" secondItem="niz-Wo-CLm" secondAttribute="leadingMargin" constant="-4" id="JM2-WB-qf3"/>
+                            <constraint firstItem="srr-nk-hWf" firstAttribute="top" secondItem="rLw-o0-Mhd" secondAttribute="bottom" constant="16" id="Jmq-dJ-1Ag"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rLw-o0-Mhd" secondAttribute="trailing" constant="-4" id="KjT-1c-MTC"/>
+                            <constraint firstItem="hTd-dz-yzA" firstAttribute="leading" secondItem="niz-Wo-CLm" secondAttribute="leadingMargin" constant="-4" id="Oj1-aO-k0p"/>
+                            <constraint firstItem="QBv-nd-BGH" firstAttribute="top" secondItem="ij9-VP-IxY" secondAttribute="bottom" id="TbH-Cd-rtU"/>
+                            <constraint firstItem="ij9-VP-IxY" firstAttribute="top" secondItem="BC1-Di-G6q" secondAttribute="bottom" id="bQE-PN-jyC"/>
+                            <constraint firstItem="srr-nk-hWf" firstAttribute="leading" secondItem="niz-Wo-CLm" secondAttribute="leadingMargin" constant="-4" id="k62-3w-Dcn"/>
+                            <constraint firstItem="hTd-dz-yzA" firstAttribute="top" secondItem="BC1-Di-G6q" secondAttribute="bottom" constant="20" id="net-rY-DCX"/>
+                            <constraint firstItem="QBv-nd-BGH" firstAttribute="top" secondItem="srr-nk-hWf" secondAttribute="bottom" constant="20" id="qad-h9-2F0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="srr-nk-hWf" secondAttribute="trailing" constant="-4" id="vIs-ig-osV"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="creditsButton" destination="MWS-5D-GFG" id="fNJ-KQ-goT"/>
-                        <outlet property="startOverButton" destination="If0-oq-7C6" id="Mng-dE-d36"/>
-                        <outlet property="view" destination="MWS-5D-GFG" id="pIP-fH-VSx"/>
-                        <segue destination="oom-yx-vMU" kind="modal" identifier="SegueToTitleFromWin" id="HeW-oI-xu4"/>
+                        <outlet property="creditsButton" destination="srr-nk-hWf" id="os3-bw-GCE"/>
+                        <outlet property="startOverButton" destination="rLw-o0-Mhd" id="JDZ-1a-gmH"/>
+                        <segue destination="oom-yx-vMU" kind="modal" identifier="SegueToTitleFromSuccess" id="Ych-U7-ZP1"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aPb-K0-818" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9fp-8I-8ut" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="881" y="1802"/>
+            <point key="canvasLocation" x="293" y="1802"/>
         </scene>
         <!--Simple Table View Controller-->
         <scene sceneID="cUf-ay-lxh">
@@ -580,11 +579,11 @@ Good luck! YOU'LL NEED IT!</string>
         <image name="unicornghost" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="j9h-Az-9ah"/>
-        <segue reference="cE7-qX-Wyf"/>
-        <segue reference="HeW-oI-xu4"/>
         <segue reference="Jab-05-NG9"/>
-        <segue reference="vxH-Cx-hGg"/>
+        <segue reference="cE7-qX-Wyf"/>
+        <segue reference="f86-RU-Je5"/>
+        <segue reference="D30-m9-cgw"/>
+        <segue reference="j9h-Az-9ah"/>
         <segue reference="m96-hh-Yz6"/>
     </inferredMetricsTieBreakers>
 </document>

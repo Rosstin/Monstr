@@ -1,22 +1,25 @@
 //
-//  WinScreenController.m
+//  SuccessScreenController.m
 //  Monstr
 //
-//  Created by Rosstin Murphy on 8/28/15.
-//  Copyright (c) 2015 Richard Kim. All rights reserved.
+//  Created by Rosstin Murphy on 10/19/15.
+//  Copyright © 2015 Rosstin Murphy. All rights reserved.
 //
 
-#import "WinScreenController.h"
+#import <Foundation/Foundation.h>
+
+#import "SuccessScreenController.h"
 #import "ProfileStack.h"
 #import "Config.h"
 
-@implementation WinScreenController
+@implementation SuccessScreenController : UIViewController
 
-- (void)viewDidLoad {
+- (void) viewDidLoad{
+    
     ProfileStack *sharedManager = [ProfileStack sharedManager];
     [sharedManager resetAll];
     sharedManager.firstTime = true;
-    
+
     UIColor *borderAndTextColor = [UIColor colorWithRed: 1.0 green: 1.0 blue: 1.0 alpha: 0.9];
     UIColor *backgroundColor = [UIColor colorWithRed: 0.1 green: 0.7 blue: 0.9 alpha: 0.19 ];
     
@@ -31,13 +34,13 @@
     _startOverButton.layer.borderColor = borderAndTextColor.CGColor;
     _startOverButton.backgroundColor = backgroundColor;
     [_startOverButton setTitleColor: borderAndTextColor forState:UIControlStateNormal];
-}
 
+    
+}
 
 - (IBAction)startOver:(id)sender {
-    //NSLog(@"start over!");
-    [self performSegueWithIdentifier:@"SegueToTitleFromWin" sender:self];
+    NSLog(@"startOver");
+    [self performSegueWithIdentifier:@"SegueToTitleFromSuccess" sender:self];
 }
-
 
 @end

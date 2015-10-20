@@ -24,13 +24,13 @@
 		F325F19D1BD5C0BD00A45613 /* SimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F325F19C1BD5C0BD00A45613 /* SimpleTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F32CA57D1B8D38A900F3ECBD /* MonstrNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F32CA57C1B8D38A900F3ECBD /* MonstrNavigationController.m */; };
 		F32CA5821B8E6F4D00F3ECBD /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F32CA5811B8E6F4D00F3ECBD /* CHCSVParser.m */; };
-		F32FD00E1B9125A200710E45 /* WinScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = F32FD00D1B9125A200710E45 /* WinScreenController.m */; };
 		F357B4861BBB0A730049CF22 /* sfx in Resources */ = {isa = PBXBuildFile; fileRef = F357B4851BBB0A730049CF22 /* sfx */; };
 		F37A0B601BCB705F0014F74F /* ProfilesSpreadsheet_temp_20151011.csv in Resources */ = {isa = PBXBuildFile; fileRef = F37A0B5F1BCB705F0014F74F /* ProfilesSpreadsheet_temp_20151011.csv */; settings = {ASSET_TAGS = (); }; };
 		F3AA38A81BC8706900760D0F /* ProfilesSpreadsheetTemp20151010.csv in Resources */ = {isa = PBXBuildFile; fileRef = F3AA38A71BC8706900760D0F /* ProfilesSpreadsheetTemp20151010.csv */; settings = {ASSET_TAGS = (); }; };
 		F3C8B84C1B90FAFB0001057D /* MonstrMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8B84B1B90FAFB0001057D /* MonstrMessagesViewController.m */; };
 		F3C8B84F1B90FC5B0001057D /* DemoModelData.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8B84E1B90FC5B0001057D /* DemoModelData.m */; };
 		F3C8B8521B90FCB30001057D /* NSUserDefaults+DemoSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C8B8511B90FCB30001057D /* NSUserDefaults+DemoSettings.m */; };
+		F3CD52C41BD603F100B104CF /* SuccessScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CD52C31BD603F100B104CF /* SuccessScreenController.m */; settings = {ASSET_TAGS = (); }; };
 		F3D1A8951BD2E54F00332F9E /* ReflectionScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D1A8941BD2E54F00332F9E /* ReflectionScreenController.m */; settings = {ASSET_TAGS = (); }; };
 		F3F61E121B8F7B8B00EB0FC7 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F61E111B8F7B8B00EB0FC7 /* Config.m */; };
 		F3F61E151B8F85DA00EB0FC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F61E141B8F85DA00EB0FC7 /* Main.storyboard */; };
@@ -81,8 +81,6 @@
 		F32CA57C1B8D38A900F3ECBD /* MonstrNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonstrNavigationController.m; sourceTree = "<group>"; };
 		F32CA5801B8E6F4D00F3ECBD /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
 		F32CA5811B8E6F4D00F3ECBD /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
-		F32FD00C1B9125A200710E45 /* WinScreenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinScreenController.h; sourceTree = "<group>"; };
-		F32FD00D1B9125A200710E45 /* WinScreenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinScreenController.m; sourceTree = "<group>"; };
 		F357B4851BBB0A730049CF22 /* sfx */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sfx; sourceTree = "<group>"; };
 		F37A0B5F1BCB705F0014F74F /* ProfilesSpreadsheet_temp_20151011.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ProfilesSpreadsheet_temp_20151011.csv; sourceTree = "<group>"; };
 		F3AA38A71BC8706900760D0F /* ProfilesSpreadsheetTemp20151010.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ProfilesSpreadsheetTemp20151010.csv; sourceTree = "<group>"; };
@@ -92,6 +90,8 @@
 		F3C8B84E1B90FC5B0001057D /* DemoModelData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoModelData.m; sourceTree = "<group>"; };
 		F3C8B8501B90FCB30001057D /* NSUserDefaults+DemoSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+DemoSettings.h"; sourceTree = "<group>"; };
 		F3C8B8511B90FCB30001057D /* NSUserDefaults+DemoSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+DemoSettings.m"; sourceTree = "<group>"; };
+		F3CD52C31BD603F100B104CF /* SuccessScreenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuccessScreenController.m; sourceTree = "<group>"; };
+		F3CD52C51BD6040100B104CF /* SuccessScreenController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuccessScreenController.h; sourceTree = "<group>"; };
 		F3D1A8931BD2E54700332F9E /* ReflectionScreenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReflectionScreenController.h; sourceTree = "<group>"; };
 		F3D1A8941BD2E54F00332F9E /* ReflectionScreenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReflectionScreenController.m; sourceTree = "<group>"; };
 		F3F61E111B8F7B8B00EB0FC7 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
@@ -187,8 +187,8 @@
 				F325F19C1BD5C0BD00A45613 /* SimpleTableViewController.m */,
 				F3F61E161B8F8D5600EB0FC7 /* LoginController.h */,
 				F3F61E171B8F8D5600EB0FC7 /* LoginController.m */,
-				F32FD00C1B9125A200710E45 /* WinScreenController.h */,
-				F32FD00D1B9125A200710E45 /* WinScreenController.m */,
+				F3CD52C51BD6040100B104CF /* SuccessScreenController.h */,
+				F3CD52C31BD603F100B104CF /* SuccessScreenController.m */,
 				F3C8B84D1B90FC5B0001057D /* DemoModelData.h */,
 				F3C8B84E1B90FC5B0001057D /* DemoModelData.m */,
 				F3C8B8501B90FCB30001057D /* NSUserDefaults+DemoSettings.h */,
@@ -379,11 +379,11 @@
 				F3C8B84C1B90FAFB0001057D /* MonstrMessagesViewController.m in Sources */,
 				F325F19D1BD5C0BD00A45613 /* SimpleTableViewController.m in Sources */,
 				99B7AEAF192D50D500C1B49C /* ViewController.m in Sources */,
-				F32FD00E1B9125A200710E45 /* WinScreenController.m in Sources */,
 				99B7AED2192E914500C1B49C /* OverlayView.m in Sources */,
 				99B7AEA9192D50D500C1B49C /* AppDelegate.m in Sources */,
 				F32CA57D1B8D38A900F3ECBD /* MonstrNavigationController.m in Sources */,
 				F3F620841B8D099E004CA182 /* ProfileViewController.m in Sources */,
+				F3CD52C41BD603F100B104CF /* SuccessScreenController.m in Sources */,
 				F3F61E181B8F8D5600EB0FC7 /* LoginController.m in Sources */,
 				F3F6207A1B8CE4ED004CA182 /* ProfileView.m in Sources */,
 				99B7AECF192D513800C1B49C /* DraggableView.m in Sources */,

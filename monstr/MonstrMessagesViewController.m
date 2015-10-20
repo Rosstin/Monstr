@@ -513,7 +513,7 @@
     if(sharedManager.winner && !sharedManager.seguedToWin){
         NSLog(@"if(sharedManager.winner && !sharedManager.seguedToWin){");
         sharedManager.seguedToWin = YES;
-        [self performSegueWithIdentifier:@"SegueToWinFromMessage" sender:self];
+        [self performSegueWithIdentifier:@"SegueToSuccessFromMessage" sender:self];
     }
     else{
         //TODO SEGUE TO REFLECTION SCREEN INSTEAD
