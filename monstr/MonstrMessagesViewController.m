@@ -49,6 +49,9 @@
 {
     [super viewDidLoad];
     
+    _youWereBlocked = NO;
+
+    
     self.title = @"JSQMessages";
     
     int width = 2048.0/9.6;
@@ -607,8 +610,10 @@
         response = myCurrentProfile.badMessage;
     }
     
-    if([response isEqualToString: @"......"] && !sharedManager.winner){
+    if([response isEqualToString: @"......"] && !sharedManager.winner && (_youWereBlocked == NO)){
         NSLog(@"So-and-so has blocked you.");
+        
+        _youWereBlocked = YES;
         
         NSString *blockMessage = @"";
         

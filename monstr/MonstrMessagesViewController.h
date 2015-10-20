@@ -36,6 +36,8 @@
 
 @property NSTimer *monsterMessageTimer;
 
+@property BOOL youWereBlocked;
+
 -(void) receiveMessagePressed:(UIBarButtonItem *)sender;
 
 -(void)closePressed:(UIBarButtonItem *)sender;
