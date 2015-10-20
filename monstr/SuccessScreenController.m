@@ -20,7 +20,7 @@
     [sharedManager resetAll];
     sharedManager.firstTime = true;
 
-    UIColor *borderAndTextColor = [UIColor colorWithRed: 1.0 green: 1.0 blue: 1.0 alpha: 0.9];
+    UIColor *borderAndTextColor = [UIColor colorWithRed: 0.0 green: 0.0 blue: 0.0 alpha: 0.9];
     UIColor *backgroundColor = [UIColor colorWithRed: 0.1 green: 0.7 blue: 0.9 alpha: 0.19 ];
     
     _creditsButton.layer.cornerRadius = STANDARD_BUTTON_CORNER_RADIUS;
