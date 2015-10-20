@@ -13,8 +13,6 @@
 @implementation WinScreenController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-
     ProfileStack *sharedManager = [ProfileStack sharedManager];
     [sharedManager resetAll];
     sharedManager.firstTime = true;
