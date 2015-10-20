@@ -226,7 +226,7 @@
     
     _allProfiles = [NSMutableArray array];
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"ProfilesSpreadsheet_temp_20151011" ofType:@"csv"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"TempProfileSpreadsheet201510201151" ofType:@"csv"];
     
     NSError *error = nil;
     

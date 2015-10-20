@@ -337,7 +337,7 @@ Good luck! YOU'LL NEED IT!</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unicornghost" translatesAutoresizingMaskIntoConstraints="NO" id="a9L-Z5-BMu">
+                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unicornbackgroundforcredits" translatesAutoresizingMaskIntoConstraints="NO" id="a9L-Z5-BMu">
                                 <rect key="frame" x="-4" y="-20" width="328" height="608"/>
                             </imageView>
                             <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TkV-zo-P7D">
@@ -568,15 +568,15 @@ Good luck! YOU'LL NEED IT!</string>
         </scene>
     </scenes>
     <resources>
-        <image name="busstop" width="1800" height="3200"/>
-        <image name="heart-texture" width="4724" height="3543"/>
-        <image name="heartlogo" width="1200" height="1200"/>
+        <image name="busstop" width="900" height="1600"/>
+        <image name="heart-texture" width="650" height="953"/>
+        <image name="heartlogo" width="400" height="400"/>
         <image name="logo" width="1000" height="1000"/>
-        <image name="p_cerealkiller" width="1000" height="1000"/>
+        <image name="p_cerealkiller" width="400" height="400"/>
         <image name="pattern" width="800" height="1400"/>
         <image name="share" width="38" height="54"/>
         <image name="share2" width="38" height="54"/>
-        <image name="unicornghost" width="1000" height="1000"/>
+        <image name="unicornbackgroundforcredits" width="787" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Jab-05-NG9"/>
