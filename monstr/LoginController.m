@@ -8,6 +8,7 @@
 
 #import "LoginController.h"
 #import "ProfileStack.h"
+#import "Config.h"
 @import AVFoundation;
 
 @implementation LoginController
@@ -25,13 +26,13 @@
     UIColor *borderAndTextColor = [UIColor colorWithRed: 0.5 green: 0.1 blue: 0.5 alpha: 0.9];
     UIColor *backgroundColor = [UIColor colorWithRed: 0.1 green: 0.7 blue: 0.9 alpha: 0.19 ];
     
-    _loginButton.layer.cornerRadius = 8;
+    _loginButton.layer.cornerRadius = STANDARD_BUTTON_CORNER_RADIUS;
     _loginButton.layer.borderWidth = 2;
     _loginButton.layer.borderColor = borderAndTextColor.CGColor;
     _loginButton.backgroundColor = backgroundColor;
     [_loginButton setTitleColor: borderAndTextColor forState:UIControlStateNormal];
     
-    _loginWithButton.layer.cornerRadius = 8;
+    _loginWithButton.layer.cornerRadius = STANDARD_BUTTON_CORNER_RADIUS;
     _loginWithButton.layer.borderWidth = 2;
     _loginWithButton.layer.borderColor = borderAndTextColor.CGColor;
     _loginWithButton.backgroundColor = backgroundColor;

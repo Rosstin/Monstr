@@ -21,6 +21,7 @@
 		99B7AECF192D513800C1B49C /* DraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B7AECE192D513800C1B49C /* DraggableView.m */; };
 		99B7AED2192E914500C1B49C /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B7AED1192E914500C1B49C /* OverlayView.m */; };
 		99FDDE7919A992F200371454 /* DraggableViewBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FDDE7819A992F200371454 /* DraggableViewBackground.m */; };
+		F325F19D1BD5C0BD00A45613 /* SimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F325F19C1BD5C0BD00A45613 /* SimpleTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F32CA57D1B8D38A900F3ECBD /* MonstrNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F32CA57C1B8D38A900F3ECBD /* MonstrNavigationController.m */; };
 		F32CA5821B8E6F4D00F3ECBD /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F32CA5811B8E6F4D00F3ECBD /* CHCSVParser.m */; };
 		F32FD00E1B9125A200710E45 /* WinScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = F32FD00D1B9125A200710E45 /* WinScreenController.m */; };
@@ -74,6 +75,8 @@
 		99FDDE7719A992F200371454 /* DraggableViewBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableViewBackground.h; sourceTree = "<group>"; };
 		99FDDE7819A992F200371454 /* DraggableViewBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableViewBackground.m; sourceTree = "<group>"; };
 		ACE7B59594B5E22593AE89FA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F325F19B1BD5C0B100A45613 /* SimpleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewController.h; sourceTree = "<group>"; };
+		F325F19C1BD5C0BD00A45613 /* SimpleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewController.m; sourceTree = "<group>"; };
 		F32CA57B1B8D38A900F3ECBD /* MonstrNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonstrNavigationController.h; sourceTree = "<group>"; };
 		F32CA57C1B8D38A900F3ECBD /* MonstrNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonstrNavigationController.m; sourceTree = "<group>"; };
 		F32CA5801B8E6F4D00F3ECBD /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
@@ -180,6 +183,8 @@
 				F3C8B84B1B90FAFB0001057D /* MonstrMessagesViewController.m */,
 				F3D1A8931BD2E54700332F9E /* ReflectionScreenController.h */,
 				F3D1A8941BD2E54F00332F9E /* ReflectionScreenController.m */,
+				F325F19B1BD5C0B100A45613 /* SimpleTableViewController.h */,
+				F325F19C1BD5C0BD00A45613 /* SimpleTableViewController.m */,
 				F3F61E161B8F8D5600EB0FC7 /* LoginController.h */,
 				F3F61E171B8F8D5600EB0FC7 /* LoginController.m */,
 				F32FD00C1B9125A200710E45 /* WinScreenController.h */,
@@ -372,6 +377,7 @@
 				99FDDE7919A992F200371454 /* DraggableViewBackground.m in Sources */,
 				F3F61E121B8F7B8B00EB0FC7 /* Config.m in Sources */,
 				F3C8B84C1B90FAFB0001057D /* MonstrMessagesViewController.m in Sources */,
+				F325F19D1BD5C0BD00A45613 /* SimpleTableViewController.m in Sources */,
 				99B7AEAF192D50D500C1B49C /* ViewController.m in Sources */,
 				F32FD00E1B9125A200710E45 /* WinScreenController.m in Sources */,
 				99B7AED2192E914500C1B49C /* OverlayView.m in Sources */,

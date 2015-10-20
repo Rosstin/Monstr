@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface WinScreenController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *startOverButton;
+@property (weak, nonatomic) IBOutlet UIButton *creditsButton;
 
 @end

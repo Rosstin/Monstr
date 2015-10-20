@@ -2,13 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "main page rounder corners 2.png"
+      "filename" : "share2.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "main page rounder corners 2-1.png"
+      "scale" : "2x"
     },
     {
       "idiom" : "universal",

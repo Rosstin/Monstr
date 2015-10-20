@@ -8,14 +8,34 @@
 
 #import "WinScreenController.h"
 #import "ProfileStack.h"
+#import "Config.h"
 
 @implementation WinScreenController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    /*
+    UIColor *borderAndTextColor = [UIColor colorWithRed: 0.5 green: 0.1 blue: 0.5 alpha: 0.9];
+    UIColor *backgroundColor = [UIColor colorWithRed: 0.1 green: 0.7 blue: 0.9 alpha: 0.19 ];
+    
+    _creditsButton.layer.cornerRadius = STANDARD_BUTTON_CORNER_RADIUS;
+    _creditsButton.layer.borderWidth = 2;
+    _creditsButton.layer.borderColor = borderAndTextColor.CGColor;
+    _creditsButton.backgroundColor = backgroundColor;
+    [_creditsButton setTitleColor: borderAndTextColor forState:UIControlStateNormal];
+    
+    _startOverButton.layer.cornerRadius = STANDARD_BUTTON_CORNER_RADIUS;
+    _startOverButton.layer.borderWidth = 2;
+    _startOverButton.layer.borderColor = borderAndTextColor.CGColor;
+    _startOverButton.backgroundColor = backgroundColor;
+    [_startOverButton setTitleColor: borderAndTextColor forState:UIControlStateNormal];
+     */
+}
+
+
 - (IBAction)startOver:(id)sender {
     //NSLog(@"start over!");
-    ProfileStack *sharedManager = [ProfileStack sharedManager];
-    [sharedManager resetAll];
-    sharedManager.firstTime = true;
     [self performSegueWithIdentifier:@"SegueToTitleFromWin" sender:self];
 }
 

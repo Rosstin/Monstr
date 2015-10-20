@@ -492,6 +492,9 @@
     ProfileStack *sharedManager = [ProfileStack sharedManager];
     
     if(sharedManager.winner){
+        ProfileStack *sharedManager = [ProfileStack sharedManager];
+        [sharedManager resetAll];
+        sharedManager.firstTime = true;
         [self performSegueWithIdentifier:@"SegueToWinFromMessage" sender:self];
     }
     else{
