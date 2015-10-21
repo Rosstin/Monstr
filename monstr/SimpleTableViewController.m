@@ -59,13 +59,16 @@
                  @"",
        @"~TRAVIS FORD DECASTRO~",
        @"music and sound",
+                 @"",
+       @"Check out more of our games at...",
+       @"http://plusultra.ninja/",
        nil
        ];
     
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 12;
+    return 11.5;
 }
 
 - (void) tableView:(UITableView *)tableView willDisplayCell:(nonnull UITableViewCell *)cell forRowAtIndexPath:(nonnull NSIndexPath *)indexPath{

@@ -15,7 +15,8 @@
     ProfileStack *sharedManager = [ProfileStack sharedManager]; // force it to gen a winning profile
     
     _hintText.text = [sharedManager.profileWinner.profileHint stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\""]];
-    _hintText.font = [UIFont fontWithName:@"TrebuchetMS-Italic" size:16];
+    _hintText.font = [UIFont italicSystemFontOfSize:17.0];
+     
     _hintText.scrollEnabled = NO;
 
 }

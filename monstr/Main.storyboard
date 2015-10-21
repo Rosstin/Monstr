@@ -143,22 +143,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="busstop" translatesAutoresizingMaskIntoConstraints="NO" id="5f7-l6-e1t">
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="busstop" translatesAutoresizingMaskIntoConstraints="NO" id="5f7-l6-e1t">
                                 <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="You think back to that unforgettable encounter at the bus stop..." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qr-hV-TVl">
-                                <rect key="frame" x="16" y="20" width="288" height="60"/>
+                                <rect key="frame" x="16" y="20" width="288" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="4Rm-6Z-iSH"/>
+                                    <constraint firstAttribute="height" constant="80" id="4Rm-6Z-iSH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8H-NH-YkS">
-                                <rect key="frame" x="16" y="88" width="288" height="460"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8H-NH-YkS">
+                                <rect key="frame" x="16" y="108" width="288" height="440"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aI1-q9-PXh">
                                 <rect key="frame" x="20" y="530" width="280" height="30"/>
@@ -263,7 +269,7 @@ You've found your crush!
 Where will it go from here? Will they fall for you? Will they look like their profile picture? Will you have to meet their parents? Will you date for six months and break up in a sloppy rage and never speak to one another again? WHO KNOWS!
 
 Good luck! YOU'LL NEED IT!</string>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -407,15 +413,15 @@ Good luck! YOU'LL NEED IT!</string>
                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                 </accessibility>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="dM1-CI-1kF">
-                                <rect key="frame" x="16" y="22" width="288" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleplusheart" translatesAutoresizingMaskIntoConstraints="NO" id="dM1-CI-1kF">
+                                <rect key="frame" x="16" y="36" width="288" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="288" id="DXr-KN-ZCE"/>
                                     <constraint firstAttribute="height" constant="100" id="GV4-il-ewa"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heartlogo" translatesAutoresizingMaskIntoConstraints="NO" id="Wsb-Fn-FX1">
-                                <rect key="frame" x="31" y="130" width="258" height="128"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heartlogo" translatesAutoresizingMaskIntoConstraints="NO" id="Wsb-Fn-FX1">
+                                <rect key="frame" x="31" y="144" width="258" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="258" id="ZrA-me-5CM"/>
                                     <constraint firstAttribute="height" constant="128" id="tEw-g3-MAN"/>
@@ -424,6 +430,15 @@ Good luck! YOU'LL NEED IT!</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nt8-IM-j7Y">
                                 <rect key="frame" x="16" y="245" width="288" height="173"/>
                                 <subviews>
+                                    <view alpha="0.45000000000000001" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vgO-Hf-swH">
+                                        <rect key="frame" x="8" y="20" width="272" height="145"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="lonelylurker87" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ow3-uc-BgK">
                                         <rect key="frame" x="15" y="43" width="258" height="36"/>
                                         <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
@@ -443,15 +458,6 @@ Good luck! YOU'LL NEED IT!</string>
                                     <view userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FAZ-4O-dKb">
                                         <rect key="frame" x="15" y="77" width="258" height="2"/>
                                         <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                    <view alpha="0.14999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vgO-Hf-swH">
-                                        <rect key="frame" x="8" y="20" width="272" height="145"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -516,7 +522,7 @@ Good luck! YOU'LL NEED IT!</string>
                             <constraint firstItem="44d-X3-Zrg" firstAttribute="top" secondItem="akU-yU-4TO" secondAttribute="bottom" constant="20" id="BJa-or-PM5"/>
                             <constraint firstItem="7qJ-2p-4oZ" firstAttribute="centerX" secondItem="Xb6-Z1-w0P" secondAttribute="centerX" id="COF-RW-BQR"/>
                             <constraint firstItem="Wsb-Fn-FX1" firstAttribute="centerX" secondItem="48N-EC-Yej" secondAttribute="centerX" id="Fvg-VG-n3T"/>
-                            <constraint firstItem="dM1-CI-1kF" firstAttribute="top" secondItem="Lbg-cC-mgD" secondAttribute="bottom" constant="22" id="Juv-vr-97f"/>
+                            <constraint firstItem="dM1-CI-1kF" firstAttribute="top" secondItem="Lbg-cC-mgD" secondAttribute="bottom" constant="36" id="Juv-vr-97f"/>
                             <constraint firstItem="b24-QN-fv6" firstAttribute="top" secondItem="Xb6-Z1-w0P" secondAttribute="bottom" constant="8" id="KVp-M9-QqN"/>
                             <constraint firstItem="RkI-nl-ENu" firstAttribute="leading" secondItem="48N-EC-Yej" secondAttribute="leadingMargin" constant="-20" id="M9y-ca-9qY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="akU-yU-4TO" secondAttribute="trailing" constant="15" id="NMA-E6-8tz"/>
@@ -584,18 +590,18 @@ Good luck! YOU'LL NEED IT!</string>
         <image name="busstop" width="900" height="1600"/>
         <image name="heartlogo" width="400" height="400"/>
         <image name="heartscreen_justBG" width="900" height="1600"/>
-        <image name="logo" width="1000" height="1000"/>
         <image name="p_cerealkiller" width="400" height="400"/>
         <image name="share" width="38" height="54"/>
         <image name="share2" width="38" height="54"/>
+        <image name="titleplusheart" width="800" height="200"/>
         <image name="unicornbackgroundforcredits" width="787" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="cE7-qX-Wyf"/>
-        <segue reference="Ych-U7-ZP1"/>
-        <segue reference="Jab-05-NG9"/>
-        <segue reference="50u-53-vYR"/>
-        <segue reference="m96-hh-Yz6"/>
+        <segue reference="fqB-zU-iaG"/>
         <segue reference="j9h-Az-9ah"/>
+        <segue reference="D30-m9-cgw"/>
+        <segue reference="m96-hh-Yz6"/>
+        <segue reference="p9v-Zh-02f"/>
     </inferredMetricsTieBreakers>
 </document>
