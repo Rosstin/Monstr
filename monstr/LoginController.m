@@ -73,6 +73,8 @@
     
     [sharedManager sendSound];
     
+    [self textFade];
+    
     switch(sharedManager.introTextIndex)
     {
         case 0: //this should never happen, it's reset elsewhere
@@ -84,30 +86,23 @@
             [_introText setFont:[UIFont boldSystemFontOfSize:18]];
             break;
         case 2:
-            _introText.text = @"The vehicle disgorges five or six hairy suburb schlubs, all boring fangs and forgettable fins.";
+            _introText.text = @" The vehicle disgorges five or six hairy suburb schlubs, all boring fangs and forgettable fins. But the last person to step off the bus catches your eye like NO ONE ELSE EVER HAS...";
             [_introText setFont:[UIFont boldSystemFontOfSize:18]];
             break;
         case 3:
-            _introText.text = @"But the last person to step off the bus catches your eye like NO ONE ELSE EVER HAS.";
-            [_introText setFont:[UIFont boldSystemFontOfSize:18]];
-            break;
-        case 4:
             _introText.text = [sharedManager.profileWinner.profileHint stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\""]];
             [_introText setFont:[UIFont boldSystemFontOfSize:18]];
+            //[self lightningFlash];
             break;
-        case 5:
+        case 4:
             _introText.text = @"If only you had time to stop, start a conversation, get a phone number... you work the whole day with shaking hands, trying to keep that enthralling profile in your mind. And when you get home, it's time to find that mysterious someone.";
             [_introText setFont:[UIFont boldSystemFontOfSize:18]];
             break;
+        case 5:
+            _introText.text = @"It's time to do what all lonely, horny monsters do... It's time to check Monstr.";
+            [_introText setFont:[UIFont boldSystemFontOfSize:18]];
+            break;
         case 6:
-            _introText.text = @"It's time to do what all lonely, horny monsters do...";
-            [_introText setFont:[UIFont boldSystemFontOfSize:18]];
-            break;
-        case 7:
-            _introText.text = @"It's time to check Monstr.";
-            [_introText setFont:[UIFont boldSystemFontOfSize:18]];
-            break;
-        case 8:
             [self returnToRegularLoginScreen];
             break;
         default:
@@ -134,12 +129,47 @@
     [_tappingArrow setHidden:(!_tappingArrow.hidden)];
 }
 
+- (void)textFade{
+    [_introText setAlpha:0.0f];
+    
+    [UIView animateWithDuration: TEXT_FADE_IN_SECONDS delay: 0.0f options: UIViewAnimationOptionCurveEaseIn animations:^{ [_introText setAlpha:1.f];
+    } completion:^(BOOL finished){
+    }];
+}
+
+- (void) textFadePlusShake {
+    [_introText setAlpha:0.0f];
+    
+    [UIView animateWithDuration: TEXT_FADE_IN_SECONDS/2 delay: 0.0f options: UIViewAnimationOptionCurveEaseIn animations:^{ [_introText setAlpha:1.f];
+    } completion:^(BOOL finished){
+        [self textShake];
+    }];
+}
+
+- (void)textShake{
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
+    [animation setDuration:0.03];
+    [animation setRepeatCount:8];
+    [animation setAutoreverses:YES];
+    [animation setFromValue:[NSValue valueWithCGPoint: CGPointMake([_introText center].x - 1.0f, [_introText center].y)]];
+    [animation setToValue:[NSValue valueWithCGPoint:CGPointMake([_introText center].x + 1.0f, [_introText center].y)]];
+    [[_introText layer] addAnimation:animation forKey:@"position"];
+}
+
+- (void) lightningFlash{
+    [_rainyIntro setAlpha:0.0f];
+    
+    [UIView animateWithDuration: LIGHTNING_FLASH_IN_SECONDS delay: 0.0f options: UIViewAnimationOptionCurveEaseIn animations:^{ [_rainyIntro setAlpha:1.f];
+    } completion:^(BOOL finished){
+    }];
+}
 
 
 - (void) hideIntroStuff {
     _introText.hidden = YES;
     _rainyIntro.hidden= YES;
     _tappingArrow.hidden = YES;
+    _whiteBackground.hidden = YES;
     [self stopBlinkArrowTimer];
 }
 
@@ -147,6 +177,7 @@
     _introText.hidden = NO;
     _rainyIntro.hidden= NO;
     _tappingArrow.hidden = NO;
+    _whiteBackground.hidden = NO;
     [self startBlinkArrowTimer];
 }
 

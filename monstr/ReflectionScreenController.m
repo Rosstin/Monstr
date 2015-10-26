@@ -76,5 +76,4 @@
     [_tappingArrow setHidden:(!_tappingArrow.hidden)];
 }
 
-
 @end

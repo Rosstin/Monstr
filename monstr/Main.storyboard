@@ -513,6 +513,11 @@ Good luck! YOU'LL NEED IT!</string>
                                     <segue destination="Fvf-GV-bgW" kind="modal" id="QoV-6t-2IT"/>
                                 </connections>
                             </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EFI-6F-cig" userLabel="White">
+                                <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                            </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="busstop" translatesAutoresizingMaskIntoConstraints="NO" id="7qJ-2p-4oZ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <gestureRecognizers/>
@@ -547,16 +552,20 @@ Good luck! YOU'LL NEED IT!</string>
                             <constraint firstAttribute="trailingMargin" secondItem="akU-yU-4TO" secondAttribute="trailing" constant="15" id="NMA-E6-8tz"/>
                             <constraint firstItem="akU-yU-4TO" firstAttribute="leading" secondItem="48N-EC-Yej" secondAttribute="leadingMargin" constant="15" id="O2V-nX-ZzB"/>
                             <constraint firstItem="akU-yU-4TO" firstAttribute="top" secondItem="Lbg-cC-mgD" secondAttribute="bottom" constant="20" id="QoR-0M-fnx"/>
+                            <constraint firstItem="EFI-6F-cig" firstAttribute="leading" secondItem="48N-EC-Yej" secondAttribute="leadingMargin" constant="-20" id="U1R-k8-Hlr"/>
                             <constraint firstItem="7qJ-2p-4oZ" firstAttribute="top" secondItem="Lbg-cC-mgD" secondAttribute="bottom" id="YuV-V3-dAd"/>
                             <constraint firstItem="44d-X3-Zrg" firstAttribute="top" secondItem="RkI-nl-ENu" secondAttribute="bottom" id="Zh5-op-Alv"/>
                             <constraint firstItem="RkI-nl-ENu" firstAttribute="top" secondItem="Lbg-cC-mgD" secondAttribute="bottom" id="aE1-Nk-iyu"/>
+                            <constraint firstItem="EFI-6F-cig" firstAttribute="top" secondItem="Lbg-cC-mgD" secondAttribute="bottom" id="as9-ql-EAB"/>
                             <constraint firstItem="nt8-IM-j7Y" firstAttribute="centerX" secondItem="48N-EC-Yej" secondAttribute="centerX" id="dHt-FG-619"/>
                             <constraint firstAttribute="centerX" secondItem="Xb6-Z1-w0P" secondAttribute="centerX" id="fti-AW-vfn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EFI-6F-cig" secondAttribute="trailing" constant="-20" id="hei-Dj-J8X"/>
                             <constraint firstItem="dM1-CI-1kF" firstAttribute="centerX" secondItem="48N-EC-Yej" secondAttribute="centerX" id="llo-XC-sYz"/>
                             <constraint firstAttribute="centerY" secondItem="akU-yU-4TO" secondAttribute="centerY" id="mJp-bU-EcQ"/>
                             <constraint firstAttribute="centerX" secondItem="dM1-CI-1kF" secondAttribute="centerX" id="pq8-7l-z5D"/>
                             <constraint firstItem="Xb6-Z1-w0P" firstAttribute="top" secondItem="nt8-IM-j7Y" secondAttribute="bottom" constant="14" id="sXy-N8-yXs"/>
                             <constraint firstItem="b24-QN-fv6" firstAttribute="centerX" secondItem="48N-EC-Yej" secondAttribute="centerX" id="stj-9W-o7N"/>
+                            <constraint firstItem="44d-X3-Zrg" firstAttribute="top" secondItem="EFI-6F-cig" secondAttribute="bottom" id="va1-jI-1qB"/>
                             <constraint firstItem="7qJ-2p-4oZ" firstAttribute="bottom" secondItem="44d-X3-Zrg" secondAttribute="top" id="xBY-kU-9Q3"/>
                             <constraint firstItem="7qJ-2p-4oZ" firstAttribute="leading" secondItem="48N-EC-Yej" secondAttribute="leading" id="y1n-aR-Bxk"/>
                             <constraint firstItem="Wsb-Fn-FX1" firstAttribute="top" secondItem="dM1-CI-1kF" secondAttribute="bottom" constant="8" id="yh9-84-ThU"/>
@@ -572,6 +581,7 @@ Good luck! YOU'LL NEED IT!</string>
                         <outlet property="loginWithButton" destination="b24-QN-fv6" id="xo4-Oz-898"/>
                         <outlet property="rainyIntro" destination="7qJ-2p-4oZ" id="pFq-FH-qVz"/>
                         <outlet property="tappingArrow" destination="oLP-rX-p3r" id="zFE-Tv-h4R"/>
+                        <outlet property="whiteBackground" destination="EFI-6F-cig" id="eJE-UQ-kTf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J44-y8-N6g" userLabel="First Responder" sceneMemberID="firstResponder"/>

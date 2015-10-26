@@ -14,6 +14,8 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *rainyIntro;
 
+@property (weak, nonatomic) IBOutlet UIImageView *whiteBackground;
+
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UIButton *loginWithButton;
 
