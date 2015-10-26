@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UIView *viewContainingContent;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollviewContainingView;
 
+@property (weak, nonatomic) IBOutlet UIButton *messageUserButton;
+
 @end
 
 

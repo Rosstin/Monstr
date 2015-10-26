@@ -46,7 +46,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Tl-N9-dff">
-                                <rect key="frame" x="0.0" y="1" width="320" height="365.5"/>
+                                <rect key="frame" x="0.0" y="1" width="320" height="447.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="p_cerealkiller" translatesAutoresizingMaskIntoConstraints="NO" id="5rZ-LT-fI3">
                                         <rect key="frame" x="16" y="0.0" width="288" height="288"/>
@@ -88,6 +88,22 @@
                                         <state key="selected" image="share2"/>
                                         <state key="highlighted" image="share2"/>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vzc-5r-1nm">
+                                        <rect key="frame" x="60" y="373.5" width="200" height="45"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="SaN-oh-tlu"/>
+                                            <constraint firstAttribute="height" constant="45" id="dfQ-Fv-RQu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" title="Message this User">
+                                            <color key="titleColor" red="0.2666666667" green="0.0" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logIn:" destination="oom-yx-vMU" eventType="touchUpInside" id="ytT-0l-dDz"/>
+                                            <action selector="messageButtonClicked:" destination="ktp-rT-Sfg" eventType="touchUpInside" id="R7c-Gw-I6v"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -96,10 +112,12 @@
                                     <constraint firstItem="5rZ-LT-fI3" firstAttribute="top" secondItem="7Tl-N9-dff" secondAttribute="top" id="G44-Me-mHA"/>
                                     <constraint firstAttribute="centerX" secondItem="5rZ-LT-fI3" secondAttribute="centerX" id="H1O-yH-Z42"/>
                                     <constraint firstItem="dLw-Ce-mGz" firstAttribute="leading" secondItem="7Tl-N9-dff" secondAttribute="leading" constant="16" id="UUY-fT-del"/>
+                                    <constraint firstItem="Vzc-5r-1nm" firstAttribute="top" secondItem="iJg-sD-G5e" secondAttribute="bottom" constant="16" id="aof-pZ-Q2K"/>
                                     <constraint firstItem="iJg-sD-G5e" firstAttribute="leading" secondItem="7Tl-N9-dff" secondAttribute="leading" constant="16" id="d1j-BQ-TO7"/>
                                     <constraint firstAttribute="centerX" secondItem="wbO-ru-RYu" secondAttribute="centerX" id="f55-0X-5IQ"/>
                                     <constraint firstItem="iJg-sD-G5e" firstAttribute="top" secondItem="wbO-ru-RYu" secondAttribute="bottom" constant="4" id="fuQ-im-XvX"/>
-                                    <constraint firstAttribute="bottom" secondItem="iJg-sD-G5e" secondAttribute="bottom" constant="8" id="kMt-zf-kbf"/>
+                                    <constraint firstItem="Vzc-5r-1nm" firstAttribute="centerX" secondItem="7Tl-N9-dff" secondAttribute="centerX" id="jUQ-df-MIP"/>
+                                    <constraint firstAttribute="bottom" secondItem="iJg-sD-G5e" secondAttribute="bottom" constant="90" id="kMt-zf-kbf"/>
                                     <constraint firstItem="dLw-Ce-mGz" firstAttribute="top" secondItem="5rZ-LT-fI3" secondAttribute="bottom" constant="4" id="kV0-wb-cBL"/>
                                     <constraint firstAttribute="centerX" secondItem="dLw-Ce-mGz" secondAttribute="centerX" id="sN5-K2-g9k"/>
                                     <constraint firstItem="wbO-ru-RYu" firstAttribute="leading" secondItem="7Tl-N9-dff" secondAttribute="leading" constant="16" id="v8L-Z9-qW5"/>
@@ -118,6 +136,7 @@
                     <navigationItem key="navigationItem" id="TU7-st-Hal"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
+                        <outlet property="messageUserButton" destination="Vzc-5r-1nm" id="oo5-sc-dan"/>
                         <outlet property="profileDescription" destination="wbO-ru-RYu" id="Lom-8T-dhy"/>
                         <outlet property="profileImage" destination="5rZ-LT-fI3" id="wsd-xE-u3d"/>
                         <outlet property="profileName" destination="dLw-Ce-mGz" id="G2X-6A-sMc"/>
