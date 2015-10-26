@@ -181,6 +181,13 @@
                                     <segue destination="NHT-oV-tLV" kind="modal" id="D30-m9-cgw"/>
                                 </connections>
                             </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="a1" translatesAutoresizingMaskIntoConstraints="NO" id="FOr-8J-mcN">
+                                <rect key="frame" x="248" y="516" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="dIr-JX-fuf"/>
+                                    <constraint firstAttribute="width" constant="40" id="tg9-gN-G3n"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -194,10 +201,12 @@
                             <constraint firstItem="5f7-l6-e1t" firstAttribute="leading" secondItem="rZn-i5-79t" secondAttribute="leadingMargin" constant="-20" id="IsT-yh-kXC"/>
                             <constraint firstItem="5f7-l6-e1t" firstAttribute="centerX" secondItem="rZn-i5-79t" secondAttribute="centerX" id="JlN-gT-rOh"/>
                             <constraint firstItem="6CB-tG-GC7" firstAttribute="top" secondItem="u8H-NH-YkS" secondAttribute="bottom" constant="20" id="YXe-1C-V7N"/>
+                            <constraint firstItem="6CB-tG-GC7" firstAttribute="top" secondItem="FOr-8J-mcN" secondAttribute="bottom" constant="12" id="aQ8-HJ-a2D"/>
                             <constraint firstItem="8Qr-hV-TVl" firstAttribute="centerX" secondItem="rZn-i5-79t" secondAttribute="centerX" id="fUd-Yp-6ZA"/>
                             <constraint firstItem="8Qr-hV-TVl" firstAttribute="trailing" secondItem="rZn-i5-79t" secondAttribute="trailingMargin" id="gd0-jQ-DN7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5f7-l6-e1t" secondAttribute="trailing" constant="-20" id="lkt-84-mFH"/>
                             <constraint firstItem="u8H-NH-YkS" firstAttribute="trailing" secondItem="rZn-i5-79t" secondAttribute="trailingMargin" id="sMs-6O-heO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FOr-8J-mcN" secondAttribute="trailing" constant="16" id="vOt-dz-Ntv"/>
                             <constraint firstItem="u8H-NH-YkS" firstAttribute="top" secondItem="8Qr-hV-TVl" secondAttribute="bottom" constant="8" id="w48-uF-bV9"/>
                         </constraints>
                         <connections>
@@ -207,6 +216,7 @@
                     <navigationItem key="navigationItem" id="vyb-RH-HbZ"/>
                     <connections>
                         <outlet property="hintText" destination="u8H-NH-YkS" id="4ut-vA-sKk"/>
+                        <outlet property="tappingArrow" destination="FOr-8J-mcN" id="q8e-HS-dtZ"/>
                         <segue destination="oom-yx-vMU" kind="modal" identifier="SegueToLoginFromReflection" id="fqB-zU-iaG"/>
                     </connections>
                 </viewController>
@@ -513,12 +523,21 @@ Good luck! YOU'LL NEED IT!</string>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="a1" translatesAutoresizingMaskIntoConstraints="NO" id="oLP-rX-p3r">
+                                <rect key="frame" x="248" y="516" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="UFJ-cc-pCm"/>
+                                    <constraint firstAttribute="height" constant="40" id="UZc-Eg-oGk"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="oLP-rX-p3r" secondAttribute="trailing" constant="16" id="2aH-cR-Fdn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RkI-nl-ENu" secondAttribute="trailing" constant="-20" id="2eH-su-jd3"/>
                             <constraint firstItem="44d-X3-Zrg" firstAttribute="top" secondItem="b24-QN-fv6" secondAttribute="bottom" constant="38" id="2qH-qA-Hdh"/>
+                            <constraint firstItem="44d-X3-Zrg" firstAttribute="top" secondItem="oLP-rX-p3r" secondAttribute="bottom" constant="12" id="8nj-J3-Vr3"/>
                             <constraint firstItem="44d-X3-Zrg" firstAttribute="top" secondItem="akU-yU-4TO" secondAttribute="bottom" constant="20" id="BJa-or-PM5"/>
                             <constraint firstItem="7qJ-2p-4oZ" firstAttribute="centerX" secondItem="Xb6-Z1-w0P" secondAttribute="centerX" id="COF-RW-BQR"/>
                             <constraint firstItem="Wsb-Fn-FX1" firstAttribute="centerX" secondItem="48N-EC-Yej" secondAttribute="centerX" id="Fvg-VG-n3T"/>
@@ -552,6 +571,7 @@ Good luck! YOU'LL NEED IT!</string>
                         <outlet property="loginButton" destination="Xb6-Z1-w0P" id="Nct-yu-ioO"/>
                         <outlet property="loginWithButton" destination="b24-QN-fv6" id="xo4-Oz-898"/>
                         <outlet property="rainyIntro" destination="7qJ-2p-4oZ" id="pFq-FH-qVz"/>
+                        <outlet property="tappingArrow" destination="oLP-rX-p3r" id="zFE-Tv-h4R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J44-y8-N6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -586,6 +606,7 @@ Good luck! YOU'LL NEED IT!</string>
         </scene>
     </scenes>
     <resources>
+        <image name="a1" width="50" height="50"/>
         <image name="bigFlyingHeartIcon" width="881" height="735"/>
         <image name="busstop" width="900" height="1600"/>
         <image name="heartlogo" width="400" height="400"/>
@@ -597,11 +618,11 @@ Good luck! YOU'LL NEED IT!</string>
         <image name="unicornbackgroundforcredits" width="787" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="p9v-Zh-02f"/>
+        <segue reference="m96-hh-Yz6"/>
         <segue reference="cE7-qX-Wyf"/>
         <segue reference="fqB-zU-iaG"/>
         <segue reference="j9h-Az-9ah"/>
         <segue reference="D30-m9-cgw"/>
-        <segue reference="m96-hh-Yz6"/>
-        <segue reference="p9v-Zh-02f"/>
     </inferredMetricsTieBreakers>
 </document>

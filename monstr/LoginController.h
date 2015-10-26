@@ -10,6 +10,7 @@
 
 @interface LoginController : UIViewController <UIGestureRecognizerDelegate>
 
+@property (weak, nonatomic) IBOutlet UIImageView *tappingArrow;
 
 @property (weak, nonatomic) IBOutlet UIImageView *rainyIntro;
 
@@ -19,5 +20,7 @@
 - (IBAction)handleTap:(UITapGestureRecognizer *)sender;
 
 @property (weak, nonatomic) IBOutlet UITextView *introText;
+
+@property (strong, nonatomic) NSTimer *arrowBlinkTimer;
 
 @end

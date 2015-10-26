@@ -10,5 +10,7 @@
 
 @interface ReflectionScreenController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextView *hintText;
+@property (weak, nonatomic) IBOutlet UIImageView *tappingArrow;
+@property (strong, nonatomic) NSTimer *arrowBlinkTimer;
 
 @end

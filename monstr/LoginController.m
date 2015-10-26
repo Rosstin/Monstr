@@ -58,7 +58,7 @@
 
     if(sharedManager.firstTime){   // if it's your first time show the intro
         sharedManager.firstTime = NO;
-        _rainyIntro.hidden = NO;
+        
         [self startFirstTimeIntro];
     }
     else{ //NSLog(@"It's not my first time at login screen... don't show intro....");
@@ -70,7 +70,9 @@
 - (IBAction)handleTap:(UITapGestureRecognizer *)sender {
     ProfileStack *sharedManager = [ProfileStack sharedManager];
     sharedManager.introTextIndex++;
-
+    
+    [sharedManager sendSound];
+    
     switch(sharedManager.introTextIndex)
     {
         case 0: //this should never happen, it's reset elsewhere
@@ -113,13 +115,43 @@
             break;
     }
     
-    
-    
+}
+
+- (void) startBlinkArrowTimer {
+    _arrowBlinkTimer = [NSTimer scheduledTimerWithTimeInterval: TIMER_BLINK_IN_SECONDS target:self selector:@selector(tickBlinkArrow) userInfo:nil repeats:YES];
+}
+
+- (void) stopBlinkArrowTimer {
+    [self invalidateBlinkArrowTimer];
+}
+
+- (void) invalidateBlinkArrowTimer{
+    [_arrowBlinkTimer invalidate];
+    _arrowBlinkTimer = nil;
+}
+
+- (void)tickBlinkArrow {
+    [_tappingArrow setHidden:(!_tappingArrow.hidden)];
+}
+
+
+
+- (void) hideIntroStuff {
+    _introText.hidden = YES;
+    _rainyIntro.hidden= YES;
+    _tappingArrow.hidden = YES;
+    [self stopBlinkArrowTimer];
+}
+
+- (void) showIntroStuff {
+    _introText.hidden = NO;
+    _rainyIntro.hidden= NO;
+    _tappingArrow.hidden = NO;
+    [self startBlinkArrowTimer];
 }
 
 - (void)returnToRegularLoginScreen {
-    _introText.hidden = YES;
-    _rainyIntro.hidden= YES;
+    [self hideIntroStuff];
     
     ProfileStack *sharedManager = [ProfileStack sharedManager];
     [sharedManager startTitleMusic];
@@ -133,8 +165,7 @@
     ProfileStack *sharedManager = [ProfileStack sharedManager];
     [sharedManager startIntroMusic];
     
-    _introText.hidden = NO;
-    _rainyIntro.hidden = NO;
+    [self showIntroStuff];
 }
 
 - (void)didReceiveMemoryWarning {

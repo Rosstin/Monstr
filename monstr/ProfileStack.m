@@ -31,12 +31,7 @@
     NSData *fileData2 = [NSData dataWithContentsOfFile:filePath2];
     self.introMusicPlayer = [[AVAudioPlayer alloc] initWithData:fileData2 error:&error];
     self.introMusicPlayer.numberOfLoops = -1;
-
-    //THE START SOUND PLAYER
-    NSString *filePath3 = [mainBundle pathForResource:@"sfx/start" ofType:@"mp3"];
-    NSData *fileData3 = [NSData dataWithContentsOfFile:filePath3];
-    self.startSoundPlayer = [[AVAudioPlayer alloc] initWithData:fileData3 error:&error];
-
+    
     //THE VICTORY MUSIC PLAYER
     NSString *filePath4 = [mainBundle pathForResource:@"sfx/victory" ofType:@"mp3"];
     NSData *fileData4 = [NSData dataWithContentsOfFile:filePath4];
@@ -47,6 +42,22 @@
     NSData *fileData5 = [NSData dataWithContentsOfFile:filePath5];
     self.titleMusicPlayer = [[AVAudioPlayer alloc] initWithData:fileData5 error:&error];
     self.titleMusicPlayer.numberOfLoops = -1;
+    
+    
+    //THE START SOUND PLAYER
+    NSString *filePath3 = [mainBundle pathForResource:@"sfx/start" ofType:@"mp3"];
+    NSData *fileData3 = [NSData dataWithContentsOfFile:filePath3];
+    self.startSoundPlayer = [[AVAudioPlayer alloc] initWithData:fileData3 error:&error];
+
+    //THE SEND SOUND PLAYER
+    NSString *filePathSend = [mainBundle pathForResource:@"sfx/send" ofType:@"mp3"];
+    NSData *fileDataSend = [NSData dataWithContentsOfFile:filePathSend];
+    self.sendSoundPlayer = [[AVAudioPlayer alloc] initWithData:fileDataSend error:&error];
+
+    //THE RECEIVE SOUND PLAYER
+    NSString *filePathReceive = [mainBundle pathForResource:@"sfx/receive" ofType:@"mp3"];
+    NSData *fileDataReceive = [NSData dataWithContentsOfFile:filePathReceive];
+    self.sendSoundPlayer = [[AVAudioPlayer alloc] initWithData:fileDataReceive error:&error];
     
     self = [super init];
     
@@ -79,10 +90,20 @@
 }
 
 -(void) startSound{
-    //[self.mainMusicPlayer stop];
     [self.startSoundPlayer prepareToPlay];
     [self.startSoundPlayer play];
 }
+
+-(void) sendSound{
+    [self.sendSoundPlayer prepareToPlay];
+    [self.sendSoundPlayer play];
+}
+
+-(void) receiveSound{
+    [self.receiveSoundPlayer prepareToPlay];
+    [self.receiveSoundPlayer play];
+}
+
 
 -(void) startMainMusic{
     [self stopAllMusic];

@@ -32,9 +32,12 @@
 
 @property AVAudioPlayer* mainMusicPlayer;
 @property AVAudioPlayer* introMusicPlayer;
-@property AVAudioPlayer* startSoundPlayer;
 @property AVAudioPlayer* victoryMusicPlayer;
 @property AVAudioPlayer* titleMusicPlayer;
+
+@property AVAudioPlayer* startSoundPlayer;
+@property AVAudioPlayer* sendSoundPlayer;
+@property AVAudioPlayer* receiveSoundPlayer;
 
 + (id)sharedManager;
 
@@ -46,7 +49,10 @@
 -(void)startIntroMusic;
 -(void)startVictoryMusic;
 -(void)startTitleMusic;
+
 -(void)startSound;
+-(void)sendSound;
+-(void)receiveSound;
 
 -(void)resetAll;
 
