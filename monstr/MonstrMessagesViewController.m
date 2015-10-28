@@ -519,9 +519,16 @@
         [self performSegueWithIdentifier:@"SegueToSuccessFromMessage" sender:self];
     }
     else{
-        //TODO SEGUE TO REFLECTION SCREEN INSTEAD
-        //NSLog(@"else... TODO SEGUE TO REFLECTION SCREEN INSTEAD");
+        //TODO SEGUE right back to profiles
+        /*
+        ProfileStack *sharedManager = [ProfileStack sharedManager];
+        [sharedManager generateDailyIndices];
+
+        [self performSegueWithIdentifier:@"SegueToNavFromMessage" sender:self];
+         */
+        
         [self performSegueWithIdentifier:@"SegueToReflectionFromMessage" sender:self];
+
     }
 }
 

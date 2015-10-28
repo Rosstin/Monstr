@@ -265,6 +265,7 @@
                     <connections>
                         <segue destination="piJ-Ev-x7h" kind="modal" identifier="SegueToReflectionFromMessage" id="B33-w7-ewh"/>
                         <segue destination="VWQ-XH-kLd" kind="modal" identifier="SegueToSuccessFromMessage" id="cMf-My-gOH"/>
+                        <segue destination="Fvf-GV-bgW" kind="modal" identifier="SegueToNavFromMessage" id="tgH-7y-nzd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTj-xE-t6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -649,9 +650,9 @@ Good luck! YOU'LL NEED IT!</string>
     <inferredMetricsTieBreakers>
         <segue reference="p9v-Zh-02f"/>
         <segue reference="m96-hh-Yz6"/>
-        <segue reference="cE7-qX-Wyf"/>
-        <segue reference="fqB-zU-iaG"/>
-        <segue reference="j9h-Az-9ah"/>
+        <segue reference="tgH-7y-nzd"/>
+        <segue reference="B33-w7-ewh"/>
         <segue reference="D30-m9-cgw"/>
+        <segue reference="fqB-zU-iaG"/>
     </inferredMetricsTieBreakers>
 </document>
