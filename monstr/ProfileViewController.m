@@ -55,9 +55,21 @@
 
 -(void) addNavigationBarItem
 {
-    UIBarButtonItem *messageBtn = [[UIBarButtonItem alloc] initWithTitle: @"Message" style: UIBarButtonItemStyleBordered target: self action:@selector(messageButtonClicked:)];
+    UIBarButtonItem *messageBtn = [[UIBarButtonItem alloc] initWithTitle: @"Message" style: UIBarButtonItemStyleDone target: self action:@selector(messageButtonClicked:)];
 
-    [self.navigationItem setRightBarButtonItem:messageBtn];
+    UIBarButtonItem *shareBtn = [[UIBarButtonItem alloc] initWithTitle: @"Share" style: UIBarButtonItemStylePlain target: self action:@selector(shareButtonClicked:)];
+
+    //UIBarButtonItem *emptyBtn = [[UIBarButtonItem alloc] initWithTitle: @"         " style: UIBarButtonItemStylePlain target: self action:@selector(emptyButtonClicked:)];
+
+    
+    //[self.navigationItem setRightBarButtonItem:messageBtn];
+    
+    //NSArray<UIBarButtonItem *> *array = [messageBtn, shareBtn];
+    
+    NSArray * array = [NSArray arrayWithObjects:messageBtn, shareBtn, nil];
+    
+    [self.navigationItem setRightBarButtonItems: array];
+
 }
 
 -(IBAction)messageButtonClicked:(id)sender{
@@ -73,6 +85,26 @@
     [self performSegueWithIdentifier:@"SegueToMessageFromProfile" sender:self];
 
 }
+
+-(IBAction)shareButtonClicked:(id)sender{
+    NSLog(@"Share button clicked!!!");
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
+    
+    [sharedManager startSound];
+    
+    //since they were accepted, remove them permanently from the pool
+    //TODO fix exclusion
+    //[sharedManager excludeProfileByProfileWeWantUserToSeeRightNow];
+    
+    //[self performSegueWithIdentifier:@"SegueToMessageFromProfile" sender:self];
+    
+}
+
+-(IBAction)emptyButtonClicked:(id)sender{
+}
+
+
+
 
 
 @end
