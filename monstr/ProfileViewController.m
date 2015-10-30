@@ -78,6 +78,45 @@
 
 }
 
+-(IBAction)messageButtonClicked:(id)sender{
+    NSLog(@"Message this user!! And remove them permanently from pool.");
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
+    
+    [sharedManager startSound];
+    
+    //since they were accepted, remove them permanently from the pool
+    //TODO fix exclusion
+    [sharedManager excludeProfileByProfileWeWantUserToSeeRightNow];
+    
+    [self performSegueWithIdentifier:@"SegueToMessageFromProfile" sender:self];
+
+}
+
+
+
+-(IBAction)shareButtonClicked:(id)sender{
+    NSLog(@"Share button clicked!!!");
+    ProfileStack *sharedManager = [ProfileStack sharedManager];
+    
+    [sharedManager startSound];
+    
+    UIImage* screenshot = [self getScreenshot];
+    
+        //TODO FIND OUT HOW TO SHARE ON TWITTER
+    
+    /* send mail code from swift
+     
+     let mailComposeViewController = configuredMailComposeViewController()
+     if MFMailComposeViewController.canSendMail() {
+     self.presentViewController(mailComposeViewController, animated: true, completion: nil)
+     } else {
+     self.showSendMailErrorAlert()
+     }
+     
+     */
+}
+
+
 -(UIImage*)getScreenshot{
     
     CALayer *layer = [UIApplication sharedApplication].keyWindow.layer;
@@ -96,35 +135,40 @@
     return screenshot;
 }
 
--(IBAction)messageButtonClicked:(id)sender{
-    NSLog(@"Message this user!! And remove them permanently from pool.");
-    ProfileStack *sharedManager = [ProfileStack sharedManager];
-    
-    [sharedManager startSound];
-    
-    //since they were accepted, remove them permanently from the pool
-    //TODO fix exclusion
-    [sharedManager excludeProfileByProfileWeWantUserToSeeRightNow];
-    
-    [self performSegueWithIdentifier:@"SegueToMessageFromProfile" sender:self];
 
+/*
+func configuredMailComposeViewController() -> MFMailComposeViewController {
+    let mailComposerVC = MFMailComposeViewController()
+    mailComposerVC.mailComposeDelegate = self
+    mailComposerVC.setSubject("IBM RedRock")
+    mailComposerVC.addAttachmentData(UIImageJPEGRepresentation(getScreenShot(), 1)!, mimeType: "image/jpeg", fileName: "IBMSparkInsightScreenShot.jpeg")
+    return mailComposerVC
 }
 
--(IBAction)shareButtonClicked:(id)sender{
-    NSLog(@"Share button clicked!!!");
-    ProfileStack *sharedManager = [ProfileStack sharedManager];
+func getScreenShot() -> UIImage {
+    let layer = UIApplication.sharedApplication().keyWindow!.layer
+    let scale = UIScreen.mainScreen().scale
+    UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, scale);
+    UIApplication.sharedApplication().keyWindow?.drawViewHierarchyInRect(layer.frame, afterScreenUpdates: true)
     
-    [sharedManager startSound];
+    let screenshot = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
     
-    UIImage* screenshot = [self getScreenshot];
+    UIImageWriteToSavedPhotosAlbum(screenshot, nil, nil, nil)
     
-    //since they were accepted, remove them permanently from the pool
-    //TODO fix exclusion
-    //[sharedManager excludeProfileByProfileWeWantUserToSeeRightNow];
-    
-    //[self performSegueWithIdentifier:@"SegueToMessageFromProfile" sender:self];
-    
+    return screenshot
 }
+
+func showSendMailErrorAlert() {
+    let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
+    sendMailErrorAlert.show()
+}
+
+func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+    controller.dismissViewControllerAnimated(true, completion: nil)
+}
+
+*/
 
 -(IBAction)emptyButtonClicked:(id)sender{
 }
