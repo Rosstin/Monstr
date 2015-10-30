@@ -162,10 +162,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="busstop" translatesAutoresizingMaskIntoConstraints="NO" id="5f7-l6-e1t">
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="busstop" translatesAutoresizingMaskIntoConstraints="NO" id="5f7-l6-e1t">
                                 <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="You think back to that unforgettable encounter at the bus stop..." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qr-hV-TVl">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="You think back to that unforgettable encounter at the bus stop..." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qr-hV-TVl">
                                 <rect key="frame" x="16" y="20" width="288" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="4Rm-6Z-iSH"/>
@@ -173,7 +173,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8H-NH-YkS">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8H-NH-YkS">
                                 <rect key="frame" x="16" y="108" width="288" height="440"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -284,10 +284,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heartscreen_justBG" translatesAutoresizingMaskIntoConstraints="NO" id="ij9-VP-IxY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="heartscreen_justBG" translatesAutoresizingMaskIntoConstraints="NO" id="ij9-VP-IxY">
                                 <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTd-dz-yzA">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTd-dz-yzA">
                                 <rect key="frame" x="8" y="20" width="304" height="218"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="218" id="obX-Sh-8qQ"/>
@@ -303,7 +303,7 @@ Good luck! YOU'LL NEED IT!</string>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srr-nk-hWf">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srr-nk-hWf">
                                 <rect key="frame" x="12" y="294" width="296" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Hey, who made this game?">
@@ -318,7 +318,7 @@ Good luck! YOU'LL NEED IT!</string>
                                     <segue destination="NHT-oV-tLV" kind="modal" id="50u-53-vYR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLw-o0-Mhd">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLw-o0-Mhd">
                                 <rect key="frame" x="12" y="248" width="296" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="START OVER">
@@ -333,7 +333,7 @@ Good luck! YOU'LL NEED IT!</string>
                                     <action selector="startOver:" destination="VWQ-XH-kLd" eventType="touchUpInside" id="Mxb-fm-xM9"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="bigFlyingHeartIcon" translatesAutoresizingMaskIntoConstraints="NO" id="NRW-ek-xEd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" image="bigFlyingHeartIcon" translatesAutoresizingMaskIntoConstraints="NO" id="NRW-ek-xEd">
                                 <rect key="frame" x="26" y="350" width="268" height="198"/>
                             </imageView>
                         </subviews>
@@ -384,7 +384,7 @@ Good luck! YOU'LL NEED IT!</string>
                             <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unicornbackgroundforcredits" translatesAutoresizingMaskIntoConstraints="NO" id="a9L-Z5-BMu">
                                 <rect key="frame" x="-4" y="-20" width="328" height="608"/>
                             </imageView>
-                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TkV-zo-P7D">
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TkV-zo-P7D">
                                 <rect key="frame" x="16" y="20" width="288" height="528"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -437,20 +437,20 @@ Good luck! YOU'LL NEED IT!</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heartscreen_justBG" translatesAutoresizingMaskIntoConstraints="NO" id="RkI-nl-ENu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="heartscreen_justBG" translatesAutoresizingMaskIntoConstraints="NO" id="RkI-nl-ENu">
                                 <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                 </accessibility>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleplusheart" translatesAutoresizingMaskIntoConstraints="NO" id="dM1-CI-1kF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="titleplusheart" translatesAutoresizingMaskIntoConstraints="NO" id="dM1-CI-1kF">
                                 <rect key="frame" x="16" y="36" width="288" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="288" id="DXr-KN-ZCE"/>
                                     <constraint firstAttribute="height" constant="100" id="GV4-il-ewa"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heartlogo" translatesAutoresizingMaskIntoConstraints="NO" id="Wsb-Fn-FX1">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="heartlogo" translatesAutoresizingMaskIntoConstraints="NO" id="Wsb-Fn-FX1">
                                 <rect key="frame" x="31" y="144" width="258" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="258" id="ZrA-me-5CM"/>
@@ -533,16 +533,16 @@ Good luck! YOU'LL NEED IT!</string>
                                     <segue destination="Fvf-GV-bgW" kind="modal" id="QoV-6t-2IT"/>
                                 </connections>
                             </button>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EFI-6F-cig" userLabel="White">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFI-6F-cig" userLabel="White">
                                 <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="busstop" translatesAutoresizingMaskIntoConstraints="NO" id="7qJ-2p-4oZ">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="busstop" translatesAutoresizingMaskIntoConstraints="NO" id="7qJ-2p-4oZ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akU-yU-4TO">
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akU-yU-4TO">
                                 <rect key="frame" x="31" y="20" width="258" height="528"/>
                                 <string key="text">Ugh... Late for work again! You're huddled under your umbrella at the bus stop, trying to keep your tentacles out of the rain, trying not to think about what your boss will say...</string>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>

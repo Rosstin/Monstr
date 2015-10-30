@@ -20,9 +20,11 @@
     
     ProfileStack *sharedManager = [ProfileStack sharedManager];
 
+    /*
     if(sharedManager.thisIsTheLastCard){
         self.navigationItem.hidesBackButton = YES;
     }
+     */
     
     UIColor *borderAndTextColor = [UIColor colorWithRed: 0.5 green: 0.1 blue: 0.5 alpha: 0.9];
     UIColor *backgroundColor = [UIColor colorWithRed: 0.1 green: 0.7 blue: 0.9 alpha: 0.05 ];
@@ -51,6 +53,10 @@
     frame.size.height = 50;
         
     _viewContainingContent.frame = frame;
+}
+
+- (void) viewDidAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:NO];
 }
 
 -(void) addNavigationBarItem
