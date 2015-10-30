@@ -520,14 +520,12 @@
     }
     else{
         //TODO SEGUE right back to profiles
-        /*
         ProfileStack *sharedManager = [ProfileStack sharedManager];
         [sharedManager generateDailyIndices];
 
         [self performSegueWithIdentifier:@"SegueToNavFromMessage" sender:self];
-         */
         
-        [self performSegueWithIdentifier:@"SegueToReflectionFromMessage" sender:self];
+        //[self performSegueWithIdentifier:@"SegueToReflectionFromMessage" sender:self];
 
     }
 }
