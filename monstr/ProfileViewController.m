@@ -78,6 +78,24 @@
 
 }
 
+-(UIImage*)getScreenshot{
+    
+    CALayer *layer = [UIApplication sharedApplication].keyWindow.layer;
+    CGFloat scale = [UIScreen mainScreen].scale;
+    UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, scale);
+    
+    
+    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+    [keyWindow drawViewHierarchyInRect:layer.frame afterScreenUpdates:true];
+    
+    UIImage *screenshot = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    UIImageWriteToSavedPhotosAlbum(screenshot,nil,nil,nil);
+    
+    return screenshot;
+}
+
 -(IBAction)messageButtonClicked:(id)sender{
     NSLog(@"Message this user!! And remove them permanently from pool.");
     ProfileStack *sharedManager = [ProfileStack sharedManager];
@@ -97,6 +115,8 @@
     ProfileStack *sharedManager = [ProfileStack sharedManager];
     
     [sharedManager startSound];
+    
+    UIImage* screenshot = [self getScreenshot];
     
     //since they were accepted, remove them permanently from the pool
     //TODO fix exclusion
